@@ -23,17 +23,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head><link rel="icon" href="/favicon.ico"/></Head>
-      <header className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-      <link rel="icon" href="/favicon.ico" />
-      <Navbar />
-      </header>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+      <header className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+      <Navbar />
+      </header>
         {children}
+        <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+        </footer>
       </body>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-      </footer>
+
     </html>
   );
 }
