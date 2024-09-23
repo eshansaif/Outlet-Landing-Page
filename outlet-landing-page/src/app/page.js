@@ -3,12 +3,11 @@ import Link from "next/link";
 import BuyNowButton from '../components/BuyNowButton'; 
 
 export default function Home() {
-  const props = {
-    message: "Start For Free"
-  }
   return (
     <div className="flex items-center w-full justify-center font-[family-name:var(--font-geist-sans)] x-overflow-hidden">
-      <section className=" w-full z-0">
+      
+        <main className="flex flex-col mt-16 w-full overflow-auto h-full">
+        <section className="top-background w-full z-0 pb-12">
         <Image
           className=" absolute top-[35%] right-0"
           src="/background-half-circle.png" // Replace with your image path
@@ -30,8 +29,7 @@ export default function Home() {
           height={500}
           width={150}
         />
-        <main className="flex flex-col mt-16 w-full overflow-auto h-full">
-          <div className="top-background flex flex-row h-screen w-full ">
+          <div className="flex flex-row w-full ">
             <div className="flex w-[100%] h-[100%] max-w-7xl mx-auto">
               <div className="flex flex-col h-[100%] w-[50%] items-center">
                 <div className="mt-40">
@@ -52,7 +50,7 @@ export default function Home() {
 
                 <div className="flex w-[100%] items-center justify-start mt-4 gap-5">
                   <div className="">
-                      <BuyNowButton props={props} />
+                      <BuyNowButton message="Start For Free" />
                   </div>
                   <div className="">
                     <Link href="/your-target-page" passHref>
@@ -65,10 +63,53 @@ export default function Home() {
                      <span className="text-lg font-semibold">How it Works</span>
                   </div>
                 </div>
+                <div className="flex w-[100%]">
+                  <span className="font-bold text-2xl mt-12">Trusted By</span>
+                </div>
+                <div className="flex w-[100%] mt-10">
+                  <ul className="flex">
+                    <li className="flex items-center justify-center mr-6">
+                      <Image
+                        src="/Google-Reviews.png" // Replace with your image path
+                        alt="Logo"
+                        height={40}
+                        width={70}
+                      />
+                      <span className="ml-3 font-semibold">(4.5)</span>
+                    </li>
+                    <li className="flex items-center justify-center mr-6">
+                      <Image
+                        src="/trusted_2.png" // Replace with your image path
+                        alt="Logo"
+                        height={40}
+                        width={100}
+                      />
+                      <span className="ml-3 font-semibold">(5.0)</span>
+                    </li>
+                    <li className="flex items-center justify-center mr-6">
+                    <Image
+                        src="/trusted_3.png" // Replace with your image path
+                        alt="Logo"
+                        height={40}
+                        width={100}
+                      />
+                      <span className="ml-3 font-semibold">(4.0)</span>
+                    </li>
+                    <li className="flex items-center justify-center mr-6">
+                    <Image
+                        src="/trusted_4.png" // Replace with your image path
+                        alt="Logo"
+                        height={20}
+                        width={40}
+                      />
+                      <span className="ml-3 font-semibold">(4.5)</span>
+                    </li>
+                  </ul>
+                </div>
                 
               </div>
               <div className="flex h-[100%] w-[50%] items-center overflow-x-hidden">
-                <div className="realtive animate-float mt-24">
+                <div className="realtive animate-float mt-44">
                   <Image
                     className=""
                     src="/outletdash.png" // Replace with your image path
@@ -80,11 +121,93 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex flex-row row-start-2 h-[50%] w-full"> 
-
+          </section>
+          <div className="flex flex-row row-start-2 h-screen w-full"> 
+            <div className="flex items-center justify-between border-b border-gray-200 h-[45%] w-full max-w-7xl mx-auto pt-6 pb-6">
+              <div className="flex justify-evenly flex-col h-full">
+                <p className="font-bold text-2xl">Trusted By More Than <br/> <span className="gradient-text">1800+</span> Companies.</p>
+                <div className="">
+                  <BuyNowButton message="See Client Feedback"/>
+                </div>
+                
+              </div>
+              <div className="grid grid-cols-4 gap-4 p-3">
+                <div className="flex justify-center items-cente rounded-md shadow-md">
+                  <Image
+                    className=""
+                    src="/companies_1.webp" // Replace with your image path
+                    alt="Logo"
+                    height={80}
+                    width={130}
+                  />
+                </div>
+                <figure className="pt-8 pb-8 pr-3 pl-3 ">
+                  <Image
+                    className=""
+                    src="/companies_2.webp" // Replace with your image path
+                    alt="Logo"
+                    height={70}
+                    width={170}
+                  />
+                </figure>
+                <figure className="pt-8 pb-8 pr-3 pl-3">
+                  <Image
+                    className=""
+                    src="/companies_3.webp" // Replace with your image path
+                    alt="Logo"
+                    height={70}
+                    width={170}
+                  />
+                </figure>
+                <figure className="pt-8 pb-8 pr-3 pl-3 bg-white">
+                  <Image
+                    className=""
+                    src="/companies_4.webp" // Replace with your image path
+                    alt="Logo"
+                    height={70}
+                    width={170}
+                  />
+                </figure>
+                <figure className="pt-8 pb-8 pr-3 pl-3 bg-white">
+                  <Image
+                    className=""
+                    src="/companies_5.webp" // Replace with your image path
+                    alt="Logo"
+                    height={70}
+                    width={170}
+                  />
+                </figure>
+                <figure className="pt-8 pb-8pr-3 pl-3 bg-white">
+                  <Image
+                    className=""
+                    src="/companies_6.webp" // Replace with your image path
+                    alt="Logo"
+                    height={70}
+                    width={170}
+                  />
+                </figure>
+                <figure className="pt-8 pb-8 pr-3 pl-3 bg-white">
+                  <Image
+                    className=""
+                    src="/companies_7.webp" // Replace with your image path
+                    alt="Logo"
+                    height={70}
+                    width={170}
+                  />
+                </figure>
+                <figure className="pt-8 pb-8 pr-3 pl-3 bg-white"> 
+                  <Image
+                    className=""
+                    src="/companies_8.webp" // Replace with your image path
+                    alt="Logo"
+                    height={70}
+                    width={170}
+                  />
+                </figure>
+              </div>
+            </div>
           </div>
         </main>
-      </section>
     </div>
   );
 }

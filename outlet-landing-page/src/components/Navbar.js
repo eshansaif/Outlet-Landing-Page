@@ -3,9 +3,6 @@ import Image from 'next/image';
 import BuyNowButton from './BuyNowButton';  
 
 export default function Navbar() {
-  const props = {
-    message: "Buy Now"
-  }
   return (
     <nav
       className="fixed w-full z-10 top-0 transition duration-300 ease-in-out bg-white shadow-sm">
@@ -47,7 +44,7 @@ export default function Navbar() {
             <Link href="/login" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">
               Login
             </Link>
-            <BuyNowButton props={props}/>
+            <BuyNowButton message="Buy Now"/>
           </div>
           <div className="-mr-2 flex md:hidden">
             {/* Mobile menu button */}
