@@ -22,6 +22,7 @@ body {
 .top-background {
   background: url('/banner.webp') no-repeat center center fixed;
   background-size: cover;
+  position: relative;
 }
 
 @layer utilities {
