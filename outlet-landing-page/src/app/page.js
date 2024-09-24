@@ -7,7 +7,7 @@ export default function Home() {
     <div className="flex items-center w-full justify-center font-[family-name:var(--font-geist-sans)] x-overflow-hidden">
       
         <main className="flex flex-col mt-16 w-full overflow-auto h-full">
-        <section className="top-background w-full z-0 pb-12">
+        <section className="top-background w-full h-screen z-0 pb-12">
         <Image
           className=" absolute top-[35%] right-0"
           src="/background-half-circle.png" // Replace with your image path
@@ -123,7 +123,8 @@ export default function Home() {
           </div>
           </section>
           <div className="flex flex-row row-start-2 h-screen w-full"> 
-            <div className="flex items-center justify-between border-b border-gray-200 h-[45%] w-full max-w-7xl mx-auto pt-6 pb-6">
+            <div className="w-full bg-[#F1F5FB] h-[45%]">
+            <div className="flex items-center justify-between border-b border-gray-200 h-full w-full max-w-7xl mx-auto pt-6 pb-6">
               <div className="flex justify-evenly flex-col h-full">
                 <p className="font-bold text-2xl">Trusted By More Than <br/> <span className="gradient-text">1800+</span> Companies.</p>
                 <div className="">
@@ -131,81 +132,34 @@ export default function Home() {
                 </div>
                 
               </div>
-              <div className="grid grid-cols-4 gap-4 p-3">
-                <div className="flex justify-center items-cente rounded-md shadow-md">
-                  <Image
-                    className=""
-                    src="/companies_1.webp" // Replace with your image path
-                    alt="Logo"
-                    height={80}
-                    width={130}
-                  />
-                </div>
-                <figure className="pt-8 pb-8 pr-3 pl-3 ">
-                  <Image
-                    className=""
-                    src="/companies_2.webp" // Replace with your image path
-                    alt="Logo"
-                    height={70}
-                    width={170}
-                  />
-                </figure>
-                <figure className="pt-8 pb-8 pr-3 pl-3">
-                  <Image
-                    className=""
-                    src="/companies_3.webp" // Replace with your image path
-                    alt="Logo"
-                    height={70}
-                    width={170}
-                  />
-                </figure>
-                <figure className="pt-8 pb-8 pr-3 pl-3 bg-white">
-                  <Image
-                    className=""
-                    src="/companies_4.webp" // Replace with your image path
-                    alt="Logo"
-                    height={70}
-                    width={170}
-                  />
-                </figure>
-                <figure className="pt-8 pb-8 pr-3 pl-3 bg-white">
-                  <Image
-                    className=""
-                    src="/companies_5.webp" // Replace with your image path
-                    alt="Logo"
-                    height={70}
-                    width={170}
-                  />
-                </figure>
-                <figure className="pt-8 pb-8pr-3 pl-3 bg-white">
-                  <Image
-                    className=""
-                    src="/companies_6.webp" // Replace with your image path
-                    alt="Logo"
-                    height={70}
-                    width={170}
-                  />
-                </figure>
-                <figure className="pt-8 pb-8 pr-3 pl-3 bg-white">
-                  <Image
-                    className=""
-                    src="/companies_7.webp" // Replace with your image path
-                    alt="Logo"
-                    height={70}
-                    width={170}
-                  />
-                </figure>
-                <figure className="pt-8 pb-8 pr-3 pl-3 bg-white"> 
-                  <Image
-                    className=""
-                    src="/companies_8.webp" // Replace with your image path
-                    alt="Logo"
-                    height={70}
-                    width={170}
-                  />
-                </figure>
-              </div>
+
+<div className="grid grid-cols-4 gap-4 p-3 justify-center items-center">
+  {[
+    "/companies_1.webp",
+    "/companies_2.webp",
+    "/companies_3.webp",
+    "/companies_4.webp",
+    "/companies_5.webp",
+    "/companies_6.webp",
+    "/companies_7.webp",
+    "/companies_8.webp",
+  ].map((src, idx) => (
+    <figure
+      key={idx}
+      className="w-52 h-28 flex justify-center items-center bg-[#FFFFFF] rounded-lg transition-transform transform hover:scale-105"
+    >
+      <Image
+        className=""
+        src={src}
+        alt={`Logo ${idx + 1}`}
+        height={70}
+        width={170}
+      />
+    </figure>
+  ))}
+</div>
             </div>
+            </div> 
           </div>
         </main>
     </div>
