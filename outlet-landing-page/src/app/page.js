@@ -166,7 +166,7 @@ export default function Home() {
 
         {/*-------------------- Third Section------------------ */}
 
-      <section className="w-full z-0 pb-28 relative bg-gradient-to-r from-[#ffffff] via-[#f9f8f8] to-[#f9f6f6] h-screen  pt-20">
+      <section className="w-full z-0 pb-28 relative bg-gradient-to-r from-[#ffffff] via-[#f9f8f8] to-[#f9f6f6]  pt-20">
         <Image
             className=" absolute top-[25%] right-0 transform rotate-180"
             src="/work_images.png" // Replace with your image path
@@ -199,7 +199,7 @@ export default function Home() {
 
               </div>
               {/* ----------------------SLIDER------------------------ */}
-              <div className="w-full">
+              <div className="w-full h-screen mt-28">
                 <FirstSlider/>
               </div>
           </div>
