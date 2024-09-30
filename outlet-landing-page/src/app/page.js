@@ -34,10 +34,10 @@ export default function Home() {
             <div className="flex w-[100%] h-[100%] max-w-7xl mx-auto">
               <div className="flex flex-col h-[100%] w-[50%] items-center">
                 <div className="mt-28">
-                  <h6 class="text-5xl font-bold mb-4">
+                  <h6 className="text-5xl font-bold mb-4">
                     Unlock the Power of Seamless Inventory Management
                   </h6>
-                  <span class="gradient-text text-4xl font-semibold">
+                  <span className="gradient-text text-4xl font-semibold">
                     Wave Goodbye To Spreadsheets!
                   </span>
                   <p className="text-lg mt-4 w-[80%]">
