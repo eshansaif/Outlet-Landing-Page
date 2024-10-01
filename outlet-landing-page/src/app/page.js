@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import BuyNowButton from "../components/BuyNowButton";
 import FirstSlider from "../components/FirstSlider";
+import StatsSection from "../components/StatsSection";
 
 
 export default function Home() {
@@ -166,7 +167,7 @@ export default function Home() {
 
         {/*-------------------- Third Section------------------ */}
 
-      <section className="w-full z-0 pb-28 relative bg-gradient-to-r from-[#ffffff] via-[#f9f8f8] to-[#f9f6f6]  pt-20">
+      <section className="w-full z-0 relative bg-gradient-to-r from-[#ffffff] via-[#f9f8f8] to-[#f9f6f6] pt-20">
         <Image
             className=" absolute top-[25%] right-0 transform rotate-180"
             src="/work_images.png" // Replace with your image path
@@ -199,11 +200,27 @@ export default function Home() {
 
               </div>
               {/* ----------------------SLIDER------------------------ */}
-              <div className="w-full h-screen mt-28">
+              <div className="w-full h-screen mt-28 border-b border-gray-200">
                 <FirstSlider/>
               </div>
           </div>
       </section>
+
+       {/*-------------------- Fourth Section------------------ */}
+
+       <section className="w-full z-0 h-screen relative bg-gradient-to-r from-[#ffffff] via-[#f9f8f8] to-[#f9f6f6]">
+            <div className="max-w-7xl mx-auto border-b border-gray-200">
+              <div className="flex flex-col h-[60%] w-full pt-20">
+                <div className="flex flex-col items-center">
+                  <span className="text-4xl font-bold">Is Your Business Growth Ready for <span className="gradient-text">Outlet Expense's</span> Support?</span>
+                  <span className="mt-10 text-gray text-xl">Outlet Expense is one-stop destination for sustainable growth</span>
+                </div>
+                
+                <StatsSection/>
+
+              </div>  
+            </div>
+       </section>
         
       </main>
     </div>

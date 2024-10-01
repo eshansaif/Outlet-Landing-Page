@@ -16,7 +16,7 @@ const FirstSlider = () => {
   const slides = [
     <div className="flex flex-col items-center justify-center w-[95%] h-[80%] p-20 shadow-xl rounded-3xl bg-gradient-to-r from-white via-[#ECFAFD] to-white relative custom-before">
       <div className="bg-transparent  w-full h-full flex ">
-        <div className="w-[60%] h-full flex flex-col">
+        <div className="w-[60%] h-full flex flex-col pb-10">
           <div className="flex flex-col w-full">
             <span className="font-semibold text-3xl">Inventory Management</span>
             <p className="pt-4">Grow your business online effortlessly with our multi-channel inventory management system. Outlet Expense makes it simpler than you think!</p>
@@ -77,7 +77,7 @@ const FirstSlider = () => {
     </div>,
     <div className="flex flex-col  items-center justify-center w-[95%] h-[80%] p-20 shadow-xl rounded-3xl bg-gradient-to-r from-white via-[#ECFAFD] to-white relative custom-before">
             <div className="bg-transparent  w-full h-full flex ">
-        <div className="w-[60%] h-full flex flex-col">
+        <div className="w-[60%] h-full flex flex-col pb-10">
           <div className="flex flex-col w-full">
             <span className="font-semibold text-3xl">Inventory Management</span>
             <p className="pt-4">Grow your business online effortlessly with our multi-channel inventory management system. Outlet Expense makes it simpler than you think!</p>
@@ -138,7 +138,7 @@ const FirstSlider = () => {
     </div>,
     <div className="flex flex-col  items-center justify-center w-[95%] h-[80%] p-20 shadow-xl rounded-3xl bg-gradient-to-r from-white via-[#ECFAFD] to-white relative custom-before">
             <div className="bg-transparent  w-full h-full flex ">
-        <div className="w-[60%] h-full flex flex-col">
+        <div className="w-[60%] h-full flex flex-col pb-10">
           <div className="flex flex-col w-full">
             <span className="font-semibold text-3xl">Inventory Management</span>
             <p className="pt-4">Grow your business online effortlessly with our multi-channel inventory management system. Outlet Expense makes it simpler than you think!</p>
@@ -199,7 +199,7 @@ const FirstSlider = () => {
     </div>,
     <div className="flex flex-col  items-center justify-center w-[95%] h-[80%] p-20 shadow-xl rounded-3xl bg-gradient-to-r from-white via-[#ECFAFD] to-white relative custom-before">
             <div className="bg-transparent  w-full h-full flex ">
-        <div className="w-[60%] h-full flex flex-col">
+        <div className="w-[60%] h-full flex flex-col pb-10">
           <div className="flex flex-col w-full">
             <span className="font-semibold text-3xl">Inventory Management</span>
             <p className="pt-4">Grow your business online effortlessly with our multi-channel inventory management system. Outlet Expense makes it simpler than you think!</p>
@@ -343,14 +343,14 @@ const FirstSlider = () => {
       {/* Arrow Buttons */}
       <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2">
         <button
-          className="prevSlide w-14 h-14 rounded-full bg-white flex items-center justify-center text-white hover:bg-transparent hover:border-transparent transition-all hover:bg-gradient-to-r from-blue-600 to-teal-500"
+          className="prevSlide mr-4 w-14 h-14 rounded-full bg-white flex items-center justify-center text-white hover:bg-transparent hover:border-transparent transition-all hover:bg-gradient-to-r from-blue-600 to-teal-500"
           onClick={() => setCurrentIndex((prevIndex) => (prevIndex === 1 ? totalSlides : prevIndex - 1))} // Navigate to previous slide
         >
           <ArrowLeftIcon className="w-7 h-7 text-black" />
         </button>
 
         <button
-          className="nextSlide w-14 h-14 rounded-full bg-white flex items-center justify-center text-white hover:bg-transparent hover:border-transparent transition-all hover:bg-gradient-to-r from-blue-600 to-teal-500"
+          className="nextSlide ml-4 w-14 h-14 rounded-full bg-white flex items-center justify-center text-white hover:bg-transparent hover:border-transparent transition-all hover:bg-gradient-to-r from-blue-600 to-teal-500"
           onClick={() => setCurrentIndex((prevIndex) => (prevIndex === totalSlides ? 1 : prevIndex + 1))} // Navigate to next slide
         >
           <ArrowRightIcon className="w-7 h-7 text-black " />
