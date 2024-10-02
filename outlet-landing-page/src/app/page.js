@@ -4,7 +4,6 @@ import BuyNowButton from "../components/BuyNowButton";
 import FirstSlider from "../components/FirstSlider";
 import StatsSection from "../components/StatsSection";
 
-
 export default function Home() {
   return (
     <div className="flex items-center w-full justify-center font-[family-name:var(--font-geist-sans)] x-overflow-hidden">
@@ -167,15 +166,15 @@ export default function Home() {
 
         {/*-------------------- Third Section------------------ */}
 
-      <section className="w-full z-0 relative bg-gradient-to-r from-[#ffffff] via-[#f9f8f8] to-[#f9f6f6] pt-20">
-        <Image
+        <section className="w-full z-0 relative bg-gradient-to-r from-[#ffffff] via-[#f9f8f8] to-[#f9f6f6] pt-20">
+          <Image
             className=" absolute top-[25%] right-0 transform rotate-180"
             src="/work_images.png" // Replace with your image path
             alt="Logo"
             height={700}
             width={400}
           />
-        <Image
+          <Image
             className=" absolute top-[45%] left-0"
             src="/work_images.png" // Replace with your image path
             alt="Logo"
@@ -183,45 +182,92 @@ export default function Home() {
             width={400}
           />
           <div className="z-10 max-w-7xl mx-auto">
-              <div className="flex w-full flex-wrap">
-                <div className="flex flex-col w-[70%] flex-wrap">
-                  <span className="text-4xl font-bold">How <span className="gradient-text">Outlet Expense's</span> Inventory Fullfillment Solutions Works</span>
-                  <p className="pt-5">
-                    Outlet Expense's automated inventory fulfillment system tracks every stock, order, 
-                    and sale with high accuracy and transparency. 
-                    Our multi-channel, automated inventory management system enables 
-                    real-time monitoring and organization of your inventory, 
-                    helping you make quick, critical business decisions in a timely manner.
-                  </p>
-                </div>
-                <div className="w-[30%] flex items-center justify-center">
-                  <BuyNowButton message="Get Starte"/>
-                </div>
-
+            <div className="flex w-full flex-wrap">
+              <div className="flex flex-col w-[70%] flex-wrap">
+                <span className="text-4xl font-bold">
+                  How <span className="gradient-text">Outlet Expense's</span>{" "}
+                  Inventory Fullfillment Solutions Works
+                </span>
+                <p className="pt-5">
+                  Outlet Expense's automated inventory fulfillment system tracks
+                  every stock, order, and sale with high accuracy and
+                  transparency. Our multi-channel, automated inventory
+                  management system enables real-time monitoring and
+                  organization of your inventory, helping you make quick,
+                  critical business decisions in a timely manner.
+                </p>
               </div>
-              {/* ----------------------SLIDER------------------------ */}
-              <div className="w-full h-screen mt-28 border-b border-gray-200">
-                <FirstSlider/>
+              <div className="w-[30%] flex items-center justify-center">
+                <BuyNowButton message="Get Starte" />
               </div>
-          </div>
-      </section>
-
-       {/*-------------------- Fourth Section------------------ */}
-
-       <section className="w-full z-0 h-screen relative bg-gradient-to-r from-[#ffffff] via-[#f9f8f8] to-[#f9f6f6]">
-            <div className="max-w-7xl mx-auto border-b border-gray-200">
-              <div className="flex flex-col h-[60%] w-full pt-20">
-                <div className="flex flex-col items-center">
-                  <span className="text-4xl font-bold">Is Your Business Growth Ready for <span className="gradient-text">Outlet Expense's</span> Support?</span>
-                  <span className="mt-10 text-gray text-xl">Outlet Expense is one-stop destination for sustainable growth</span>
-                </div>
-                
-                <StatsSection/>
-
-              </div>  
             </div>
-       </section>
-        
+            {/* ----------------------SLIDER------------------------ */}
+            <div className="w-full h-screen mt-28 border-b border-gray-200">
+              <FirstSlider />
+            </div>
+          </div>
+        </section>
+
+        {/*-------------------- Fourth Section------------------ */}
+
+        <section className="w-full z-0 relative bg-gradient-to-r from-[#ffffff] via-[#f9f8f8] to-[#f9f6f6] pb-20">
+          <div className="max-w-7xl mx-auto border-b border-gray-300">
+            <div className="flex flex-col h-[60%] w-full pt-20">
+              <div className="flex flex-col items-center">
+                <span className="text-4xl font-bold">
+                  Is Your Business Growth Ready for{" "}
+                  <span className="gradient-text">Outlet Expense's</span>{" "}
+                  Support?
+                </span>
+                <span className="mt-10 text-gray text-xl">
+                  Outlet Expense is one-stop destination for sustainable growth
+                </span>
+              </div>
+
+              <StatsSection />
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full h-screen bg-gradient-to-r bg-white relative inventory">
+          <div className="max-w-7xl mx-auto z-10 h-full">
+            <div className="flex flex-col h-full w-full">
+              <span className="text-5xl font-semibold text-center pt-20 pb-10 z-10">
+                Centralized & Multi-Channel Inventory
+                <br />
+                Management System
+              </span>
+              <div className="p-5 z-10 bg-white border-l border-r border-t rounded-t-3xl h-[50%]">
+              <div className="grid grid-cols-4 grid-rows-3 gap-6 h-full border-gray border rounded-3xl p-5 z-10">
+                <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">Row 1, Col 1</div>
+                <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">Row 1, Col 2</div>
+                <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">Row 1, Col 3</div>
+                <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">Row 1, Col 4</div>
+
+                <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">Row 2, Col 1</div>
+                <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">Row 2, Col 2</div>
+                <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">Row 2, Col 3</div>
+                <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">Row 2, Col 4</div>
+
+                <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">Row 3, Col 1</div>
+                <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">Row 3, Col 2</div>
+                <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">Row 3, Col 3</div>
+                <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">Row 3, Col 4</div>
+              </div>
+              <div className="flex items-center justify-center">
+                <Image
+                  className=""
+                  src="/border-arrow.svg" // Replace with your image path
+                  alt="Logo"
+                  height={800}
+                  width={900}
+                />
+              </div>
+              </div>
+              
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
