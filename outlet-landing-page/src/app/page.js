@@ -229,7 +229,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="w-full h-screen bg-gradient-to-r bg-white relative inventory">
+        {/*-------------------- Fifth Section------------------ */}
+
+        <section className="w-full pb-20 bg-gradient-to-r bg-white relative inventory">
           <div className="max-w-7xl mx-auto z-10 h-full">
             <div className="flex flex-col h-full w-full">
               <span className="text-5xl font-semibold text-center pt-20 pb-10 z-10">
@@ -238,36 +240,226 @@ export default function Home() {
                 Management System
               </span>
               <div className="p-5 z-10 bg-white border-l border-r border-t rounded-t-3xl h-[50%]">
-              <div className="grid grid-cols-4 grid-rows-3 gap-6 h-full border-gray border rounded-3xl p-5 z-10">
-                <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">Row 1, Col 1</div>
-                <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">Row 1, Col 2</div>
-                <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">Row 1, Col 3</div>
-                <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">Row 1, Col 4</div>
+                <div className="grid grid-cols-4 grid-rows-3 gap-4 h-full border-gray border rounded-3xl p-5 z-10">
+                  <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
+                    <div className="flex justify-left items-center h-full w-full">
+                      <div className="h-12 w-12 flex items-center justify-center bg-gradient-to-b from-[#59ca38] to-[#18c2d9] rounded-full">
+                        <Image
+                          className=""
+                          src="/management_1.svg" // Replace with your image path
+                          alt="Logo"
+                          height={30}
+                          width={30}
+                        />
+                      </div>
+                      <p className="font-semibold ml-4">
+                        User Access <br />
+                        Management
+                      </p>
+                    </div>
+                  </div>
 
-                <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">Row 2, Col 1</div>
-                <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">Row 2, Col 2</div>
-                <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">Row 2, Col 3</div>
-                <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">Row 2, Col 4</div>
+                  <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
+                    <div className="flex justify-left items-center h-full w-full">
+                      <div className="h-12 w-12 bg-gradient-to-b from-[#fc7b82] to-[#e73f3f] rounded-full flex items-center justify-center">
+                        <Image
+                          className=""
+                          src="/management_2.svg" // Replace with your image path
+                          alt="Logo"
+                          height={30}
+                          width={30}
+                        />
+                      </div>
+                      <p className="font-semibold ml-4">
+                        Inventory <br />
+                        Management
+                      </p>
+                    </div>
+                  </div>
+                  <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300 ">
+                    <div className="flex justify-left items-center h-full w-full">
+                      <div className="h-12 w-12 bg-[#0bb0ee] rounded-full flex items-center justify-center">
+                        <Image
+                          className=""
+                          src="/management_3.svg" // Replace with your image path
+                          alt="Logo"
+                          height={30}
+                          width={30}
+                        />
+                      </div>
+                      <p className="font-semibold ml-4">
+                        Third-party <br />
+                        Integration
+                      </p>
+                    </div>
+                  </div>
+                  <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
+                    <div className="flex justify-left items-center h-full w-full">
+                      <div className="h-12 w-12 bg-gradient-to-b from-[#d787fc] to-[#845cf7] rounded-full flex items-center justify-center">
+                        <Image
+                          className=""
+                          src="/management_12.svg" // Replace with your image path
+                          alt="Logo"
+                          height={30}
+                          width={30}
+                        />
+                      </div>
+                      <p className="font-semibold ml-4">
+                        Return <br />
+                        Management
+                      </p>
+                    </div>
+                  </div>
+                  <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
+                    <div className="flex justify-left items-center h-full w-full">
+                      <div className="h-12 w-12 bg-gradient-to-b from-[#f9c91e] to-[#fc4c4a] rounded-full flex items-center justify-center">
+                        <Image
+                          className=""
+                          src="/management_5.svg" // Replace with your image path
+                          alt="Logo"
+                          height={30}
+                          width={30}
+                        />
+                      </div>
+                      <p className="font-semibold ml-4">
+                        Supplier <br />
+                        Management
+                      </p>
+                    </div>
+                  </div>
+                  <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
+                    <div className="flex justify-left items-center h-full w-full">
+                      <div className="h-12 w-12 bg-gradient-to-r from-[#6b70ff] to-[#0bb0ee] rounded-full flex items-center justify-center">
+                        <Image
+                          className=""
+                          src="/management_6.svg" // Replace with your image path
+                          alt="Logo"
+                          height={30}
+                          width={30}
+                        />
+                      </div>
+                      <p className="font-semibold ml-4">
+                        Real-Time Analytics And <br />
+                        Reporting
+                      </p>
+                    </div>
+                  </div>
+                  <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
+                    <div className="flex justify-left items-center h-full w-full">
+                      <div className="h-12 w-12 bg-gradient-to-r from-[#18b5f0] to-[#b02ee5] rounded-full flex items-center justify-center">
+                        <Image
+                          className=""
+                          src="/management_7.svg" // Replace with your image path
+                          alt="Logo"
+                          height={30}
+                          width={30}
+                        />
+                      </div>
+                      <p className="font-semibold ml-4">
+                        Wherehouse <br />
+                        Management
+                      </p>
+                    </div>
+                  </div>
+                  <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
+                    <div className="flex justify-left items-center h-full w-full">
+                      <div className="h-12 w-12 bg-gradient-to-r from-[#6b70ff] to-[#0bb0ee] rounded-full flex items-center justify-center">
+                        <Image
+                          className=""
+                          src="/management_8.svg" // Replace with your image path
+                          alt="Logo"
+                          height={30}
+                          width={30}
+                        />
+                      </div>
+                      <p className="font-semibold ml-4">
+                        Labeling & <br />
+                        Barcoding
+                      </p>
+                    </div>
+                  </div>
 
-                <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">Row 3, Col 1</div>
-                <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">Row 3, Col 2</div>
-                <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">Row 3, Col 3</div>
-                <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">Row 3, Col 4</div>
+                  <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
+                    <div className="flex justify-left items-center h-full w-full">
+                      <div className="h-12 w-12 bg-gradient-to-b from-[#59ca38] to-[#18c2d9] rounded-full flex items-center justify-center">
+                        <Image
+                          className=""
+                          src="/management_9.svg" // Replace with your image path
+                          alt="Logo"
+                          height={30}
+                          width={30}
+                        />
+                      </div>
+                      <p className="font-semibold ml-4">
+                        Sales And
+                        <br />
+                        Invoicing
+                      </p>
+                    </div>
+                  </div>
+                  <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
+                    <div className="flex justify-left items-center h-full w-full">
+                      <div className="h-12 w-12 bg-gradient-to-b from-[#fc7b82] to-[#e73f3f] rounded-full flex items-center justify-center">
+                        <Image
+                          className=""
+                          src="/management_10.svg" // Replace with your image path
+                          alt="Logo"
+                          height={30}
+                          width={30}
+                        />
+                      </div>
+                      <p className="font-semibold ml-4">
+                        Product Attribution
+                        <br />
+                        Management
+                      </p>
+                    </div>
+                  </div>
+                  <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
+                    <div className="flex justify-left items-center h-full w-full">
+                      <div className="h-12 w-12 bg-[#0bb0ee] rounded-full flex items-center justify-center">
+                        <Image
+                          className=""
+                          src="/management_11.svg" // Replace with your image path
+                          alt="Logo"
+                          height={30}
+                          width={30}
+                        />
+                      </div>
+                      <p className="font-semibold ml-4">
+                        Order
+                        <br />
+                        Management
+                      </p>
+                    </div>
+                  </div>
+                  <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
+                    <div className="flex justify-left items-center h-full w-full">
+                      <div className="h-12 w-12 bg-gradient-to-b from-[#d787fc] to-[#845cf7] rounded-full flex items-center justify-center">
+                        <Image
+                          className=""
+                          src="/management_9-1.svg" // Replace with your image path
+                          alt="Logo"
+                          height={30}
+                          width={30}
+                        />
+                      </div>
+                      <p className="font-semibold ml-4">
+                        Purchasing
+                        <br />
+                        Receiving
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center justify-center">
-                <Image
-                  className=""
-                  src="/border-arrow.svg" // Replace with your image path
-                  alt="Logo"
-                  height={800}
-                  width={900}
-                />
-              </div>
-              </div>
-              
             </div>
           </div>
         </section>
+
+        {/*-------------------- Fifth Section------------------ */}
+
+        <section className="w-full h-screen bg-[#F8F9FD] relative"></section>
       </main>
     </div>
   );
