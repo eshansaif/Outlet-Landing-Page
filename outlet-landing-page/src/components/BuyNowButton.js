@@ -1,10 +1,10 @@
 import { ArrowRightIcon } from '@heroicons/react/20/solid'; // Import Heroicons ArrowRightIcon
 import "../app/globals.css";
 
-export default function BuyNowButton({message}) {
+export default function BuyNowButton({message, link="#"}) {
   return (
     <a
-      href="#"
+      href={link}
       className="flex items-center justify-around px-4 py-2 rounded-full button-gradient"
     >
       <span className="text-md font-medium">{message}</span>

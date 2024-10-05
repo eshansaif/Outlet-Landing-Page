@@ -50,7 +50,7 @@ const StatsSection = () => {
 
       <div className="flex flex-col items-center flex-1 p-10 hover:bg-gray-200 h-full transition-all duration-300">
         <span className="text-transparent bg-clip-text bg-gradient-to-b from-blue-400 to-blue-900 text-5xl font-bold">
-          {countUp(200)}
+          {countUp(200)}+
         </span>
         <span className="mt-4 text-xl font-semibold">Users</span>
         <span className="mt-2 text-xl text-gray-600">
@@ -60,7 +60,7 @@ const StatsSection = () => {
 
       <div className="flex flex-col items-center flex-1 p-10 hover:bg-gray-200 h-full transition-all duration-300 border-l border-gray-300">
         <span className="text-transparent bg-clip-text bg-gradient-to-b from-orange-400 to-orange-900 text-5xl font-bold">
-          {countUp(250)}
+          {countUp(250)}+
         </span>
         <span className="mt-4 text-xl font-semibold">Reviews</span>
         <span className="mt-2 text-xl text-gray-600">

@@ -459,7 +459,141 @@ export default function Home() {
 
         {/*-------------------- Fifth Section------------------ */}
 
-        <section className="w-full h-screen bg-[#F8F9FD] relative"></section>
+        <section className="w-full h-screen bg-[#F8F9FD] relative pt-20">
+          <div className="max-w-7xl mx-auto h-full">
+            <div className="flex w-full h-[90%] items-center">
+              <div className="w-[50%] h-full">
+                <div className="custom-gradient-background w-full h-full rounded-3xl flex items-center justify-center">
+                  <Image
+                    className="relative animate-float"
+                    src="/outlet-dashboard-mockup.png" // Replace with your image path
+                    alt="Logo"
+                    height={700}
+                    width={600}
+                  />
+                </div>
+              </div>
+              <div className="w-[50%] h-full pl-16">
+                <div className="flex flex-col w-full h-full">
+                  <span className="custom-gradient-text text-2xl pb-4">
+                    Key Features Of :
+                  </span>
+                  <span className="text-4xl font-bold">
+                    Our Automated Solutions for{" "}
+                    <span className="text-[#3b82f6]">
+                      <br />
+                      Inventory Management
+                    </span>{" "}
+                    and Fulfillment
+                  </span>
+                  <span className="pt-10 pb-10 text-xl">
+                    These features become even more impressive when experienced
+                    firsthand.
+                  </span>
+                  <ul>
+                    <li className="flex justify-start pb-5 items-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="#1C75BB"
+                        className="size-6"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      <span className="pl-5 text-lg">
+                        User Permission Management
+                      </span>
+                    </li>
+                    <li className="flex justify-start pb-5 items-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="#1C75BB"
+                        className="size-6"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      <span className="pl-5 text-lg">
+                        Centralized Inventory Management
+                      </span>
+                    </li>
+                    <li className="flex justify-start pb-5 items-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="#1C75BB"
+                        className="size-6"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      <span className="pl-5 text-lg">
+                        Real-time analytics and reporting
+                      </span>
+                    </li>
+                    <li className="flex justify-start pb-5 items-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="#1C75BB"
+                        className="size-6"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      <span className="pl-5 text-lg">
+                        Product Attribution Management
+                      </span>
+                    </li>
+                  </ul>
+                  <div className="flex items-start pt-6">
+                    <BuyNowButton message="See All Fatures" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="w-full h-screen bg-[#F8F9FD] relative pt-20">
+        <div class="relative flex justify-center items-center w-96 h-96 rounded-full border border-gray-300 animate-rotate-right-2">
+ 
+  <img src="" class="absolute top-0 left-1/2 transform -translate-x-1/2 rotate-fix w-8 h-8 rounded-full" alt="Planet 1"></img>
+  <img src="" class="absolute right-0 top-1/2 transform -translate-y-1/2 rotate-fix w-8 h-8 rounded-full" alt="Planet 2"></img>
+  <img src="" class="absolute bottom-0 left-1/2 transform -translate-x-1/2 rotate-fix w-8 h-8 rounded-full" alt="Planet 3"></img>
+  <img src="" class="absolute left-0 top-1/2 transform -translate-y-1/2 rotate-fix w-8 h-8 rounded-full" alt="Planet 4"></img>
+
+  <div class="absolute flex justify-center items-center w-72 h-72 rounded-full border border-gray-300 animate-rotate-left">
+    
+    <img src="" class="absolute top-0 left-1/2 transform -translate-x-1/2 rotate-fix-left w-8 h-8 rounded-full" alt="Planet 5"></img>
+    <img src="" class="absolute right-0 top-1/2 transform -translate-y-1/2 rotate-fix-left w-8 h-8 rounded-full" alt="Planet 6"></img>
+    <img src="" class="absolute bottom-0 left-1/2 transform -translate-x-1/2 rotate-fix-left w-8 h-8 rounded-full" alt="Planet 7"></img>
+    <img src="" class="absolute left-0 top-1/2 transform -translate-y-1/2 rotate-fix-left w-8 h-8 rounded-full" alt="Planet 8"></img>
+
+    <div class="absolute flex justify-center items-center w-48 h-48 rounded-full border border-gray-300 animate-rotate-right">
+      
+      <img src="" class="absolute top-0 left-1/2 transform -translate-x-1/2 rotate-fix w-8 h-8 rounded-full" alt="Planet 9"></img>
+      <img src="" class="absolute right-0 top-1/2 transform -translate-y-1/2 rotate-fix w-8 h-8 rounded-full" alt="Planet 10"></img>
+      <img src="" class="absolute bottom-0 left-1/2 transform -translate-x-1/2 rotate-fix w-8 h-8 rounded-full" alt="Planet 11"></img>
+      <img src="" class="absolute left-0 top-1/2 transform -translate-y-1/2 rotate-fix w-8 h-8 rounded-full" alt="Planet 12"></img>
+    </div>
+  </div>
+</div>
+        </section>
       </main>
     </div>
   );
