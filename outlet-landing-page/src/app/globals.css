@@ -59,6 +59,12 @@ body {
   position: relative;
 }
 
+.solar-background {
+  background: url('/favorite-tools.webp') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

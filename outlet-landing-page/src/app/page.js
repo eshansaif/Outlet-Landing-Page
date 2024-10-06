@@ -3,6 +3,7 @@ import Link from "next/link";
 import BuyNowButton from "../components/BuyNowButton";
 import FirstSlider from "../components/FirstSlider";
 import StatsSection from "../components/StatsSection";
+import SolarSystem from "../components/SolarSystem";
 
 export default function Home() {
   return (
@@ -568,31 +569,14 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        <section className="w-full h-screen bg-[#F8F9FD] relative pt-20">
-        <div class="relative flex justify-center items-center w-96 h-96 rounded-full border border-gray-300 animate-rotate-right-2">
- 
-  <img src="" class="absolute top-0 left-1/2 transform -translate-x-1/2 rotate-fix w-8 h-8 rounded-full" alt="Planet 1"></img>
-  <img src="" class="absolute right-0 top-1/2 transform -translate-y-1/2 rotate-fix w-8 h-8 rounded-full" alt="Planet 2"></img>
-  <img src="" class="absolute bottom-0 left-1/2 transform -translate-x-1/2 rotate-fix w-8 h-8 rounded-full" alt="Planet 3"></img>
-  <img src="" class="absolute left-0 top-1/2 transform -translate-y-1/2 rotate-fix w-8 h-8 rounded-full" alt="Planet 4"></img>
-
-  <div class="absolute flex justify-center items-center w-72 h-72 rounded-full border border-gray-300 animate-rotate-left">
-    
-    <img src="" class="absolute top-0 left-1/2 transform -translate-x-1/2 rotate-fix-left w-8 h-8 rounded-full" alt="Planet 5"></img>
-    <img src="" class="absolute right-0 top-1/2 transform -translate-y-1/2 rotate-fix-left w-8 h-8 rounded-full" alt="Planet 6"></img>
-    <img src="" class="absolute bottom-0 left-1/2 transform -translate-x-1/2 rotate-fix-left w-8 h-8 rounded-full" alt="Planet 7"></img>
-    <img src="" class="absolute left-0 top-1/2 transform -translate-y-1/2 rotate-fix-left w-8 h-8 rounded-full" alt="Planet 8"></img>
-
-    <div class="absolute flex justify-center items-center w-48 h-48 rounded-full border border-gray-300 animate-rotate-right">
-      
-      <img src="" class="absolute top-0 left-1/2 transform -translate-x-1/2 rotate-fix w-8 h-8 rounded-full" alt="Planet 9"></img>
-      <img src="" class="absolute right-0 top-1/2 transform -translate-y-1/2 rotate-fix w-8 h-8 rounded-full" alt="Planet 10"></img>
-      <img src="" class="absolute bottom-0 left-1/2 transform -translate-x-1/2 rotate-fix w-8 h-8 rounded-full" alt="Planet 11"></img>
-      <img src="" class="absolute left-0 top-1/2 transform -translate-y-1/2 rotate-fix w-8 h-8 rounded-full" alt="Planet 12"></img>
-    </div>
-  </div>
-</div>
+        
+        {/*--------------------Sixth Section (Solar System)------------------ */}
+        <section className="w-full h-screen relative solar-background ">
+        <div className="max-w-7xl mx-auto h-full">
+          <div className="flex h-full w-full items-center justify-center">
+          <SolarSystem/>
+          </div>
+        </div>
         </section>
       </main>
     </div>
