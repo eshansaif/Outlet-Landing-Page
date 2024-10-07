@@ -145,6 +145,15 @@ body {
   }
 }
 
+@keyframes rotate-fix-left {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg); /* Counter rotation */
+  }
+}
+
 .animate-rotate-right {
   animation: rotate-right 100s linear infinite;
 }
@@ -154,7 +163,7 @@ body {
 }
 
 .animate-rotate-left {
-  animation: rotate-left 100s linear infinite; /* Left (counterclockwise) rotation */
+  animation: rotate-left 80s linear infinite; /* Left (counterclockwise) rotation */
 }
 
 .rotate-fix {
@@ -164,12 +173,12 @@ body {
 
 .rotate-fix-left {
   transform-origin: center;
-  animation: rotate-fix 100s linear infinite; /* Counter rotation to keep images upright */
+  animation: rotate-fix-left 80s linear infinite; /* Counter rotation to keep images upright */
 }
 
 .button-gradient:hover {
   background: #3b82f6; /* from-blue-500 to-blue-500 */
-  transition: background transform 1s ease;
+  transition: background-color transform 1s ease;
   /* transform: scale(1.05); */
 }
 

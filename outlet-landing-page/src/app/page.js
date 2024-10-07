@@ -571,9 +571,10 @@ export default function Home() {
         </section>
         
         {/*--------------------Sixth Section (Solar System)------------------ */}
-        <section className="w-full h-screen relative solar-background ">
+        <section className="w-full relative solar-background pt-20 pb-20">
         <div className="max-w-7xl mx-auto h-full">
-          <div className="flex h-full w-full items-center justify-center">
+          <div className="flex flex-col h-full w-full items-center justify-center">
+            <span className="pb-20 text-4xl font-semibold text-center">Our Inventory Management System is Loaded <br/>with Powerful Features</span>
           <SolarSystem/>
           </div>
         </div>
