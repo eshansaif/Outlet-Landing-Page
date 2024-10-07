@@ -48,7 +48,7 @@ const SolarSystem = () => {
         </div>
       </div>
 
-      <div className="absolute flex justify-center items-center w-[650px] h-[650px] rounded-full border border-gray-300 animate-rotate-left">
+      <div className="absolute flex justify-center items-center w-[600px] h-[600px] rounded-full border border-gray-300 animate-rotate-left">
         <div className="absolute flex flex-col items-center justify-center top-[-40px] left-1/2 rotate-fix-left w-20 h-20  bg-gradient-to-b from-[#f9c91e] to-[#fc4c4a] rounded-full">
         <Image
           src="/stock.png"
