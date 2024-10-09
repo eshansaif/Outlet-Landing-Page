@@ -575,7 +575,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto h-full">
           <div className="flex flex-col h-full w-full items-center justify-center">
             <span className="pb-10 text-4xl font-semibold text-center">Our Inventory Management System is Loaded <br/>with Powerful Features</span>
-          <SolarSystem/>
+            <div className="flex flex-col h-full w-full items-center justify-center mt-10">
+              <SolarSystem/>
+            </div>
+          
           </div>
         </div>
         </section>

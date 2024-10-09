@@ -3,7 +3,7 @@ import Image from "next/image";
 const SolarSystem = () => {
   return (
     <>
-      <div className="relative h-[950px] w-[950px] rounded-full border border-gray-300 animate-rotate-right-2">
+      <div className="relative h-[950px] w-[950px] rounded-full border border-gray-300 animate-rotate-right-2 text-white">
         <div className="absolute flex flex-col items-center justify-center top-[-40px] left-1/2 rotate-fix w-20 h-20 bg-gradient-to-b from-[#59ca38] to-[#18c2d9] rounded-full">
           <Image
             src="/dashboard.png"
@@ -48,7 +48,7 @@ const SolarSystem = () => {
         </div>
       </div>
 
-      <div className="absolute flex justify-center items-center w-[600px] h-[600px] rounded-full border border-gray-300 animate-rotate-left">
+      <div className="absolute flex justify-center items-center w-[680px] h-[680px] rounded-full border border-gray-300 animate-rotate-left text-white">
         <div className="absolute flex flex-col items-center justify-center top-[-40px] left-1/2 rotate-fix-left w-20 h-20  bg-gradient-to-b from-[#f9c91e] to-[#fc4c4a] rounded-full">
         <Image
           src="/stock.png"
@@ -70,51 +70,84 @@ const SolarSystem = () => {
           />
           <span className="text-xs">Balance</span>
         </div>
+        <div className="absolute bottom-[-40px] left-1/2 flex flex-col justify-center items-center rotate-fix-left w-20 h-20 bg-gradient-to-r from-[#18b5f0] to-[#b02ee5] rounded-full">
         <Image
-          src="/path/to/planet7.png"
-          className="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-fix-left w-20 h-20 bg-gradient-to-r from-[#18b5f0] to-[#b02ee5] rounded-full"
-          alt="Planet 7"
+          src="/e-commerce.png"
+          className=""
+          alt="E-Commerce"
           width={32}
           height={32}
         />
-        <Image
-          src="/path/to/planet8.png"
-          className="absolute left-[-40px] top-1/2 transform translate-x-1/2 -translate-y-1/2 rotate-fix-left w-20 h-20 bg-gradient-to-r from-[#6b70ff] to-[#0bb0ee] rounded-full"
-          alt="Planet 8"
-          width={32}
-          height={32}
-        />
+        <span className="text-[10px]">E-Commerce</span>
+        </div>
+        <div className="absolute left-[-40px] top-1/2 flex flex-col justify-center items-center rotate-fix-left w-20 h-20 bg-gradient-to-r from-[#6b70ff] to-[#0bb0ee] rounded-full">
+          <Image
+            src="/finance.png"
+            className=""
+            alt="Finance"
+            width={32}
+            height={32}
+          />
+          <span className="text-[10px]">Finance</span>
+        </div>
+        
       </div>
 
-      <div className="absolute flex justify-center items-center w-[350px] h-[350px] rounded-full border border-gray-300 animate-rotate-right">
+      <div className="absolute flex justify-center items-center w-[430px] h-[430px] rounded-full border border-gray-300 animate-rotate-right text-white">
+        <div className="absolute top-[-40px] flex flex-col justify-center items-center left-1/2 rotate-fix w-20 h-20 bg-gradient-to-b from-[#59ca38] to-[#18c2d9] rounded-full">
         <Image
-          src="/path/to/planet9.png"
-          className="absolute top-[-40px] left-1/2 transform -translate-x-1/2 translate-y-1/2 rotate-fix w-20 h-20 bg-gradient-to-b from-[#59ca38] to-[#18c2d9] rounded-full"
-          alt="Planet 9"
+          src="/hrm.png"
+          className=""
+          alt="HRM"
           width={32}
           height={32}
         />
-        <Image
-          src="/path/to/planet10.png"
-          className="absolute right-[-40px] top-1/2 transform translate-x-1/2 -translate-y-1/2 rotate-fix w-20 h-20 bg-gradient-to-b from-[#fc7b82] to-[#e73f3f] rounded-full"
-          alt="Planet 10"
+        <span className="text-[10px]">HRM</span>
+        </div>
+       
+       <div className="absolute right-[-40px] top-1/2 flex flex-col justify-center items-center rotate-fix w-20 h-20 bg-gradient-to-b from-[#fc7b82] to-[#e73f3f] rounded-full">
+       <Image
+          src="/warehouse.png"
+          className=""
+          alt="Warehouse"
           width={32}
           height={32}
         />
+        <span className="text-[10px]">Warehouse</span>
+       </div>
+        <div className="absolute bottom-[-40px] left-1/2 flex flex-col justify-center items-center rotate-fix w-20 h-20 bg-[#0bb0ee] rounded-full">
+          <Image
+            src="/expense.png"
+            className=""
+            alt="Expense"
+            width={32}
+            height={32}
+          />
+           <span className="text-[10px]">Expense</span>
+        </div>
+        <div className="absolute left-[-40px] top-1/2 flex flex-col justify-center items-center rotate-fix w-20 h-20 bg-gradient-to-b from-[#d787fc] to-[#845cf7] rounded-full">
         <Image
-          src="/path/to/planet11.png"
-          className="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-fix w-20 h-20 bg-[#0bb0ee] rounded-full"
-          alt="Planet 11"
+          src="/product.png"
+          className=""
+          alt=""
           width={32}
           height={32}
         />
-        <Image
-          src="/path/to/planet12.png"
-          className="absolute left-[-40px] top-1/2 transform translate-x-1/2 -translate-y-1/2 rotate-fix w-20 h-20 bg-gradient-to-b from-[#d787fc] to-[#845cf7] rounded-full"
-          alt="Planet 12"
-          width={32}
-          height={32}
-        />
+        <span className="text-[10px]">Product</span>
+        </div>
+
+         {/* Video player in the center */}
+        <div className="absolute flex justify-center items-center rounded-full overflow-hidden rotate-fix w-[300px] h-[300px]">
+          <video
+            className="object-cover w-[75%] h-[75%] rounded-full "
+            src="/center.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+          ></video>
+        </div>
+       
       </div>
     </>
   );
