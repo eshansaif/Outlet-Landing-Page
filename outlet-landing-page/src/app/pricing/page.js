@@ -3,7 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import PricingPlans from '../../components/PricingPlans';
 
-const Pricing = () => {
+const Pricing = async () => {
+
+    const res = await fetch(`${process.env.REACT_APP_API_URL}plan-option-list`);
+    const data = await res.json();
 
     return (
         <div className="bg-gradient-to-r from-[#ffffff] via-[#f9f8f8] to-[#f9f6f6] w-full">
@@ -32,14 +35,14 @@ const Pricing = () => {
             </section>
             
             {/* Pricing Plans  */}
-            <section className="w-full z-0 relative pt-24 pb-16">
+            <section className="w-full z-0 relative pt-24 pb-10">
                 <div className="max-w-7xl mx-auto h-full">
                     <PricingPlans />
                 </div>
             </section>
 
             {/* Pricing Compare Table */}
-            <section className="w-full z-0 relative pt-16 h-screen pb-24">
+            <section className="w-full z-0 relative pt-10 pb-24">
                 <div className="max-w-7xl mx-auto h-full">
                     <div className="pt-20 pb-16 flex items-center justify-center">
                         <span className="text-5xl font-bold text-center ">
@@ -57,30 +60,16 @@ const Pricing = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="bg-gray-100">
-                                    <td class="py-3 px-6 text-left">Feature 1</td>
-                                    <td class="py-3 px-6 text-center">✔</td>
-                                    <td class="py-3 px-6 text-center">✔</td>
-                                    <td class="py-3 px-6 text-center">✔</td>
-                                </tr>
-                                <tr class="bg-white">
-                                    <td class="py-3 px-6 text-left">Feature 2</td>
-                                    <td class="py-3 px-6 text-center">✘</td>
-                                    <td class="py-3 px-6 text-center">✔</td>
-                                    <td class="py-3 px-6 text-center">✔</td>
-                                </tr>
-                                <tr class="bg-gray-100">
-                                    <td class="py-3 px-6 text-left">Feature 3</td>
-                                    <td class="py-3 px-6 text-center">✘</td>
-                                    <td class="py-3 px-6 text-center">✘</td>
-                                    <td class="py-3 px-6 text-center">✔</td>
-                                </tr>
-                                <tr class="bg-white">
-                                    <td class="py-3 px-6 text-left">Feature 4</td>
-                                    <td class="py-3 px-6 text-center">✔</td>
-                                    <td class="py-3 px-6 text-center">✔</td>
-                                    <td class="py-3 px-6 text-center">✔</td>
-                                </tr>
+                                {
+                                    data?.map((plan, index)=> (
+                                    <tr className={index % 2 === 0 ? "bg-white" : "bg-gray-100"} key={index}>
+                                        <td class="py-3 px-6 text-left">{plan.options}</td>
+                                        <td class="py-3 px-6 text-center">{plan.subscriptions_ids.includes("1") ? "✔" : "✘" }</td>
+                                        <td class="py-3 px-6 text-center">{plan.subscriptions_ids.includes("2") ? "✔" : "✘" }</td>
+                                        <td class="py-3 px-6 text-center">{plan.subscriptions_ids.includes("3") ? "✔" : "✘" }</td>
+                                    </tr>
+                                    ))
+                                }
                             </tbody>
                         </table>
                     </div>

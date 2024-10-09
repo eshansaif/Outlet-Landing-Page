@@ -159,7 +159,7 @@ body {
 }
 
 .animate-rotate-right-2 {
-  animation: rotate-right 100s linear infinite;
+  animation: rotate-right 90s linear infinite;
 }
 
 .animate-rotate-left {
@@ -169,6 +169,11 @@ body {
 .rotate-fix {
   transform-origin: center;
   animation: rotate-fix 100s linear infinite; /* Counter rotation to keep images upright */
+}
+
+.rotate-fix-2 {
+  transform-origin: center;
+  animation: rotate-fix 90s linear infinite; /* Counter rotation to keep images upright */
 }
 
 .rotate-fix-left {
