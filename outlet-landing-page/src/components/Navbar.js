@@ -26,14 +26,17 @@ export default function Navbar() {
               <Link href="/features" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">
                 Features
               </Link>
-              <Link href="/integrations" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">
+              {/* <Link href="/integrations" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">
                 Integrations
-              </Link>
+              </Link> */}
               <Link href="/pricing" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">
                 Pricing
               </Link>
-              <Link href="/blog" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">
+              {/* <Link href="/blog" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">
                 Blog
+              </Link> */}
+              <Link href="/faqs" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">
+                FaQs
               </Link>
               <Link href="/deals" className="gradient-text text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">
                 Deals
@@ -80,14 +83,17 @@ export default function Navbar() {
           <Link href="/features" className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">
             Features
           </Link>
-          <Link href="/integrations" className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">
+          {/* <Link href="/integrations" className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">
             Integrations
-          </Link>
+          </Link> */}
           <Link href="/pricing" className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">
             Pricing
           </Link>
-          <Link href="/blog" className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">
+          {/* <Link href="/blog" className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">
             Blog
+          </Link> */}
+          <Link href="/faqs" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">
+                FaQs
           </Link>
           <Link href="/deals" className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">
             Deals
