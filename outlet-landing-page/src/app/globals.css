@@ -187,6 +187,14 @@ body {
   /* transform: scale(1.05); */
 }
 
+.bg-gradient-to-right {
+  background: linear-gradient(to right, #2e3192,#232670);
+}
+
+.bg-custom-gradient-seventh {
+  background: linear-gradient(to right, #FDFFFE, #EFFDFA, #FDFFFE);
+}
+
 /* play button styles */
 .circleRing {
   position: relative;

@@ -1,7 +1,7 @@
 "use client"
 
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from "next/image";
 import BuyNowButton from './BuyNowButton';
 
@@ -11,6 +11,17 @@ const PricingPlans = () => {
     const handleToggle = (plan) => {
         setSelectedPlan(plan);
     };
+
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+      async function fetchData() {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}subscriptions-list`); // Replace with your API endpoint
+        const result = await response.json();
+        setData(result);
+      }
+      fetchData();
+    }, []);
 
     return (
         <div className="flex flex-col justify-center w-full h-full">
@@ -38,7 +49,8 @@ const PricingPlans = () => {
 
             <div className="mt-16 flex gap-6 w-full h-full flex-wrap items-center justify-center">
                 {/* Starter */}
-                <div className="flex flex-col h-full w-[30%]">
+                {console.log(data)}
+                { data[0]?.status == 1 && <div className="flex flex-col h-full w-[30%]">
                     <div className="border-2 border-gray-300 hover:border-blue-500 rounded-3xl h-full w-full group transition-all duration-500 ease-in-out pb-4">
                         <div className="h-[20%] flex flex-col items-start justify-center border-b border-gray-300">
                             <div className="flex w-full h-full items-center justify-start pl-10">
@@ -62,8 +74,8 @@ const PricingPlans = () => {
                                     {/* <span className="text-3xl font-bold">
                                 499.0<span className="text-gray-500 text-xs">BDT</span> <span className="text-gray-500 text-xs">/Month</span>
                             </span> */}
-                                    <span className="text-3xl font-bold">Starter</span>
-                                    <p className="pt-1 text-sm text-gray-500">For Small Business</p>
+                                    <span className="text-3xl font-bold">{data[0]?.plan_name}</span>
+                                    <p className="pt-1 text-sm text-gray-500">For {data[0]?.description}</p>
                                 </div>
                             </div>
                         </div>
@@ -130,7 +142,7 @@ const PricingPlans = () => {
 
 
                             <span className="text-3xl font-bold pt-28 pb-4">
-                                499.0<span className="text-gray-500 text-xs">BDT</span> <span className="text-gray-500 text-xs">/Month</span>
+                                {data[0]?.price_bd}<span className="text-gray-500 text-xs">BDT</span> <span className="text-gray-500 text-xs">/Month</span>
                             </span>
                             
                             <div className="pb-6">
@@ -139,10 +151,10 @@ const PricingPlans = () => {
 
                         </div>
                     </div>
-                </div>
+                </div>}
 
                 {/* Enterprise */}
-                <div className="flex flex-col h-full w-[30%]">
+                {data[2]?.status == 1 && <div className="flex flex-col h-full w-[30%]">
                     <div className="border-2 border-gray-300 hover:border-red-500 rounded-3xl h-full w-full group transition-all duration-500 ease-in-out pb-4">
                         <div className="h-[20%] flex flex-col items-start justify-center border-b border-gray-300">
                             <div className="flex w-full h-full items-center justify-start pl-10">
@@ -166,8 +178,8 @@ const PricingPlans = () => {
                                     {/*  <span className="text-3xl font-bold">
                                 2999.0<span className="text-gray-500 text-xs">BDT</span> <span className="text-gray-500 text-xs">/Month</span>
                             </span> */}
-                                    <span className="text-3xl font-bold">Enterprise</span>
-                                    <p className="pt-1 text-sm text-gray-500">For Big Business</p>
+                                    <span className="text-3xl font-bold">{data[2]?.plan_name}</span>
+                                    <p className="pt-1 text-sm text-gray-500">For {data[2]?.description}</p>
                                 </div>
                             </div>
                         </div>
@@ -233,7 +245,7 @@ const PricingPlans = () => {
                             </ul>
 
                             <span className="text-3xl font-bold pt-28 pb-4">
-                                2999.0<span className="text-gray-500 text-xs">BDT</span> <span className="text-gray-500 text-xs">/Month</span>
+                                {data[2]?.price_bd}<span className="text-gray-500 text-xs">BDT</span> <span className="text-gray-500 text-xs">/Month</span>
                             </span>
 
                             <div className="pb-6">
@@ -242,10 +254,10 @@ const PricingPlans = () => {
 
                         </div>
                     </div>
-                </div>
+                </div>}
 
                 {/* Premium */}
-                <div className="flex flex-col h-full w-[30%]">
+                {data[1]?.status == 1 && <div className="flex flex-col h-full w-[30%]">
                     <div className="border-2 border-gray-300 hover:border-green-500 rounded-3xl h-full w-full group transition-all duration-500 ease-in-out pb-4">
                         <div className="w-full h-[20%] flex flex-col items-center justify-center border-b border-gray-300">
                             <div className="flex w-full h-full items-center justify-start pl-10">
@@ -269,8 +281,8 @@ const PricingPlans = () => {
                                     {/* <span className="text-3xl font-bold">
                                     1499.0<span className="text-gray-500 text-xs">BDT</span> <span className="text-gray-500 text-xs">/Month</span>
                                 </span> */}
-                                    <span className="text-3xl font-bold">Premium</span>
-                                    <p className="pt-1 text-sm text-gray-500">For Mid-Sized Business</p>
+                                    <span className="text-3xl font-bold">{data[1]?.plan_name}</span>
+                                    <p className="pt-1 text-sm text-gray-500">For {data[1]?.description}</p>
                                 </div>
 
                             </div>
@@ -338,7 +350,7 @@ const PricingPlans = () => {
                             </ul>
 
                             <span className="text-3xl font-bold pt-28 pb-4">
-                                1499.0<span className="text-gray-500 text-xs">BDT</span> <span className="text-gray-500 text-xs">/Month</span>
+                                {data[1]?.price_bd}<span className="text-gray-500 text-xs">BDT</span> <span className="text-gray-500 text-xs">/Month</span>
                             </span>
 
                             <div className="pb-6">
@@ -348,7 +360,7 @@ const PricingPlans = () => {
                         </div>
                     </div>
 
-                </div>
+                </div>}
 
             </div>
         </div>

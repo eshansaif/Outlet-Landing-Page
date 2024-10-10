@@ -137,7 +137,7 @@ const SolarSystem = () => {
         </div>
 
          {/* Video player in the center */}
-        <div className="absolute flex justify-center items-center rounded-full overflow-hidden rotate-fix w-[300px] h-[300px]">
+        <div className="absolute flex justify-center items-center bg-white p-1 rounded-full overflow-hidden rotate-fix w-[300px] h-[300px]">
           <video
             className="object-cover w-[75%] h-[75%] rounded-full "
             src="/center.mp4"

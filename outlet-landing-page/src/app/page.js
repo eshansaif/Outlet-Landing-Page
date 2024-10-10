@@ -65,7 +65,7 @@ export default function Home() {
                     <span className="text-lg font-semibold">How it Works</span>
                   </div>
                 </div>
-                <div className="flex w-[100%] mt-14">
+                {/* <div className="flex w-[100%] mt-14">
                   <span className="font-bold text-2xl lg:mt-2">Trusted By</span>
                 </div>
                 <div className="flex w-[100%] mt-4">
@@ -107,7 +107,7 @@ export default function Home() {
                       <span className="ml-3 font-semibold">(4.5)</span>
                     </li>
                   </ul>
-                </div>
+                </div> */}
               </div>
               <div className="flex h-[100%] w-[50%] items-center overflow-x-hidden">
                 <div className="realtive animate-float mt-44">
@@ -123,47 +123,25 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <div className="flex flex-col w-full">
-          <div className="w-full bg-gradient-to-r from-[#ffffff] via-[#f9f8f8] to-[#f9f6f6] h-[45%]">
-            <div className="flex items-center justify-between border-b border-gray-200 h-full w-full max-w-7xl mx-auto pt-6 pb-6">
-              <div className="flex justify-evenly flex-col h-full">
-                <p className="font-bold text-2xl">
-                  Trusted By More Than <br />{" "}
-                  <span className="gradient-text">1800+</span> Companies.
-                </p>
-                <div className="pt-5">
-                  <BuyNowButton message="See Client Feedback" />
-                </div>
+
+        <section className="w-full z-0 relative bg-gradient-to-r from-[#ffffff] via-[#f9f8f8] to-[#f9f6f6] pb-20">
+          <div className="max-w-7xl mx-auto border-b border-gray-300">
+            <div className="flex flex-col h-[60%] w-full pt-20">
+              <div className="flex flex-col items-center">
+                <span className="text-4xl font-bold">
+                  Is Your Business Growth Ready for{" "}
+                  <span className="gradient-text">Outlet Expense's</span>{" "}
+                  Support?
+                </span>
+                <span className="mt-10 text-gray text-xl">
+                  Outlet Expense is one-stop destination for sustainable growth
+                </span>
               </div>
 
-              <div className="grid grid-cols-4 gap-4 p-3 justify-center items-center">
-                {[
-                  "/companies_1.webp",
-                  "/companies_2.webp",
-                  "/companies_3.webp",
-                  "/companies_4.webp",
-                  "/companies_5.webp",
-                  "/companies_6.webp",
-                  "/companies_7.webp",
-                  "/companies_8.webp",
-                ].map((src, idx) => (
-                  <figure
-                    key={idx}
-                    className="w-52 h-28 flex justify-center items-center bg-[#FFFFFF] rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-105"
-                  >
-                    <Image
-                      className=""
-                      src={src}
-                      alt={`Logo ${idx + 1}`}
-                      height={50}
-                      width={100}
-                    />
-                  </figure>
-                ))}
-              </div>
+              <StatsSection />
             </div>
           </div>
-        </div>
+        </section>
 
         {/*-------------------- Third Section------------------ */}
 
@@ -211,24 +189,47 @@ export default function Home() {
 
         {/*-------------------- Fourth Section------------------ */}
 
-        <section className="w-full z-0 relative bg-gradient-to-r from-[#ffffff] via-[#f9f8f8] to-[#f9f6f6] pb-20">
-          <div className="max-w-7xl mx-auto border-b border-gray-300">
-            <div className="flex flex-col h-[60%] w-full pt-20">
-              <div className="flex flex-col items-center">
-                <span className="text-4xl font-bold">
-                  Is Your Business Growth Ready for{" "}
-                  <span className="gradient-text">Outlet Expense's</span>{" "}
-                  Support?
-                </span>
-                <span className="mt-10 text-gray text-xl">
-                  Outlet Expense is one-stop destination for sustainable growth
-                </span>
+        <div className="flex flex-col w-full">
+          <div className="w-full bg-gradient-to-r from-[#ffffff] via-[#f9f8f8] to-[#f9f6f6] h-[45%]">
+            <div className="flex items-center justify-between border-b border-gray-200 h-full w-full max-w-7xl mx-auto pt-6 pb-6">
+              <div className="flex justify-evenly flex-col h-full">
+                <p className="font-bold text-2xl">
+                  Trusted By More Than <br />{" "}
+                  <span className="gradient-text">1800+</span> Companies.
+                </p>
+                <div className="pt-5">
+                  <BuyNowButton message="See Client Feedback" />
+                </div>
               </div>
 
-              <StatsSection />
+              <div className="grid grid-cols-4 gap-4 p-3 justify-center items-center">
+                {[
+                  "/companies_1.webp",
+                  "/companies_2.webp",
+                  "/companies_3.webp",
+                  "/companies_4.webp",
+                  "/companies_5.webp",
+                  "/companies_6.webp",
+                  "/companies_7.webp",
+                  "/companies_8.webp",
+                ].map((src, idx) => (
+                  <figure
+                    key={idx}
+                    className="w-52 h-28 flex justify-center items-center bg-[#FFFFFF] rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-105"
+                  >
+                    <Image
+                      className=""
+                      src={src}
+                      alt={`Logo ${idx + 1}`}
+                      height={50}
+                      width={100}
+                    />
+                  </figure>
+                ))}
+              </div>
             </div>
           </div>
-        </section>
+        </div>
 
         {/*-------------------- Fifth Section------------------ */}
 
@@ -458,7 +459,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/*-------------------- Fifth Section------------------ */}
+        {/*-------------------- Sixth Section------------------ */}
 
         <section className="w-full h-screen bg-[#F8F9FD] relative pt-20">
           <div className="max-w-7xl mx-auto h-full">
@@ -569,18 +570,242 @@ export default function Home() {
             </div>
           </div>
         </section>
-        
-        {/*--------------------Sixth Section (Solar System)------------------ */}
+
+        {/*-------------------- Seventh Section (Solar System)------------------ */}
         <section className="w-full relative solar-background pt-20 pb-20">
-        <div className="max-w-7xl mx-auto h-full">
-          <div className="flex flex-col h-full w-full items-center justify-center">
-            <span className="pb-10 text-4xl font-semibold text-center">Our Inventory Management System is Loaded <br/>with Powerful Features</span>
-            <div className="flex flex-col h-full w-full items-center justify-center mt-10">
-              <SolarSystem/>
+          <div className="max-w-7xl mx-auto h-full">
+            <div className="flex flex-col h-full w-full items-center justify-center">
+              <span className="pb-10 text-4xl font-semibold text-center">
+                Our Inventory Management System is Loaded <br />
+                with Powerful Features
+              </span>
+              <div className="flex flex-col h-full w-full items-center justify-center mt-10">
+                <SolarSystem />
+              </div>
             </div>
-          
           </div>
-        </div>
+        </section>
+
+        {/* -------------------- Eighth Section (Customer Feedback)------------------  */}
+        <section className="w-full relative pt-20 pb-20 bg-custom-gradient-seventh h-screen">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-5xl font-semibold font-gilroy text-center text-gray-900 mb-8">
+              Our client expresses their satisfaction
+            </h2>
+            <p className="pt-6 text-center text-xl text-gray-500">
+              Our clients consistently share their satisfaction with our
+              services,
+              <br /> emphasizing our dedication to providing outstanding
+              experiences
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-20">
+              {/* <!-- Card 1 --> */}
+              <div className="bg-blue-200 rounded-lg shadow-lg overflow-hidden flex flex-col justify-center">
+                <div className="pl-8 pt-8">
+                  <p className="text-lg text-gray-700 mb-16 mt-12 font-semibold">
+                  "This product has greatly improved our workflow. We can't
+                  imagine going back!"
+                  </p>
+                </div>
+                <div className="bg-white h-[1px]"></div>
+                <div className="flex items-center justify-start pl-2 py-6">
+                  <div className="pl-4 pt-3 rounded-full">
+                    <Image
+                      className="rounded-full"
+                      src="/user3.jpg" // Replace with your image path
+                      alt="Logo"
+                      height={50}
+                      width={50}
+                    />
+                  </div>
+                  <div className="flex flex-col">
+                    <p className="text-sm font-medium text-gray-900 pl-3 pt-3">
+                      <span className="font-semibold">Anwar Khan</span>, I Luxury BD
+                    </p>
+                    <div class="flex items-center  pl-3 pt-1">
+                      {/* <!-- Star 1 --> */}
+                      <svg
+                        class="w-4 h-4 text-green-600"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.558 4.768a1 1 0 00.95.69h5.02c.969 0 1.372 1.24.588 1.81l-4.066 2.95a1 1 0 00-.364 1.118l1.558 4.768c.3.922-.755 1.688-1.54 1.118l-4.066-2.95a1 1 0 00-1.176 0l-4.066 2.95c-.784.57-1.838-.196-1.54-1.118l1.558-4.768a1 1 0 00-.364-1.118L2.43 9.195c-.783-.57-.38-1.81.588-1.81h5.02a1 1 0 00.95-.69L9.049 2.927z"></path>
+                      </svg>
+                      {/* <!-- Star 2 --> */}
+                      <svg
+                        class="w-4 h-4 text-green-600"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.558 4.768a1 1 0 00.95.69h5.02c.969 0 1.372 1.24.588 1.81l-4.066 2.95a1 1 0 00-.364 1.118l1.558 4.768c.3.922-.755 1.688-1.54 1.118l-4.066-2.95a1 1 0 00-1.176 0l-4.066 2.95c-.784.57-1.838-.196-1.54-1.118l1.558-4.768a1 1 0 00-.364-1.118L2.43 9.195c-.783-.57-.38-1.81.588-1.81h5.02a1 1 0 00.95-.69L9.049 2.927z"></path>
+                      </svg>
+                      {/* <!-- Star 3 --> */}
+                      <svg
+                        class="w-4 h-4 text-green-600"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.558 4.768a1 1 0 00.95.69h5.02c.969 0 1.372 1.24.588 1.81l-4.066 2.95a1 1 0 00-.364 1.118l1.558 4.768c.3.922-.755 1.688-1.54 1.118l-4.066-2.95a1 1 0 00-1.176 0l-4.066 2.95c-.784.57-1.838-.196-1.54-1.118l1.558-4.768a1 1 0 00-.364-1.118L2.43 9.195c-.783-.57-.38-1.81.588-1.81h5.02a1 1 0 00.95-.69L9.049 2.927z"></path>
+                      </svg>
+                      {/* <!-- Star 4 --> */}
+                      <svg
+                        class="w-4 h-4 text-green-600"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.558 4.768a1 1 0 00.95.69h5.02c.969 0 1.372 1.24.588 1.81l-4.066 2.95a1 1 0 00-.364 1.118l1.558 4.768c.3.922-.755 1.688-1.54 1.118l-4.066-2.95a1 1 0 00-1.176 0l-4.066 2.95c-.784.57-1.838-.196-1.54-1.118l1.558-4.768a1 1 0 00-.364-1.118L2.43 9.195c-.783-.57-.38-1.81.588-1.81h5.02a1 1 0 00.95-.69L9.049 2.927z"></path>
+                      </svg>
+                      {/* <!-- Star 5 --> */}
+                      <svg
+                        class="w-4 h-4 text-green-600"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.558 4.768a1 1 0 00.95.69h5.02c.969 0 1.372 1.24.588 1.81l-4.066 2.95a1 1 0 00-.364 1.118l1.558 4.768c.3.922-.755 1.688-1.54 1.118l-4.066-2.95a1 1 0 00-1.176 0l-4.066 2.95c-.784.57-1.838-.196-1.54-1.118l1.558-4.768a1 1 0 00-.364-1.118L2.43 9.195c-.783-.57-.38-1.81.588-1.81h5.02a1 1 0 00.95-.69L9.049 2.927z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/*  <!-- Card 2 --> */}
+              <div className="bg-yellow-200 rounded-lg shadow-lg overflow-hidden flex flex-col justify-center">
+                <div className="pl-8 pt-8">
+                  <p className="text-lg text-gray-700 mb-16 mt-12 font-semibold">
+                    "Fantastic support and amazing value. Highly recommended!"
+                  </p>
+                </div>
+                <div className="bg-white h-[1px]"></div>
+                <div className="flex items-center justify-start pl-2 py-6">
+                  <div className="pl-4 pt-3 rounded-full">
+                    <Image
+                      className="rounded-full"
+                      src="/user2.jpg" // Replace with your image path
+                      alt="Logo"
+                      height={50}
+                      width={50}
+                    />
+                  </div>
+                  <div className="flex flex-col">
+                    <p className="text-sm font-medium text-gray-900 pl-3 pt-3">
+                    <span className="font-semibold">H M Abdul Kader</span>, Muslim Pharma
+                    </p>
+                    <div class="flex items-center  pl-3 pt-1">
+                      {/* <!-- Star 1 --> */}
+                      <svg
+                        class="w-4 h-4 text-green-600"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.558 4.768a1 1 0 00.95.69h5.02c.969 0 1.372 1.24.588 1.81l-4.066 2.95a1 1 0 00-.364 1.118l1.558 4.768c.3.922-.755 1.688-1.54 1.118l-4.066-2.95a1 1 0 00-1.176 0l-4.066 2.95c-.784.57-1.838-.196-1.54-1.118l1.558-4.768a1 1 0 00-.364-1.118L2.43 9.195c-.783-.57-.38-1.81.588-1.81h5.02a1 1 0 00.95-.69L9.049 2.927z"></path>
+                      </svg>
+                      {/* <!-- Star 2 --> */}
+                      <svg
+                        class="w-4 h-4 text-green-600"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.558 4.768a1 1 0 00.95.69h5.02c.969 0 1.372 1.24.588 1.81l-4.066 2.95a1 1 0 00-.364 1.118l1.558 4.768c.3.922-.755 1.688-1.54 1.118l-4.066-2.95a1 1 0 00-1.176 0l-4.066 2.95c-.784.57-1.838-.196-1.54-1.118l1.558-4.768a1 1 0 00-.364-1.118L2.43 9.195c-.783-.57-.38-1.81.588-1.81h5.02a1 1 0 00.95-.69L9.049 2.927z"></path>
+                      </svg>
+                      {/* <!-- Star 3 --> */}
+                      <svg
+                        class="w-4 h-4 text-green-600"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.558 4.768a1 1 0 00.95.69h5.02c.969 0 1.372 1.24.588 1.81l-4.066 2.95a1 1 0 00-.364 1.118l1.558 4.768c.3.922-.755 1.688-1.54 1.118l-4.066-2.95a1 1 0 00-1.176 0l-4.066 2.95c-.784.57-1.838-.196-1.54-1.118l1.558-4.768a1 1 0 00-.364-1.118L2.43 9.195c-.783-.57-.38-1.81.588-1.81h5.02a1 1 0 00.95-.69L9.049 2.927z"></path>
+                      </svg>
+                      {/* <!-- Star 4 --> */}
+                      <svg
+                        class="w-4 h-4 text-green-600"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.558 4.768a1 1 0 00.95.69h5.02c.969 0 1.372 1.24.588 1.81l-4.066 2.95a1 1 0 00-.364 1.118l1.558 4.768c.3.922-.755 1.688-1.54 1.118l-4.066-2.95a1 1 0 00-1.176 0l-4.066 2.95c-.784.57-1.838-.196-1.54-1.118l1.558-4.768a1 1 0 00-.364-1.118L2.43 9.195c-.783-.57-.38-1.81.588-1.81h5.02a1 1 0 00.95-.69L9.049 2.927z"></path>
+                      </svg>
+                      {/* <!-- Star 5 --> */}
+                      <svg
+                        class="w-4 h-4 text-green-600"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.558 4.768a1 1 0 00.95.69h5.02c.969 0 1.372 1.24.588 1.81l-4.066 2.95a1 1 0 00-.364 1.118l1.558 4.768c.3.922-.755 1.688-1.54 1.118l-4.066-2.95a1 1 0 00-1.176 0l-4.066 2.95c-.784.57-1.838-.196-1.54-1.118l1.558-4.768a1 1 0 00-.364-1.118L2.43 9.195c-.783-.57-.38-1.81.588-1.81h5.02a1 1 0 00.95-.69L9.049 2.927z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* <!-- Card 3 --> */}
+              <div className="bg-pink-200 rounded-lg shadow-lg overflow-hidden flex flex-col justify-center">
+                <div className="pl-8 pt-8">
+                  <p className="text-lg text-gray-700 mb-16 mt-12 font-semibold">
+                  "The best decision we made for our business. The features
+                  are unmatched."
+                  </p>
+                </div>
+                <div className="bg-white h-[1px]"></div>
+                <div className="flex items-center justify-start pl-2 py-6">
+                  <div className="pl-4 pt-3 rounded-full">
+                    <Image
+                      className="rounded-full"
+                      src="/user1.jpg" // Replace with your image path
+                      alt="Logo"
+                      height={50}
+                      width={50}
+                    />
+                  </div>
+                  <div className="flex flex-col">
+                    <p className="text-sm font-medium text-gray-900 pl-3 pt-3">
+                    <span className="font-semibold">Robert Jhonson</span>, BizSolutions
+                    </p>
+                    <div class="flex items-center  pl-3 pt-1">
+                      {/* <!-- Star 1 --> */}
+                      <svg
+                        class="w-4 h-4 text-green-600"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.558 4.768a1 1 0 00.95.69h5.02c.969 0 1.372 1.24.588 1.81l-4.066 2.95a1 1 0 00-.364 1.118l1.558 4.768c.3.922-.755 1.688-1.54 1.118l-4.066-2.95a1 1 0 00-1.176 0l-4.066 2.95c-.784.57-1.838-.196-1.54-1.118l1.558-4.768a1 1 0 00-.364-1.118L2.43 9.195c-.783-.57-.38-1.81.588-1.81h5.02a1 1 0 00.95-.69L9.049 2.927z"></path>
+                      </svg>
+                      {/* <!-- Star 2 --> */}
+                      <svg
+                        class="w-4 h-4 text-green-600"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.558 4.768a1 1 0 00.95.69h5.02c.969 0 1.372 1.24.588 1.81l-4.066 2.95a1 1 0 00-.364 1.118l1.558 4.768c.3.922-.755 1.688-1.54 1.118l-4.066-2.95a1 1 0 00-1.176 0l-4.066 2.95c-.784.57-1.838-.196-1.54-1.118l1.558-4.768a1 1 0 00-.364-1.118L2.43 9.195c-.783-.57-.38-1.81.588-1.81h5.02a1 1 0 00.95-.69L9.049 2.927z"></path>
+                      </svg>
+                      {/* <!-- Star 3 --> */}
+                      <svg
+                        class="w-4 h-4 text-green-600"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.558 4.768a1 1 0 00.95.69h5.02c.969 0 1.372 1.24.588 1.81l-4.066 2.95a1 1 0 00-.364 1.118l1.558 4.768c.3.922-.755 1.688-1.54 1.118l-4.066-2.95a1 1 0 00-1.176 0l-4.066 2.95c-.784.57-1.838-.196-1.54-1.118l1.558-4.768a1 1 0 00-.364-1.118L2.43 9.195c-.783-.57-.38-1.81.588-1.81h5.02a1 1 0 00.95-.69L9.049 2.927z"></path>
+                      </svg>
+                      {/* <!-- Star 4 --> */}
+                      <svg
+                        class="w-4 h-4 text-green-600"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.558 4.768a1 1 0 00.95.69h5.02c.969 0 1.372 1.24.588 1.81l-4.066 2.95a1 1 0 00-.364 1.118l1.558 4.768c.3.922-.755 1.688-1.54 1.118l-4.066-2.95a1 1 0 00-1.176 0l-4.066 2.95c-.784.57-1.838-.196-1.54-1.118l1.558-4.768a1 1 0 00-.364-1.118L2.43 9.195c-.783-.57-.38-1.81.588-1.81h5.02a1 1 0 00.95-.69L9.049 2.927z"></path>
+                      </svg>
+                      {/* <!-- Star 5 --> */}
+                      <svg
+                        class="w-4 h-4 text-green-600"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.558 4.768a1 1 0 00.95.69h5.02c.969 0 1.372 1.24.588 1.81l-4.066 2.95a1 1 0 00-.364 1.118l1.558 4.768c.3.922-.755 1.688-1.54 1.118l-4.066-2.95a1 1 0 00-1.176 0l-4.066 2.95c-.784.57-1.838-.196-1.54-1.118l1.558-4.768a1 1 0 00-.364-1.118L2.43 9.195c-.783-.57-.38-1.81.588-1.81h5.02a1 1 0 00.95-.69L9.049 2.927z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
     </div>

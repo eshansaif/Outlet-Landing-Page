@@ -5,7 +5,7 @@ import PricingPlans from '../../components/PricingPlans';
 
 const Pricing = async () => {
 
-    const res = await fetch(`${process.env.REACT_APP_API_URL}plan-option-list`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}plan-option-list`);
     const data = await res.json();
 
     return (
@@ -49,24 +49,24 @@ const Pricing = async () => {
                             Compare Plans and Features
                         </span>
                     </div>
-                    <div class="overflow-x-auto">
-                        <table class="min-w-full bg-white shadow-xl rounded-xl overflow-hidden">
-                            <thead class="bg-gradient-to-r from-blue-500 to-teal-500 text-white">
+                    <div className="overflow-x-auto">
+                        <table className="min-w-full bg-white shadow-xl rounded-xl overflow-hidden">
+                            <thead className="bg-gradient-to-r from-blue-500 to-teal-500 text-white">
                                 <tr>
-                                    <th class="py-3 px-6 text-left">Compare Features</th>
-                                    <th class="py-3 px-6 text-center">Starter</th>
-                                    <th class="py-3 px-6 text-center">Premium</th>
-                                    <th class="py-3 px-6 text-center">Enterprise</th>
+                                    <th className="py-3 px-6 text-left">Compare Features</th>
+                                    <th className="py-3 px-6 text-center">Starter</th>
+                                    <th className="py-3 px-6 text-center">Premium</th>
+                                    <th className="py-3 px-6 text-center">Enterprise</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {
                                     data?.map((plan, index)=> (
                                     <tr className={index % 2 === 0 ? "bg-white" : "bg-gray-100"} key={index}>
-                                        <td class="py-3 px-6 text-left">{plan.options}</td>
-                                        <td class="py-3 px-6 text-center">{plan.subscriptions_ids.includes("1") ? "✔" : "✘" }</td>
-                                        <td class="py-3 px-6 text-center">{plan.subscriptions_ids.includes("2") ? "✔" : "✘" }</td>
-                                        <td class="py-3 px-6 text-center">{plan.subscriptions_ids.includes("3") ? "✔" : "✘" }</td>
+                                        <td className="py-3 px-6 text-left">{plan.options}</td>
+                                        <td className="py-3 px-6 text-center">{plan.subscriptions_ids.includes("1") ? "✔" : "✘" }</td>
+                                        <td className="py-3 px-6 text-center">{plan.subscriptions_ids.includes("2") ? "✔" : "✘" }</td>
+                                        <td className="py-3 px-6 text-center">{plan.subscriptions_ids.includes("3") ? "✔" : "✘" }</td>
                                     </tr>
                                     ))
                                 }

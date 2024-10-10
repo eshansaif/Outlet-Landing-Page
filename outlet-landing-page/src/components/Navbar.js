@@ -47,7 +47,7 @@ export default function Navbar() {
             <Link href="https://pos.outletexpense.com/login" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">
               Login
             </Link>
-            <BuyNowButton message="Buy Now"/>
+            <BuyNowButton message="Buy Now" link='\pricing'/>
           </div>
           <div className="-mr-2 flex md:hidden">
             {/* Mobile menu button */}
