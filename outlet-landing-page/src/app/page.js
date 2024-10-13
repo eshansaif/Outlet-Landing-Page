@@ -4,6 +4,7 @@ import BuyNowButton from "../components/BuyNowButton";
 import FirstSlider from "../components/FirstSlider";
 import StatsSection from "../components/StatsSection";
 import SolarSystem from "../components/SolarSystem";
+import TypedWithGradient from "../components/TypedWithGradient";
 
 export default function Home() {
   return (
@@ -38,9 +39,9 @@ export default function Home() {
                   <h6 className="text-5xl font-bold mb-4">
                     Unlock the Power of Seamless Inventory Management
                   </h6>
-                  <span className="gradient-text text-4xl font-semibold">
-                    Wave Goodbye To Spreadsheets!
-                  </span>
+                  <div className="h-12">
+                   <TypedWithGradient message="  Wave Goodbye To Spreadsheets!"/>
+                   </div>
                   <p className="text-lg mt-4 w-[80%]">
                     Welcome to Outlet Expense—where efficiency and innovation
                     transform inventory management. Our software offers precise
@@ -51,18 +52,18 @@ export default function Home() {
                 </div>
 
                 <div className="flex w-[100%] items-center justify-start mt-4 gap-5">
-                  <div className="">
-                    <BuyNowButton message="Start For Free" />
+                  <div className="h-10">
+                    <BuyNowButton message="Click To Start Your Journey" />
                   </div>
-                  <div className="">
+                  <div className="h-10">
                     <Link href="/your-target-page" passHref>
                       <div className="circleRing">
                         <div className="playIcon"></div>
                       </div>
                     </Link>
                   </div>
-                  <div className="">
-                    <span className="text-lg font-semibold">How it Works</span>
+                  <div className="h-10 flex flex-col items-center justify-center">
+                    <span className="text-lg font-semibold h-6 ">How It Works</span>
                   </div>
                 </div>
                 {/* <div className="flex w-[100%] mt-14">
@@ -165,7 +166,7 @@ export default function Home() {
               <div className="flex flex-col w-[70%] flex-wrap">
                 <span className="text-4xl font-bold">
                   How <span className="gradient-text">Outlet Expense's</span>{" "}
-                  Inventory Fullfillment Solutions Works
+                  Inventory Fulfillment Solutions Operate
                 </span>
                 <p className="pt-5">
                   Outlet Expense's automated inventory fulfillment system tracks
@@ -192,30 +193,21 @@ export default function Home() {
         <div className="flex flex-col w-full">
           <div className="w-full bg-gradient-to-r from-[#ffffff] via-[#f9f8f8] to-[#f9f6f6] h-[45%]">
             <div className="flex items-center justify-between border-b border-gray-200 h-full w-full max-w-7xl mx-auto pt-6 pb-6">
-              <div className="flex justify-evenly flex-col h-full">
-                <p className="font-bold text-2xl">
-                  Trusted By More Than <br />{" "}
-                  <span className="gradient-text">1800+</span> Companies.
-                </p>
-                <div className="pt-5">
-                  <BuyNowButton message="See Client Feedback" />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-4 gap-4 p-3 justify-center items-center">
+                  
+            <div className="grid grid-cols-4 gap-4 p-3 justify-center items-center">
                 {[
-                  "/companies_1.webp",
-                  "/companies_2.webp",
-                  "/companies_3.webp",
-                  "/companies_4.webp",
-                  "/companies_5.webp",
-                  "/companies_6.webp",
-                  "/companies_7.webp",
-                  "/companies_8.webp",
+                  "/brothers.jpg",
+                  "/iluxurybd.jpg",
+                  "/muslim.jpg",
+                  "/rafi.jpg",
+                  "/ap.jpg",
+                  "/barcode.jpg",
+                  "/lx.jpg",
+                  "/inaya.jpg",
                 ].map((src, idx) => (
                   <figure
                     key={idx}
-                    className="w-52 h-28 flex justify-center items-center bg-[#FFFFFF] rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-105"
+                    className="w-52 h-28 flex justify-center items-center bg-[#FFFFFF] rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-105 overflow-hidden"
                   >
                     <Image
                       className=""
@@ -226,7 +218,19 @@ export default function Home() {
                     />
                   </figure>
                 ))}
+              </div>    
+              
+              <div className="flex justify-evenly flex-col h-full">
+                <p className="font-bold text-2xl">
+                  Trusted By More Than <br />{" "}
+                  <span className="gradient-text">100+</span> Clients.
+                </p>
+                <div className="pt-5">
+                  <BuyNowButton message="See Client Feedback" />
+                </div>
               </div>
+
+              
             </div>
           </div>
         </div>
@@ -255,8 +259,8 @@ export default function Home() {
                         />
                       </div>
                       <p className="font-semibold ml-4">
-                        User Access <br />
-                        Management
+                        Access<br /> Management 
+                        
                       </p>
                     </div>
                   </div>
@@ -273,8 +277,7 @@ export default function Home() {
                         />
                       </div>
                       <p className="font-semibold ml-4">
-                        Inventory <br />
-                        Management
+                      Inventory <br/> Control System
                       </p>
                     </div>
                   </div>
@@ -290,7 +293,7 @@ export default function Home() {
                         />
                       </div>
                       <p className="font-semibold ml-4">
-                        Third-party <br />
+                        Payment Gateway <br />
                         Integration
                       </p>
                     </div>
@@ -307,7 +310,7 @@ export default function Home() {
                         />
                       </div>
                       <p className="font-semibold ml-4">
-                        Return <br />
+                        Product Return <br />
                         Management
                       </p>
                     </div>
@@ -324,7 +327,7 @@ export default function Home() {
                         />
                       </div>
                       <p className="font-semibold ml-4">
-                        Supplier <br />
+                        Vendor <br />
                         Management
                       </p>
                     </div>
@@ -341,7 +344,7 @@ export default function Home() {
                         />
                       </div>
                       <p className="font-semibold ml-4">
-                        Real-Time Analytics And <br />
+                        Real-Time <br /> Analytics And 
                         Reporting
                       </p>
                     </div>
@@ -359,7 +362,7 @@ export default function Home() {
                       </div>
                       <p className="font-semibold ml-4">
                         Wherehouse <br />
-                        Management
+                        Controller
                       </p>
                     </div>
                   </div>
@@ -375,8 +378,8 @@ export default function Home() {
                         />
                       </div>
                       <p className="font-semibold ml-4">
-                        Labeling & <br />
-                        Barcoding
+                        Barcoding & <br />
+                        Labeling
                       </p>
                     </div>
                   </div>
@@ -393,9 +396,8 @@ export default function Home() {
                         />
                       </div>
                       <p className="font-semibold ml-4">
-                        Sales And
-                        <br />
-                        Invoicing
+                        Invoicing <br />
+                        And Sales
                       </p>
                     </div>
                   </div>
@@ -411,7 +413,7 @@ export default function Home() {
                         />
                       </div>
                       <p className="font-semibold ml-4">
-                        Product Attribution
+                        Product 
                         <br />
                         Management
                       </p>
@@ -429,7 +431,7 @@ export default function Home() {
                         />
                       </div>
                       <p className="font-semibold ml-4">
-                        Order
+                        Exporter
                         <br />
                         Management
                       </p>
@@ -447,9 +449,9 @@ export default function Home() {
                         />
                       </div>
                       <p className="font-semibold ml-4">
-                        Purchasing
+                        Dynamic
                         <br />
-                        Receiving
+                        HRM Management
                       </p>
                     </div>
                   </div>
@@ -590,7 +592,7 @@ export default function Home() {
         <section className="w-full relative pt-20 pb-20 bg-custom-gradient-seventh h-screen">
           <div className="max-w-7xl mx-auto px-6">
             <h2 className="text-5xl font-semibold font-gilroy text-center text-gray-900 mb-8">
-              Our client expresses their satisfaction
+              Our Clients Expresses Their Satisfaction
             </h2>
             <p className="pt-6 text-center text-xl text-gray-500">
               Our clients consistently share their satisfaction with our

@@ -18,36 +18,37 @@ export default function Navbar() {
               />
             </Link>
           </div>
+          <div className="ml-10 flex items-baseline space-x-4">
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <Link href="/" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">
+              <Link href="/" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium">
                 Home
               </Link>
-              <Link href="/features" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">
+              <Link href="/features" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium">
                 Features
               </Link>
-              {/* <Link href="/integrations" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">
+              {/* <Link href="/integrations" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium">
                 Integrations
               </Link> */}
-              <Link href="/pricing" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">
+              <Link href="/pricing" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium">
                 Pricing
               </Link>
-              {/* <Link href="/blog" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">
+              {/* <Link href="/blog" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium">
                 Blog
               </Link> */}
-              <Link href="/faqs" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">
-                FaQs
+              <Link href="/faqs" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium">
+                FAQs
               </Link>
-              <Link href="/deals" className="gradient-text text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">
+              {/* <Link href="/deals" className="gradient-text text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">
                 Deals
-              </Link>
+              </Link> */}
             </div>
           </div>
-          <div className="ml-10 flex items-baseline space-x-4">
-            <Link href="https://pos.outletexpense.com/login" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">
+          
+            <Link href="https://pos.outletexpense.com/login" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium">
               Login
             </Link>
-            <BuyNowButton message="Buy Now" link='\pricing'/>
+            <BuyNowButton message="Sign Up" link='\pricing'/>
           </div>
           <div className="-mr-2 flex md:hidden">
             {/* Mobile menu button */}
@@ -93,11 +94,11 @@ export default function Navbar() {
             Blog
           </Link> */}
           <Link href="/faqs" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">
-                FaQs
+                FAQs
           </Link>
-          <Link href="/deals" className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">
+          {/* <Link href="/deals" className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">
             Deals
-          </Link>
+          </Link> */}
         </div>
       </div>
     </nav>

@@ -27,11 +27,11 @@ const Footer = () => {
               <h2 className="text-xl font-semibold mb-4">Quick Links</h2>
               <ul>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="/about" className="hover:underline">
                     About Us
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a href="#" className="hover:underline">
                     Services
                   </a>
@@ -40,9 +40,9 @@ const Footer = () => {
                   <a href="#" className="hover:underline">
                     Contact
                   </a>
-                </li>
+                </li> */}
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="/privacy" className="hover:underline">
                     Privacy Policy
                   </a>
                 </li>

@@ -54,7 +54,7 @@ body {
 }
 
 .top-background {
-  background: url('/banner.webp') no-repeat center center fixed;
+  background: /* url('/banner.webp') no-repeat center center fixed */linear-gradient(to right, #FDFFFE, #EFFDFA, #FDFFFE);;
   background-size: cover;
   position: relative;
 }
