@@ -33,7 +33,7 @@ export default function Home() {
             width={150}
           />
           <div className="flex flex-row w-full ">
-            <div className="flex w-[100%] h-[100%] max-w-7xl mx-auto">
+            <div className="flex w-[100%] h-[100%] flex-col items-center justify-center md:flex-row md:max-w-7xl md:mx-auto">
               <div className="flex flex-col h-[100%] w-[50%] items-center">
                 <div className="mt-28">
                   <h6 className="text-5xl font-bold mb-4">

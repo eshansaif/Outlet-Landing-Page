@@ -14,6 +14,14 @@
   }
 } */
 
+[data-state="closed"] {
+  display: none;
+}
+
+[data-state="open"] {
+  display: block;
+}
+
 .global-element::after {
   content: "";
   position: absolute;
