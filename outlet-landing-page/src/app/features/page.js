@@ -36,7 +36,7 @@ const Features = async () => {
       </section>
       <section className="w-full z-0 relative pt-24 pb-10">
         <div clasName="max-w-7xl mx-auto h-full">
-          <div className="grid grid-cols-4 grid-rows-3 gap-6 w-full px-20 pb-28">
+          <div className="grid grid-cols-1 grid-rows-1 md:grid-cols-4 md:grid-rows-3 gap-6 w-full px-20 pb-28">
             {/* Cell 1 */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col justify-between min-h-48 group">
               <div className="flex justify-left items-center p-3">

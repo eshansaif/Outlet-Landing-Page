@@ -49,8 +49,7 @@ const PricingPlans = () => {
 
             <div className="mt-16 flex gap-6 w-full h-full flex-wrap items-center justify-center">
                 {/* Starter */}
-                {console.log(data)}
-                { data[0]?.status == 1 && <div className="flex flex-col h-full w-[30%]">
+                { data[0]?.status == 1 && <div className="flex flex-col md:h-full md:w-[30%] w-full h-full p-5 md:p-0">
                     <div className="border-2 border-gray-300 hover:border-blue-500 rounded-3xl h-full w-full group transition-all duration-500 ease-in-out pb-4">
                         <div className="h-[20%] flex flex-col items-start justify-center border-b border-gray-300">
                             <div className="flex w-full h-full items-center justify-start pl-10">
@@ -154,7 +153,7 @@ const PricingPlans = () => {
                 </div>}
 
                 {/* Enterprise */}
-                {data[2]?.status == 1 && <div className="flex flex-col h-full w-[30%]">
+                {data[2]?.status == 1 && <div className="flex flex-colmd:h-full md:w-[30%] w-full h-full p-5 md:p-0">
                     <div className="border-2 border-gray-300 hover:border-red-500 rounded-3xl h-full w-full group transition-all duration-500 ease-in-out pb-4">
                         <div className="h-[20%] flex flex-col items-start justify-center border-b border-gray-300">
                             <div className="flex w-full h-full items-center justify-start pl-10">
@@ -257,7 +256,7 @@ const PricingPlans = () => {
                 </div>}
 
                 {/* Premium */}
-                {data[1]?.status == 1 && <div className="flex flex-col h-full w-[30%]">
+                {data[1]?.status == 1 && <div className="flex flex-col md:h-full md:w-[30%] w-full h-full p-5 md:p-0">
                     <div className="border-2 border-gray-300 hover:border-green-500 rounded-3xl h-full w-full group transition-all duration-500 ease-in-out pb-4">
                         <div className="w-full h-[20%] flex flex-col items-center justify-center border-b border-gray-300">
                             <div className="flex w-full h-full items-center justify-start pl-10">

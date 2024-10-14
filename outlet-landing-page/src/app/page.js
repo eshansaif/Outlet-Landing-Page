@@ -34,15 +34,15 @@ export default function Home() {
           />
           <div className="flex flex-row w-full ">
             <div className="flex w-[100%] h-[100%] flex-col items-center justify-center md:flex-row md:max-w-7xl md:mx-auto">
-              <div className="flex flex-col h-[100%] w-[50%] items-center">
-                <div className="mt-28">
-                  <h6 className="text-5xl font-bold mb-4">
+              <div className="flex flex-col items-center h-[100%] md:h-auto w-[100%] md:w-[50%] px-4 md:px-0">
+                <div className="mt-16 md:mt-28">
+                  <h6 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 text-center md:text-left">
                     Unlock the Power of Seamless Inventory Management
                   </h6>
-                  <div className="h-12">
-                   <TypedWithGradient message="  Wave Goodbye To Spreadsheets!"/>
-                   </div>
-                  <p className="text-lg mt-4 w-[80%]">
+                  <div className="h-10 md:h-12 text-center md:text-left mb-14 md:mb-0">
+                    <TypedWithGradient message="  Wave Goodbye To Spreadsheets!" />
+                  </div>
+                  <p className="text-base md:text-lg mt-4 w-full md:w-[80%] text-center md:text-left">
                     Welcome to Outlet Expense—where efficiency and innovation
                     transform inventory management. Our software offers precise
                     tracking, automated workflows, and real-time insights to
@@ -51,7 +51,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="flex w-[100%] items-center justify-start mt-4 gap-5">
+                <div className="flex w-[100%] items-center justify-center md:justify-start mt-10 md:mt-4 gap-5 ">
                   <div className="h-10">
                     <BuyNowButton message="Click To Start Your Journey" />
                   </div>
@@ -63,7 +63,9 @@ export default function Home() {
                     </Link>
                   </div>
                   <div className="h-10 flex flex-col items-center justify-center">
-                    <span className="text-lg font-semibold h-6 ">How It Works</span>
+                    <span className="text-xs md:text-lg font-semibold h-6 ">
+                      How It Works
+                    </span>
                   </div>
                 </div>
                 {/* <div className="flex w-[100%] mt-14">
@@ -110,14 +112,15 @@ export default function Home() {
                   </ul>
                 </div> */}
               </div>
-              <div className="flex h-[100%] w-[50%] items-center overflow-x-hidden">
-                <div className="realtive animate-float mt-44">
+              <div className="flex h-auto w-full md:h-[100%] md:w-[50%] items-center overflow-x-hidden">
+                <div className="relative animate-float mt-28 md:mt-44 p-6 md:p-0">
                   <Image
                     className=""
                     src="/outletdash.png" // Replace with your image path
                     alt="Logo"
-                    height={700}
-                    width={900} // Adjust the height as per your needs
+                    height={400} // Adjust height for smaller screens
+                    width={600} // Adjust width for smaller screens
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Responsive sizes for image
                   />
                 </div>
               </div>
@@ -129,12 +132,12 @@ export default function Home() {
           <div className="max-w-7xl mx-auto border-b border-gray-300">
             <div className="flex flex-col h-[60%] w-full pt-20">
               <div className="flex flex-col items-center">
-                <span className="text-4xl font-bold">
+                <span className="text-2xl md:text-4xl font-bold md:text-left text-center">
                   Is Your Business Growth Ready for{" "}
                   <span className="gradient-text">Outlet Expense's</span>{" "}
                   Support?
                 </span>
-                <span className="mt-10 text-gray text-xl">
+                <span className="mt-10 text-gray text-xl md:text-left text-center">
                   Outlet Expense is one-stop destination for sustainable growth
                 </span>
               </div>
@@ -193,8 +196,7 @@ export default function Home() {
         <div className="flex flex-col w-full">
           <div className="w-full bg-gradient-to-r from-[#ffffff] via-[#f9f8f8] to-[#f9f6f6] h-[45%]">
             <div className="flex items-center justify-between border-b border-gray-200 h-full w-full max-w-7xl mx-auto pt-6 pb-6">
-                  
-            <div className="grid grid-cols-4 gap-4 p-3 justify-center items-center">
+              <div className="grid grid-cols-4 gap-4 p-3 justify-center items-center">
                 {[
                   "/brothers.jpg",
                   "/iluxurybd.jpg",
@@ -218,8 +220,8 @@ export default function Home() {
                     />
                   </figure>
                 ))}
-              </div>    
-              
+              </div>
+
               <div className="flex justify-evenly flex-col h-full">
                 <p className="font-bold text-2xl">
                   Trusted By More Than <br />{" "}
@@ -229,8 +231,6 @@ export default function Home() {
                   <BuyNowButton message="See Client Feedback" />
                 </div>
               </div>
-
-              
             </div>
           </div>
         </div>
@@ -259,8 +259,8 @@ export default function Home() {
                         />
                       </div>
                       <p className="font-semibold ml-4">
-                        Access<br /> Management 
-                        
+                        Access
+                        <br /> Management
                       </p>
                     </div>
                   </div>
@@ -277,7 +277,7 @@ export default function Home() {
                         />
                       </div>
                       <p className="font-semibold ml-4">
-                      Inventory <br/> Control System
+                        Inventory <br /> Control System
                       </p>
                     </div>
                   </div>
@@ -344,8 +344,7 @@ export default function Home() {
                         />
                       </div>
                       <p className="font-semibold ml-4">
-                        Real-Time <br /> Analytics And 
-                        Reporting
+                        Real-Time <br /> Analytics And Reporting
                       </p>
                     </div>
                   </div>
@@ -413,7 +412,7 @@ export default function Home() {
                         />
                       </div>
                       <p className="font-semibold ml-4">
-                        Product 
+                        Product
                         <br />
                         Management
                       </p>
@@ -589,7 +588,7 @@ export default function Home() {
         </section>
 
         {/* -------------------- Eighth Section (Customer Feedback)------------------  */}
-        <section className="w-full relative pt-20 pb-20 bg-custom-gradient-seventh h-screen">
+        <section className="w-full relative pt-20 pb-20 bg-custom-gradient-sevent ">
           <div className="max-w-7xl mx-auto px-6">
             <h2 className="text-5xl font-semibold font-gilroy text-center text-gray-900 mb-8">
               Our Clients Expresses Their Satisfaction
@@ -605,8 +604,8 @@ export default function Home() {
               <div className="bg-blue-200 rounded-lg shadow-lg overflow-hidden flex flex-col justify-center">
                 <div className="pl-8 pt-8">
                   <p className="text-lg text-gray-700 mb-16 mt-12 font-semibold">
-                  "This product has greatly improved our workflow. We can't
-                  imagine going back!"
+                    "This product has greatly improved our workflow. We can't
+                    imagine going back!"
                   </p>
                 </div>
                 <div className="bg-white h-[1px]"></div>
@@ -622,7 +621,8 @@ export default function Home() {
                   </div>
                   <div className="flex flex-col">
                     <p className="text-sm font-medium text-gray-900 pl-3 pt-3">
-                      <span className="font-semibold">Anwar Khan</span>, I Luxury BD
+                      <span className="font-semibold">Anwar Khan</span>, I
+                      Luxury BD
                     </p>
                     <div class="flex items-center  pl-3 pt-1">
                       {/* <!-- Star 1 --> */}
@@ -690,7 +690,8 @@ export default function Home() {
                   </div>
                   <div className="flex flex-col">
                     <p className="text-sm font-medium text-gray-900 pl-3 pt-3">
-                    <span className="font-semibold">H M Abdul Kader</span>, Muslim Pharma
+                      <span className="font-semibold">H M Abdul Kader</span>,
+                      Muslim Pharma
                     </p>
                     <div class="flex items-center  pl-3 pt-1">
                       {/* <!-- Star 1 --> */}
@@ -742,8 +743,8 @@ export default function Home() {
               <div className="bg-pink-200 rounded-lg shadow-lg overflow-hidden flex flex-col justify-center">
                 <div className="pl-8 pt-8">
                   <p className="text-lg text-gray-700 mb-16 mt-12 font-semibold">
-                  "The best decision we made for our business. The features
-                  are unmatched."
+                    "The best decision we made for our business. The features
+                    are unmatched."
                   </p>
                 </div>
                 <div className="bg-white h-[1px]"></div>
@@ -759,7 +760,8 @@ export default function Home() {
                   </div>
                   <div className="flex flex-col">
                     <p className="text-sm font-medium text-gray-900 pl-3 pt-3">
-                    <span className="font-semibold">Robert Jhonson</span>, BizSolutions
+                      <span className="font-semibold">Robert Jhonson</span>,
+                      BizSolutions
                     </p>
                     <div class="flex items-center  pl-3 pt-1">
                       {/* <!-- Star 1 --> */}

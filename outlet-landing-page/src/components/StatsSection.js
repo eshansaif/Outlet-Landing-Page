@@ -37,7 +37,7 @@ const StatsSection = () => {
   };
 
   return (
-    <div className="flex items-center pt-20" ref={ref}>
+    <div className="flex flex-col md:flex-row items-center pt-20" ref={ref}>
       <div className="flex flex-col items-center flex-1 p-10 hover:bg-gray-200 h-full transition-all duration-300 border-r border-gray-300">
         <span className="text-transparent bg-clip-text bg-gradient-to-b from-purple-400 to-purple-900 text-5xl font-bold">
           {countUp(100)}+
