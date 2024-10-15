@@ -240,13 +240,13 @@ export default function Home() {
         <section className="w-full pb-20 bg-gradient-to-r bg-white relative inventory">
           <div className="max-w-7xl mx-auto z-10 h-full">
             <div className="flex flex-col h-full w-full">
-              <span className="text-5xl font-semibold text-center pt-20 pb-10 z-10">
+              <span className="md:text-5xl text-3xl font-semibold text-center pt-20 pb-10 z-10">
                 Centralized & Multi-Channel Inventory
                 <br />
                 Management System
               </span>
               <div className="p-5 z-10 bg-white border-l border-r border-t rounded-t-3xl h-[50%]">
-                <div className="grid grid-cols-4 grid-rows-3 gap-4 h-full border-gray border rounded-3xl p-5 z-10">
+                <div className="grid md:grid-cols-4 grid-cols-2 md:grid-rows-3 grid-rows-1 gap-4 h-full border-gray border rounded-3xl p-5 z-10">
                   <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
                     <div className="flex justify-left items-center h-full w-full">
                       <div className="h-12 w-12 flex items-center justify-center bg-gradient-to-b from-[#59ca38] to-[#18c2d9] rounded-full">
