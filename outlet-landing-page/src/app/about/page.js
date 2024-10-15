@@ -1,4 +1,5 @@
  import React from 'react'
+ import Image from 'next/image';
  
  const About = () => {
     return (
@@ -21,12 +22,15 @@
                 Learn More
               </a>
             </div>
-            <div className="hidden lg:block lg:w-1/2 h-[50%] mt-28 px-10">
-              <img
-                src="/final-logo.png"
-                alt="About Us Image"
-                className="w-full h-full object-cover"
-              />
+            <div className="hidden lg:block lg:w-1/2 h-[50%] mt-36 px-10">
+                <Image 
+                  src="/final-logo.png" 
+                  alt="About Us Image"  
+                  objectFit="cover" 
+                  className=""
+                  height={200}
+                  width={300}
+                />
             </div>
           </div>
           <div className="bg-gray-100 p-6 text-center">
