@@ -24,7 +24,7 @@
             </div>
             <div className="hidden lg:block lg:w-1/2 h-[50%] mt-36 px-10">
                 <Image 
-                  src="/final-logo.png" 
+                  src="/Final-logo.png" 
                   alt="About Us Image"  
                   objectFit="cover" 
                   className=""
