@@ -12,7 +12,7 @@ const Footer = () => {
               {/* <h2 className="text-xl font-semibold mb-4"></h2> */}
               <Image
                     className="bg-white rounded-xl p-1"
-                    src="/final-logo.png" // Replace with your image path
+                    src="/Final-logo.png" // Replace with your image path
                     alt="Logo"
                     height={200}
                     width={200}

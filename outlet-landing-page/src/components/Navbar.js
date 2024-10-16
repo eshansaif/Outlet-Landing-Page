@@ -17,7 +17,7 @@ export default function Navbar() {
   return (
     <nav
       className="fixed w-full z-10 top-0 transition duration-300 ease-in-out bg-white shadow-sm">
-      <div className="md:max-w-7xl md:mx-auto mx-10">
+      <div className="max-w-xl mx-20 md:max-w-7xl md:mx-auto mx-10">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link href="/" className="text-2xl font-bold text-gray-800">
@@ -98,11 +98,9 @@ export default function Navbar() {
         </button>
       </div>
         </div>
-      </div>
-
-    {/* Mobile Menu */}
+         {/* Mobile Menu */}
     {isMenuOpen && (
-            <div className="md:hidden" id="mobile-menu">
+            <div className="md:hidden flex-shrink-0" id="mobile-menu">
               <div className="px-2 pt-2 pb-3 sm:px-3 flex flex-col">
                 <Link href="/" className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">
                   Home
@@ -126,6 +124,9 @@ export default function Navbar() {
               </div>
             </div>
           )}
+      </div>
+
+   
     </nav>
   );
 }
