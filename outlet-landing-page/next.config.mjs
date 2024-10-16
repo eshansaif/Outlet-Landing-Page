@@ -5,6 +5,9 @@ const nextConfig = {
         ignoreDuringBuilds: true,
       },
     output: 'export',
+    images: {
+      unoptimized: true, // Disable image optimization globally
+    },
 };
 
 export default nextConfig;
