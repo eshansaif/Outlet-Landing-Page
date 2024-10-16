@@ -8,7 +8,7 @@ const Footer = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-8 relative pl-5 bg-gradient-to-right pt-10 rounded-t-xl h-[80%]">
             {/* Company Info */}
-            <div className="pl-36">
+            <div className="md:pl-36 pl-0">
               {/* <h2 className="text-xl font-semibold mb-4"></h2> */}
               <Image
                     className="bg-white rounded-xl p-1"
@@ -23,7 +23,7 @@ const Footer = () => {
             </div>
   
             {/* Quick Links */}
-            <div className="pl-40">
+            <div className="md:pl-40 pl-0">
               <h2 className="text-xl font-semibold mb-4">Quick Links</h2>
               <ul>
                 <li>
@@ -79,7 +79,7 @@ const Footer = () => {
                 </a>
               </div>
 
-              <div className="flex flex-col items-start pt-10">
+              <div className="flex flex-col items-start pt-10 pb-5">
                 <div className="flex items-center justify-center pt-10">
                     <Image
                         className=""
@@ -104,7 +104,7 @@ const Footer = () => {
             </div>
           </div>
 
-        <div className="bg-[#232670] w-full h-[20%] flex items-center justify-center">
+        <div className="bg-[#232670] w-full h-[20%] flex items-center justify-center pb-8">
         <p className=" text-white">© {new Date().getFullYear()} Squad Innovators. All rights reserved.</p>
         </div>
          

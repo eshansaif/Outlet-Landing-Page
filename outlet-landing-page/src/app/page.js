@@ -462,13 +462,13 @@ export default function Home() {
 
         {/*-------------------- Sixth Section------------------ */}
 
-        <section className="w-full h-screen bg-[#F8F9FD] relative pt-20">
+        <section className="w-full bg-[#F8F9FD] relative pt-20">
           <div className="max-w-7xl mx-auto h-full">
-            <div className="flex w-full h-[90%] items-center">
-              <div className="w-[50%] h-full">
+            <div className="flex md:flex-row flex-col w-full h-[90%] items-center">
+              <div className="md:w-[50%] md:h-full w-full h-[50%]">
                 <div className="custom-gradient-background w-full h-full rounded-3xl flex items-center justify-center">
                   <Image
-                    className="relative animate-float"
+                    className="relative animate-float w-full max-w-[300px] sm:max-w-[500px] md:max-w-[600px] h-auto"
                     src="/outlet-dashboard-mockup.png" // Replace with your image path
                     alt="Logo"
                     height={700}
@@ -476,12 +476,12 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className="w-[50%] h-full pl-16">
+              <div className="md:w-[50%] md:h-full w-full h-[50%] pl-16 md:pt-0 pt-16">
                 <div className="flex flex-col w-full h-full">
                   <span className="custom-gradient-text text-2xl pb-4">
                     Key Features Of :
                   </span>
-                  <span className="text-4xl font-bold">
+                  <span className="md:text-4xl text-2xl font-bold">
                     Our Automated Solutions for{" "}
                     <span className="text-[#3b82f6]">
                       <br />
@@ -576,7 +576,7 @@ export default function Home() {
         <section className="w-full relative solar-background pt-20 pb-20">
           <div className="max-w-7xl mx-auto h-full">
             <div className="flex flex-col h-full w-full items-center justify-center">
-              <span className="pb-10 text-4xl font-semibold text-center">
+              <span className="pb-10 md:text-4xl text-3xl font-semibold text-center">
                 Our Inventory Management System is Loaded <br />
                 with Powerful Features
               </span>
