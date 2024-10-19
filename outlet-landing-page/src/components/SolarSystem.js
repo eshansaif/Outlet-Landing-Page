@@ -80,7 +80,7 @@ const SolarSystem = () => {
           width={32}
           height={32}
         />
-        <span className="md:text-xs text-[6px] md:text-normal text-bold">E-Commerce</span>
+        <span className="md:text-[8px] text-[6px] md:text-normal text-bold">E-Commerce</span>
         </div>
         <div className="absolute md:left-[-40px] left-[-20px] top-1/2 flex flex-col justify-center items-center rotate-fix-left md:w-20 md:h-20 w-10 h-10 bg-gradient-to-r from-[#6b70ff] to-[#0bb0ee] rounded-full">
           <Image

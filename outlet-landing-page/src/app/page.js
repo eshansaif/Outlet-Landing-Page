@@ -165,13 +165,13 @@ export default function Home() {
             width={400}
           />
           <div className="z-10 max-w-7xl mx-auto">
-            <div className="flex w-full flex-wrap">
-              <div className="flex flex-col w-[70%] flex-wrap">
-                <span className="text-4xl font-bold">
+            <div className="flex md:flex-row flex-col w-full flex-wrap">
+              <div className="flex flex-col md:w-[70%] w-full flex-wrap">
+                <span className="md:text-4xl text-2xl font-bold md:text-left text-center px-10 md:px-0">
                   How <span className="gradient-text">Outlet Expense's</span>{" "}
                   Inventory Fulfillment Solutions Operate
                 </span>
-                <p className="pt-5">
+                <p className="pt-5 px-10 md:px-0 md:text-xl text-sm md:text-left text-center">
                   Outlet Expense's automated inventory fulfillment system tracks
                   every stock, order, and sale with high accuracy and
                   transparency. Our multi-channel, automated inventory
@@ -180,7 +180,7 @@ export default function Home() {
                   critical business decisions in a timely manner.
                 </p>
               </div>
-              <div className="w-[30%] flex items-center justify-center">
+              <div className="md:w-[30%] w-full flex items-center justify-center pt-10 md:pt-0">
                 <BuyNowButton message="Get Starte" />
               </div>
             </div>
@@ -195,8 +195,8 @@ export default function Home() {
 
         <div className="flex flex-col w-full">
           <div className="w-full bg-gradient-to-r from-[#ffffff] via-[#f9f8f8] to-[#f9f6f6] h-[45%]">
-            <div className="flex items-center justify-between border-b border-gray-200 h-full w-full max-w-7xl mx-auto pt-6 pb-6">
-              <div className="grid grid-cols-4 gap-4 p-3 justify-center items-center">
+            <div className="flex md:flex-row flex-col items-center justify-between border-b border-gray-200 h-full w-full max-w-7xl mx-auto pt-6 pb-6">
+              <div className="grid md:grid-cols-4 grid-cols-2 md:gap-4 p-3 justify-center items-center">
                 {[
                   "/brothers.jpg",
                   "/iluxurybd.jpg",
@@ -209,7 +209,7 @@ export default function Home() {
                 ].map((src, idx) => (
                   <figure
                     key={idx}
-                    className="w-52 h-28 flex justify-center items-center bg-[#FFFFFF] rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-105 overflow-hidden"
+                    className="w-48 h-28 flex justify-center items-center bg-[#FFFFFF] rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-105 overflow-hidden"
                   >
                     <Image
                       className=""
@@ -222,8 +222,8 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="flex justify-evenly flex-col h-full">
-                <p className="font-bold text-2xl">
+              <div className="flex justify-evenly flex-col h-full md:pt-0 pt-5">
+                <p className="font-bold text-2xl md:text-left text-center">
                   Trusted By More Than <br />{" "}
                   <span className="gradient-text">100+</span> Clients.
                 </p>
@@ -248,7 +248,7 @@ export default function Home() {
               <div className="p-5 z-10 bg-white border-l border-r border-t rounded-t-3xl h-[50%]">
                 <div className="grid md:grid-cols-4 grid-cols-2 md:grid-rows-3 grid-rows-1 gap-4 h-full border-gray border rounded-3xl p-5 z-10">
                   <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
-                    <div className="flex justify-left items-center h-full w-full">
+                    <div className="flex md:flex-row flex-col md:justify-left justify-center items-center h-full w-full">
                       <div className="h-12 w-12 flex items-center justify-center bg-gradient-to-b from-[#59ca38] to-[#18c2d9] rounded-full">
                         <Image
                           className=""
@@ -258,7 +258,7 @@ export default function Home() {
                           width={30}
                         />
                       </div>
-                      <p className="font-semibold ml-4">
+                      <p className="font-semibold md:ml-4 mt-4 md:mt-0 md:text-left text-center">
                         Access
                         <br /> Management
                       </p>
@@ -266,7 +266,7 @@ export default function Home() {
                   </div>
 
                   <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
-                    <div className="flex justify-left items-center h-full w-full">
+                    <div className="flex md:flex-row flex-col md:justify-left justify-center items-center h-full w-full">
                       <div className="h-12 w-12 bg-gradient-to-b from-[#fc7b82] to-[#e73f3f] rounded-full flex items-center justify-center">
                         <Image
                           className=""
@@ -276,13 +276,13 @@ export default function Home() {
                           width={30}
                         />
                       </div>
-                      <p className="font-semibold ml-4">
+                      <p className="font-semibold md:ml-4 mt-4 md:mt-0 md:text-left text-center">
                         Inventory <br /> Control System
                       </p>
                     </div>
                   </div>
                   <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300 ">
-                    <div className="flex justify-left items-center h-full w-full">
+                    <div className="flex md:flex-row flex-col md:justify-left justify-center items-center h-full w-full">
                       <div className="h-12 w-12 bg-[#0bb0ee] rounded-full flex items-center justify-center">
                         <Image
                           className=""
@@ -292,14 +292,14 @@ export default function Home() {
                           width={30}
                         />
                       </div>
-                      <p className="font-semibold ml-4">
+                      <p className="font-semibold md:ml-4 mt-4 md:mt-0 md:text-left text-center">
                         Payment Gateway <br />
                         Integration
                       </p>
                     </div>
                   </div>
                   <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
-                    <div className="flex justify-left items-center h-full w-full">
+                    <div className="flex md:flex-row flex-col md:justify-left justify-center items-center h-full w-full">
                       <div className="h-12 w-12 bg-gradient-to-b from-[#d787fc] to-[#845cf7] rounded-full flex items-center justify-center">
                         <Image
                           className=""
@@ -309,14 +309,14 @@ export default function Home() {
                           width={30}
                         />
                       </div>
-                      <p className="font-semibold ml-4">
+                      <p className="font-semibold md:ml-4 mt-4 md:mt-0 md:text-left text-center">
                         Product Return <br />
                         Management
                       </p>
                     </div>
                   </div>
                   <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
-                    <div className="flex justify-left items-center h-full w-full">
+                    <div className="flex md:flex-row flex-col md:justify-left justify-center items-center h-full w-full">
                       <div className="h-12 w-12 bg-gradient-to-b from-[#f9c91e] to-[#fc4c4a] rounded-full flex items-center justify-center">
                         <Image
                           className=""
@@ -326,14 +326,14 @@ export default function Home() {
                           width={30}
                         />
                       </div>
-                      <p className="font-semibold ml-4">
+                      <p className="font-semibold md:ml-4 mt-4 md:mt-0 md:text-left text-center">
                         Vendor <br />
                         Management
                       </p>
                     </div>
                   </div>
                   <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
-                    <div className="flex justify-left items-center h-full w-full">
+                    <div className="flex md:flex-row flex-col md:justify-left justify-center items-center h-full w-full">
                       <div className="h-12 w-12 bg-gradient-to-r from-[#6b70ff] to-[#0bb0ee] rounded-full flex items-center justify-center">
                         <Image
                           className=""
@@ -343,13 +343,13 @@ export default function Home() {
                           width={30}
                         />
                       </div>
-                      <p className="font-semibold ml-4">
+                      <p className="font-semibold md:ml-4 mt-4 md:mt-0 md:text-left text-center">
                         Real-Time <br /> Analytics And Reporting
                       </p>
                     </div>
                   </div>
                   <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
-                    <div className="flex justify-left items-center h-full w-full">
+                    <div className="flex md:flex-row flex-col md:justify-left justify-center items-center h-full w-full">
                       <div className="h-12 w-12 bg-gradient-to-r from-[#18b5f0] to-[#b02ee5] rounded-full flex items-center justify-center">
                         <Image
                           className=""
@@ -359,14 +359,14 @@ export default function Home() {
                           width={30}
                         />
                       </div>
-                      <p className="font-semibold ml-4">
+                      <p className="font-semibold md:ml-4 mt-4 md:mt-0 md:text-left text-center">
                         Wherehouse <br />
                         Controller
                       </p>
                     </div>
                   </div>
                   <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
-                    <div className="flex justify-left items-center h-full w-full">
+                    <div className="flex md:flex-row flex-col md:justify-left justify-center items-center h-full w-full">
                       <div className="h-12 w-12 bg-gradient-to-r from-[#6b70ff] to-[#0bb0ee] rounded-full flex items-center justify-center">
                         <Image
                           className=""
@@ -376,7 +376,7 @@ export default function Home() {
                           width={30}
                         />
                       </div>
-                      <p className="font-semibold ml-4">
+                      <p className="font-semibold md:ml-4 mt-4 md:mt-0 md:text-left text-center">
                         Barcoding & <br />
                         Labeling
                       </p>
@@ -384,7 +384,7 @@ export default function Home() {
                   </div>
 
                   <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
-                    <div className="flex justify-left items-center h-full w-full">
+                    <div className="flex md:flex-row flex-col md:justify-left justify-center items-center h-full w-full">
                       <div className="h-12 w-12 bg-gradient-to-b from-[#59ca38] to-[#18c2d9] rounded-full flex items-center justify-center">
                         <Image
                           className=""
@@ -394,14 +394,14 @@ export default function Home() {
                           width={30}
                         />
                       </div>
-                      <p className="font-semibold ml-4">
+                      <p className="font-semibold md:ml-4 mt-4 md:mt-0 md:text-left text-center">
                         Invoicing <br />
                         And Sales
                       </p>
                     </div>
                   </div>
                   <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
-                    <div className="flex justify-left items-center h-full w-full">
+                    <div className="flex md:flex-row flex-col md:justify-left justify-center items-center h-full w-full">
                       <div className="h-12 w-12 bg-gradient-to-b from-[#fc7b82] to-[#e73f3f] rounded-full flex items-center justify-center">
                         <Image
                           className=""
@@ -411,7 +411,7 @@ export default function Home() {
                           width={30}
                         />
                       </div>
-                      <p className="font-semibold ml-4">
+                      <p className="font-semibold md:ml-4 mt-4 md:mt-0 md:text-left text-center">
                         Product
                         <br />
                         Management
@@ -419,7 +419,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
-                    <div className="flex justify-left items-center h-full w-full">
+                    <div className="flex md:flex-row flex-col md:justify-left justify-center items-center h-full w-full">
                       <div className="h-12 w-12 bg-[#0bb0ee] rounded-full flex items-center justify-center">
                         <Image
                           className=""
@@ -429,7 +429,7 @@ export default function Home() {
                           width={30}
                         />
                       </div>
-                      <p className="font-semibold ml-4">
+                      <p className="font-semibold md:ml-4 mt-4 md:mt-0 md:text-left text-center">
                         Exporter
                         <br />
                         Management
@@ -437,7 +437,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
-                    <div className="flex justify-left items-center h-full w-full">
+                    <div className="flex md:flex-row flex-col md:justify-left justify-center items-center h-full w-full">
                       <div className="h-12 w-12 bg-gradient-to-b from-[#d787fc] to-[#845cf7] rounded-full flex items-center justify-center">
                         <Image
                           className=""
@@ -447,7 +447,7 @@ export default function Home() {
                           width={30}
                         />
                       </div>
-                      <p className="font-semibold ml-4">
+                      <p className="font-semibold md:ml-4 mt-4 md:mt-0 md:text-left text-center">
                         Dynamic
                         <br />
                         HRM Management
@@ -574,13 +574,13 @@ export default function Home() {
 
         {/*-------------------- Seventh Section (Solar System)------------------ */}
         <section className="w-full relative solar-background pt-20 pb-20">
-          <div className="max-w-7xl mx-auto h-full">
+          <div className="md:max-w-7xl max-w-lg mx-auto h-full">
             <div className="flex flex-col h-full w-full items-center justify-center">
               <span className="pb-10 md:text-4xl text-3xl font-semibold text-center">
                 Our Inventory Management System is Loaded <br />
                 with Powerful Features
               </span>
-              <div className="flex flex-col h-full w-full items-center justify-center mt-10">
+              <div className="relative flex flex-col h-full w-full items-center justify-center mt-10">
                 <SolarSystem />
               </div>
             </div>
@@ -590,7 +590,7 @@ export default function Home() {
         {/* -------------------- Eighth Section (Customer Feedback)------------------  */}
         <section className="w-full relative pt-20 pb-20 bg-custom-gradient-sevent ">
           <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-5xl font-semibold font-gilroy text-center text-gray-900 mb-8">
+            <h2 className="md:text-5xl text-3xl font-semibold font-gilroy text-center text-gray-900 mb-8">
               Our Clients Expresses Their Satisfaction
             </h2>
             <p className="pt-6 text-center text-xl text-gray-500">
