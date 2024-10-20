@@ -4,7 +4,7 @@ const SolarSystem = () => {
   return (
     <>
       {/* First Circle */}
-      <div className="relative md:h-[950px] md:w-[950px] w-[350px] h-[350px] rounded-full border border-gray-300 animate-rotate-right-2 text-white">
+      <div className="relative md:h-[950px] md:w-[950px] w-[350px] h-[350px] rounded-full border border-gray-300 animate-rotate-right-2 text-white mt-20 mb-10">
         <div className="absolute flex flex-col items-center justify-center md:top-[-40px] top-[-20px] left-1/2 rotate-fix-2 md:w-20 md:h-20 w-10 h-10 bg-gradient-to-b from-[#59ca38] to-[#18c2d9] rounded-full">
           <Image
             src="/dashboard.png"

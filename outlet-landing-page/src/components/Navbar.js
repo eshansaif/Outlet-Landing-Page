@@ -32,40 +32,31 @@ export default function Navbar() {
               <div className="ml-10 flex items-baseline space-x-4">
                 <Link
                   href="/"
-                  className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium"
+                  className="font-inter text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium transition duration-200 ease-in-out"
                 >
                   Home
                 </Link>
                 <Link
                   href="/features"
-                  className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium"
+                  className="font-inter text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium transition duration-200 ease-in-out"
                 >
                   Features
                 </Link>
-                {/* <Link href="/integrations" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium">
-                  Integrations
-                </Link> */}
                 <Link
                   href="/pricing"
-                  className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium"
+                  className="font-inter text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium transition duration-200 ease-in-out"
                 >
                   Pricing
                 </Link>
-                {/* <Link href="/blog" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium">
-                  Blog
-                </Link> */}
                 <Link
                   href="/faqs"
-                  className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium"
+                  className="font-inter text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium transition duration-200 ease-in-out"
                 >
                   FAQs
                 </Link>
-                {/* <Link href="/deals" className="gradient-text text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">
-                  Deals
-                </Link> */}
                 <Link
                   href="https://pos.outletexpense.com/login"
-                  className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium mr-4"
+                  className="font-inter text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium transition duration-200 ease-in-out mr-4"
                 >
                   Login
                 </Link>
@@ -84,7 +75,6 @@ export default function Navbar() {
             >
               <span className="sr-only">Open main menu</span>
               {isMenuOpen ? (
-                // Close icon when menu is open
                 <svg
                   className="block h-6 w-6"
                   xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +91,6 @@ export default function Navbar() {
                   />
                 </svg>
               ) : (
-                // Hamburger icon when menu is closed
                 <svg
                   className="block h-6 w-6"
                   xmlns="http://www.w3.org/2000/svg"
@@ -121,48 +110,47 @@ export default function Navbar() {
             </button>
           </div>
         </div>
-        
       </div>
       {/* Mobile Menu */}
       {isMenuOpen && (
-          <div className="md:hidden flex-shrink-0" id="mobile-menu">
-            <div className="px-2 pt-2 pb-3 sm:px-3 flex flex-col">
-              <Link
-                href="/"
-                className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium"
-              >
-                Home
-              </Link>
-              <Link
-                href="/features"
-                className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium"
-              >
-                Features
-              </Link>
-              <Link
-                href="/pricing"
-                className="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium"
-              >
-                Pricing
-              </Link>
-              <Link
-                href="/faqs"
-                className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium"
-              >
-                FAQs
-              </Link>
-              <Link
-                href="https://pos.outletexpense.com/login"
-                className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium"
-              >
-                Login
-              </Link>
-              <div className="flex items-center justify-start mt-4">
-                <BuyNowButton message="Sign Up" link="/pricing" />
-              </div>
+        <div className="md:hidden flex-shrink-0" id="mobile-menu">
+          <div className="px-2 pt-2 pb-3 sm:px-3 flex flex-col">
+            <Link
+              href="/"
+              className="font-inter text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition duration-200 ease-in-out"
+            >
+              Home
+            </Link>
+            <Link
+              href="/features"
+              className="font-inter text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition duration-200 ease-in-out"
+            >
+              Features
+            </Link>
+            <Link
+              href="/pricing"
+              className="font-inter text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition duration-200 ease-in-out"
+            >
+              Pricing
+            </Link>
+            <Link
+              href="/faqs"
+              className="font-inter text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium transition duration-200 ease-in-out"
+            >
+              FAQs
+            </Link>
+            <Link
+              href="https://pos.outletexpense.com/login"
+              className="font-inter text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium transition duration-200 ease-in-out"
+            >
+              Login
+            </Link>
+            <div className="flex items-center justify-start mt-4">
+              <BuyNowButton message="Sign Up" link="https://pos.outletexpense.com/signup" />
             </div>
           </div>
-        )}
+        </div>
+      )}
     </nav>
   );
 }

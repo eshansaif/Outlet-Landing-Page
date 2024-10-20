@@ -52,8 +52,8 @@ export default function Home() {
                 </div>
 
                 <div className="flex w-[100%] items-center justify-center md:justify-start mt-10 md:mt-4 gap-5 ">
-                  <div className="h-10">
-                    <BuyNowButton message="Click To Start Your Journey" />
+                  <div className="md:h-10 h-8 text-xs md:text-md">
+                    <BuyNowButton message="Start Your Journey" />
                   </div>
                   <div className="h-10">
                     <Link href="/your-target-page" passHref>
@@ -573,15 +573,15 @@ export default function Home() {
         </section>
 
         {/*-------------------- Seventh Section (Solar System)------------------ */}
-        <section className="w-full relative solar-background pt-20 pb-20">
+        <section className="w-full h-full relative solar-background pt-10">
           <div className="md:max-w-7xl max-w-lg mx-auto h-full">
             <div className="flex flex-col h-full w-full items-center justify-center">
-              <span className="pb-10 md:text-4xl text-3xl font-semibold text-center">
+              <span className="pb-3 md:text-4xl text-3xl font-semibold text-center">
                 Our Inventory Management System is Loaded <br />
                 with Powerful Features
               </span>
-              <div className="relative flex flex-col h-full w-full items-center justify-center mt-10">
-                <SolarSystem />
+              <div className="relative flex flex-col h-full w-full items-center justify-center overflow-hidden">
+                <SolarSystem/>
               </div>
             </div>
           </div>

@@ -5,7 +5,7 @@ export default function BuyNowButton({ message, link = "#" }) {
   return (
     <a
       href={link}
-      className="flex items-center justify-around px-3 py-2 md:px-4 md:py-3 rounded-full button-gradient"
+      className="flex items-center justify-around rounded-full button-gradient"
     >
       <span className="text-sm md:text-lg font-medium">{message}</span>
       <div className="ml-2 md:ml-3 flex items-center justify-center w-6 h-6 md:w-8 md:h-8 bg-white rounded-full">
