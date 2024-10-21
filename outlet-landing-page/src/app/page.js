@@ -9,7 +9,7 @@ import TypedWithGradient from "../components/TypedWithGradient";
 export default function Home() {
   return (
     <div className="flex items-center w-full justify-center font-[family-name:var(--font-geist-sans)] x-overflow-hidden">
-      <main className="flex flex-col mt-16 w-full h-full">
+      <main className="flex flex-col mt-16 w-full h-full ">
         <section className="top-background w-full z-0 pb-28 relative">
           <Image
             className=" absolute top-[35%] right-0"
@@ -53,7 +53,7 @@ export default function Home() {
 
                 <div className="flex w-[100%] items-center justify-center md:justify-start mt-10 md:mt-4 gap-5 ">
                   <div className="md:h-10 h-8 text-xs md:text-md">
-                    <BuyNowButton message="Start Your Journey" />
+                    <BuyNowButton message="Start Your Journey" link="/pricing#pricing-plans" />
                   </div>
                   <div className="h-10">
                     <Link href="/your-target-page" passHref>
@@ -63,7 +63,7 @@ export default function Home() {
                     </Link>
                   </div>
                   <div className="h-10 flex flex-col items-center justify-center">
-                    <span className="text-xs md:text-lg font-semibold h-6 ">
+                    <span className="text-xs md:text-lg font-semibold h-6 mt-2">
                       How It Works
                     </span>
                   </div>
@@ -181,7 +181,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="md:w-[30%] w-full flex items-center justify-center pt-10 md:pt-0">
-                <BuyNowButton message="Get Starte" />
+                <BuyNowButton message="Get Started" link="/pricing#pricing-plans"/>
               </div>
             </div>
             {/* ----------------------SLIDER------------------------ */}
@@ -228,7 +228,7 @@ export default function Home() {
                   <span className="gradient-text">100+</span> Clients.
                 </p>
                 <div className="pt-5">
-                  <BuyNowButton message="See Client Feedback" />
+                  <BuyNowButton message="See Client Feedback" link="#client-feedback"/>
                 </div>
               </div>
             </div>
@@ -564,7 +564,7 @@ export default function Home() {
                     </li>
                   </ul>
                   <div className="flex items-start pt-6">
-                    <BuyNowButton message="See All Fatures" />
+                    <BuyNowButton message="See All Fatures"  link="/features"/>
                   </div>
                 </div>
               </div>
@@ -588,7 +588,7 @@ export default function Home() {
         </section>
 
         {/* -------------------- Eighth Section (Customer Feedback)------------------  */}
-        <section className="w-full relative pt-20 pb-20 bg-custom-gradient-sevent ">
+        <section className="w-full relative pt-20 pb-20 bg-custom-gradient-sevent" id="client-feedback">
           <div className="max-w-7xl mx-auto px-6">
             <h2 className="md:text-5xl text-3xl font-semibold font-gilroy text-center text-gray-900 mb-8">
               Our Clients Expresses Their Satisfaction

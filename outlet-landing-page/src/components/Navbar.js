@@ -14,7 +14,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed w-full z-10 top-0 transition duration-300 ease-in-out bg-white shadow-sm">
+    <nav className="fixed w-full z-10 top-0 transition duration-300 ease-in-out bg-white shadow-sm z-20">
       <div className="md:max-w-7xl md:mx-auto mx-20">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
@@ -60,7 +60,7 @@ export default function Navbar() {
                 >
                   Login
                 </Link>
-                <BuyNowButton message="Sign Up" link="/pricing" />
+                <BuyNowButton message="Sign Up" link="https://pos.outletexpense.com/signup" />
               </div>
             </div>
           </div>

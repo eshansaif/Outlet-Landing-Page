@@ -42,7 +42,7 @@ const Pricing = async () => {
       </section>
 
       {/* Pricing Plans  */}
-      <section className="w-full z-0 relative pt-24 pb-10">
+      <section className="w-full z-0 relative pt-24 pb-10" id="pricing-plans">
         <div className="max-w-7xl mx-auto h-full">
           <PricingPlans />
         </div>
