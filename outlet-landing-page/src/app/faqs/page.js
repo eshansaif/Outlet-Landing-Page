@@ -193,7 +193,7 @@ const Faqs = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-indigo-100 py-16 pt-28">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"> {/* Adjusted width */}
-        <div className="flex items-center justify-between mb-10">
+        <div className="flex flex-col md:flex-row items-center justify-between mb-10">
           <h1 className="text-5xl font-bold text-center text-gray-900 bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
             Frequently Asked Questions
           </h1>
@@ -206,7 +206,7 @@ const Faqs = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8"> {/* Two column grid */}
-          <div className="space-y-6 md:space-y-10 mr-10">
+          <div className="space-y-6 md:space-y-10 md:mr-10 md:p-0 p-5">
             {firstColumnFaqs.map((faq, index) => (
               <FAQItem
                 key={index}
@@ -216,7 +216,7 @@ const Faqs = () => {
               />
             ))}
           </div>
-          <div className="space-y-6 md:space-y-10 ml-10">
+          <div className="space-y-6 md:space-y-10 md:ml-10 md:p-0 p-5">
             {secondColumnFaqs.map((faq, index) => (
               <FAQItem
                 key={index + 5} // Adjust key to avoid conflicts

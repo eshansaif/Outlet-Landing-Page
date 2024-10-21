@@ -14,248 +14,264 @@ const FirstSlider = () => {
   const totalSlides = 4; // Number of original slides
 
   const slides = [
-    <div className="flex flex-col items-center justify-center w-[95%] h-[80%] p-20 shadow-xl rounded-3xl bg-gradient-to-r from-white via-[#ECFAFD] to-white relative custom-before">
-      <div className="bg-transparent  w-full h-full flex ">
-        <div className="w-[60%] h-full flex flex-col pb-10">
+    <div className="flex flex-col items-center md:justify-center justify-start w-[95%] h-auto md:h-[80%] p-10 md:p-20 shadow-xl rounded-3xl bg-gradient-to-r from-white via-[#ECFAFD] to-white relative custom-before">
+      <div className="bg-transparent w-full md:h-full h-[80%] flex flex-col md:flex-row">
+        <div className="w-full md:w-[60%] h-[50%] flex-col md:pb-10">
           <div className="flex flex-col w-full">
-            <span className="font-semibold text-3xl">Inventory Management</span>
-            <p className="pt-4">Grow your business online effortlessly with our multi-channel inventory management system. Outlet Expense makes it simpler than you think!</p>
+            <span className="font-semibold text-2xl md:text-3xl">
+              Inventory Management
+            </span>
+            <p className="pt-4 text-sm md:text-base">
+              Grow your business online effortlessly with our multi-channel
+              inventory management system. Outlet Expense makes it simpler than
+              you think!
+            </p>
           </div>
           <ul className="mt-6 flex flex-col justify-around">
             <li className="flex pt-4">
-              <Image 
-                className=""
-                src="/check-circle.svg" // Replace with your image path
+              <Image
+                src="/check-circle.svg"
                 alt="Logo"
                 height={20}
-                width={20}/> 
-              <span className="pl-4">Set up and integrate your eBay, WooCommerce, Shopify & other accounts. </span>
+                width={20}
+              />
+              <span className="pl-4 text-sm md:text-base">
+                Create new warehouses.
+              </span>
             </li>
             <li className="flex pt-4">
-            <Image 
-                className=""
-                src="/check-circle.svg" // Replace with your image path
+              <Image
+                src="/check-circle.svg"
                 alt="Logo"
                 height={20}
-                width={20}/> 
-              <span className="pl-4">Create new warehouses.</span>
+                width={20}
+              />
+              <span className="pl-4 text-sm md:text-base">
+                Store your products.
+              </span>
             </li>
             <li className="flex pt-4">
-            <Image 
-                className=""
-                src="/check-circle.svg" // Replace with your image path
+              <Image
+                src="/check-circle.svg"
                 alt="Logo"
                 height={20}
-                width={20}/> 
-              <span className="pl-4">Store your products.</span>
-            </li>
-            <li className="flex pt-4">
-            <Image 
-                className=""
-                src="/check-circle.svg" // Replace with your image path
-                alt="Logo"
-                height={20}
-                width={20}/> 
-              <span className="pl-4">Start selling your products with ZERO hassle.</span>
+                width={20}
+              />
+              <span className="pl-4 text-sm md:text-base">
+                Start selling your products with ZERO hassle.
+              </span>
             </li>
           </ul>
         </div>
-        <div className="w-[40%] h-full "> {/* global-element relative */}
-          <div className=" ml-10 z-10 global-element relative">
-          <Image 
-                className="w-[90%] h-[40%] rounded-2xl"
-                src="/salechart.png" // Replace with your image path
-                alt="Logo"
-                height={250}
-                width={290}/>
+        <div className="w-full md:w-[40%] h-[50%] md:mt-0 flex justify-center">
+          <div className="ml-0 md:ml-10 z-10 global-element relative">
+            <Image
+              className="w-[80%] md:w-[90%] h-auto rounded-2xl"
+              src="/salechart.png"
+              alt="Logo"
+              height={250}
+              width={290}
+            />
           </div>
         </div>
       </div>
-      <div className="flex w-full justify-start">
-        <BuyNowButton message="Learn More"/>
+      <div className="flex w-full justify-start pt-5">
+        <BuyNowButton message="Learn More" />
       </div>
     </div>,
-    <div className="flex flex-col  items-center justify-center w-[95%] h-[80%] p-20 shadow-xl rounded-3xl bg-gradient-to-r from-white via-[#ECFAFD] to-white relative custom-before">
-            <div className="bg-transparent  w-full h-full flex ">
-        <div className="w-[60%] h-full flex flex-col pb-10">
+    <div className="flex flex-col items-center md:justify-center justify-start w-[95%] h-auto md:h-[80%] p-10 md:p-20 shadow-xl rounded-3xl bg-gradient-to-r from-white via-[#ECFAFD] to-white relative custom-before">
+      <div className="bg-transparent w-full md:h-full h-[80%] flex flex-col md:flex-row">
+        <div className="w-full md:w-[60%] h-[50%] flex-col md:pb-10">
           <div className="flex flex-col w-full">
-            <span className="font-semibold text-3xl">Inventory Management</span>
-            <p className="pt-4">Grow your business online effortlessly with our multi-channel inventory management system. Outlet Expense makes it simpler than you think!</p>
+            <span className="font-semibold text-2xl md:text-3xl">
+              Inventory Management
+            </span>
+            <p className="pt-4 text-sm md:text-base">
+              Grow your business online effortlessly with our multi-channel
+              inventory management system. Outlet Expense makes it simpler than
+              you think!
+            </p>
           </div>
           <ul className="mt-6 flex flex-col justify-around">
             <li className="flex pt-4">
-              <Image 
-                className=""
-                src="/check-circle.svg" // Replace with your image path
+              <Image
+                src="/check-circle.svg"
                 alt="Logo"
                 height={20}
-                width={20}/> 
-              <span className="pl-4">Set up and integrate your eBay, WooCommerce, Shopify & other accounts. </span>
+                width={20}
+              />
+              <span className="pl-4 text-sm md:text-base">
+                Create new warehouses.
+              </span>
             </li>
             <li className="flex pt-4">
-            <Image 
-                className=""
-                src="/check-circle.svg" // Replace with your image path
+              <Image
+                src="/check-circle.svg"
                 alt="Logo"
                 height={20}
-                width={20}/> 
-              <span className="pl-4">Create new warehouses.</span>
+                width={20}
+              />
+              <span className="pl-4 text-sm md:text-base">
+                Store your products.
+              </span>
             </li>
             <li className="flex pt-4">
-            <Image 
-                className=""
-                src="/check-circle.svg" // Replace with your image path
+              <Image
+                src="/check-circle.svg"
                 alt="Logo"
                 height={20}
-                width={20}/> 
-              <span className="pl-4">Store your products.</span>
-            </li>
-            <li className="flex pt-4">
-            <Image 
-                className=""
-                src="/check-circle.svg" // Replace with your image path
-                alt="Logo"
-                height={20}
-                width={20}/> 
-              <span className="pl-4">Start selling your products with ZERO hassle.</span>
+                width={20}
+              />
+              <span className="pl-4 text-sm md:text-base">
+                Start selling your products with ZERO hassle.
+              </span>
             </li>
           </ul>
         </div>
-        <div className="w-[40%] h-full "> {/* global-element relative */}
-          <div className=" ml-10 z-10 global-element relative">
-          <Image 
-                className="w-[90%] h-[40%] rounded-2xl"
-                src="/salechart.png" // Replace with your image path
-                alt="Logo"
-                height={250}
-                width={290}/>
+        <div className="w-full md:w-[40%] h-[50%] md:mt-0 flex justify-center">
+          <div className="ml-0 md:ml-10 z-10 global-element relative">
+            <Image
+              className="w-[80%] md:w-[90%] h-auto rounded-2xl"
+              src="/salechart.png"
+              alt="Logo"
+              height={250}
+              width={290}
+            />
           </div>
         </div>
       </div>
       <div className="flex w-full justify-start">
-        <BuyNowButton message="Learn More"/>
+        <BuyNowButton message="Learn More" />
       </div>
     </div>,
-    <div className="flex flex-col  items-center justify-center w-[95%] h-[80%] p-20 shadow-xl rounded-3xl bg-gradient-to-r from-white via-[#ECFAFD] to-white relative custom-before">
-            <div className="bg-transparent  w-full h-full flex ">
-        <div className="w-[60%] h-full flex flex-col pb-10">
+    <div className="flex flex-col items-center md:justify-center justify-start w-[95%] h-auto md:h-[80%] p-10 md:p-20 shadow-xl rounded-3xl bg-gradient-to-r from-white via-[#ECFAFD] to-white relative custom-before">
+      <div className="bg-transparent w-full md:h-full h-[80%] flex flex-col md:flex-row">
+        <div className="w-full md:w-[60%] h-[50%] flex-col md:pb-10">
           <div className="flex flex-col w-full">
-            <span className="font-semibold text-3xl">Inventory Management</span>
-            <p className="pt-4">Grow your business online effortlessly with our multi-channel inventory management system. Outlet Expense makes it simpler than you think!</p>
+            <span className="font-semibold text-2xl md:text-3xl">
+              Inventory Management
+            </span>
+            <p className="pt-4 text-sm md:text-base">
+              Grow your business online effortlessly with our multi-channel
+              inventory management system. Outlet Expense makes it simpler than
+              you think!
+            </p>
           </div>
           <ul className="mt-6 flex flex-col justify-around">
             <li className="flex pt-4">
-              <Image 
-                className=""
-                src="/check-circle.svg" // Replace with your image path
+              <Image
+                src="/check-circle.svg"
                 alt="Logo"
                 height={20}
-                width={20}/> 
-              <span className="pl-4">Set up and integrate your eBay, WooCommerce, Shopify & other accounts. </span>
+                width={20}
+              />
+              <span className="pl-4 text-sm md:text-base">
+                Create new warehouses.
+              </span>
             </li>
             <li className="flex pt-4">
-            <Image 
-                className=""
-                src="/check-circle.svg" // Replace with your image path
+              <Image
+                src="/check-circle.svg"
                 alt="Logo"
                 height={20}
-                width={20}/> 
-              <span className="pl-4">Create new warehouses.</span>
+                width={20}
+              />
+              <span className="pl-4 text-sm md:text-base">
+                Store your products.
+              </span>
             </li>
             <li className="flex pt-4">
-            <Image 
-                className=""
-                src="/check-circle.svg" // Replace with your image path
+              <Image
+                src="/check-circle.svg"
                 alt="Logo"
                 height={20}
-                width={20}/> 
-              <span className="pl-4">Store your products.</span>
-            </li>
-            <li className="flex pt-4">
-            <Image 
-                className=""
-                src="/check-circle.svg" // Replace with your image path
-                alt="Logo"
-                height={20}
-                width={20}/> 
-              <span className="pl-4">Start selling your products with ZERO hassle.</span>
+                width={20}
+              />
+              <span className="pl-4 text-sm md:text-base">
+                Start selling your products with ZERO hassle.
+              </span>
             </li>
           </ul>
         </div>
-        <div className="w-[40%] h-full "> {/* global-element relative */}
-          <div className=" ml-10 z-10 global-element relative">
-          <Image 
-                className="w-[90%] h-[40%] rounded-2xl"
-                src="/salechart.png" // Replace with your image path
-                alt="Logo"
-                height={250}
-                width={290}/>
+        <div className="w-full md:w-[40%] h-[50%] md:mt-0 flex justify-center">
+          <div className="ml-0 md:ml-10 z-10 global-element relative">
+            <Image
+              className="w-[80%] md:w-[90%] h-auto rounded-2xl"
+              src="/salechart.png"
+              alt="Logo"
+              height={250}
+              width={290}
+            />
           </div>
         </div>
       </div>
       <div className="flex w-full justify-start">
-        <BuyNowButton message="Learn More"/>
+        <BuyNowButton message="Learn More" />
       </div>
     </div>,
-    <div className="flex flex-col  items-center justify-center w-[95%] h-[80%] p-20 shadow-xl rounded-3xl bg-gradient-to-r from-white via-[#ECFAFD] to-white relative custom-before">
-            <div className="bg-transparent  w-full h-full flex ">
-        <div className="w-[60%] h-full flex flex-col pb-10">
+    <div className="flex flex-col items-center md:justify-center justify-start w-[95%] h-auto md:h-[80%] p-10 md:p-20 shadow-xl rounded-3xl bg-gradient-to-r from-white via-[#ECFAFD] to-white relative custom-before">
+      <div className="bg-transparent w-full md:h-full h-[80%] flex flex-col md:flex-row">
+        <div className="w-full md:w-[60%] h-[50%] flex-col md:pb-10">
           <div className="flex flex-col w-full">
-            <span className="font-semibold text-3xl">Inventory Management</span>
-            <p className="pt-4">Grow your business online effortlessly with our multi-channel inventory management system. Outlet Expense makes it simpler than you think!</p>
+            <span className="font-semibold text-2xl md:text-3xl">
+              Inventory Management
+            </span>
+            <p className="pt-4 text-sm md:text-base">
+              Grow your business online effortlessly with our multi-channel
+              inventory management system. Outlet Expense makes it simpler than
+              you think!
+            </p>
           </div>
           <ul className="mt-6 flex flex-col justify-around">
             <li className="flex pt-4">
-              <Image 
-                className=""
-                src="/check-circle.svg" // Replace with your image path
+              <Image
+                src="/check-circle.svg"
                 alt="Logo"
                 height={20}
-                width={20}/> 
-              <span className="pl-4">Set up and integrate your eBay, WooCommerce, Shopify & other accounts. </span>
+                width={20}
+              />
+              <span className="pl-4 text-sm md:text-base">
+                Create new warehouses.
+              </span>
             </li>
             <li className="flex pt-4">
-            <Image 
-                className=""
-                src="/check-circle.svg" // Replace with your image path
+              <Image
+                src="/check-circle.svg"
                 alt="Logo"
                 height={20}
-                width={20}/> 
-              <span className="pl-4">Create new warehouses.</span>
+                width={20}
+              />
+              <span className="pl-4 text-sm md:text-base">
+                Store your products.
+              </span>
             </li>
             <li className="flex pt-4">
-            <Image 
-                className=""
-                src="/check-circle.svg" // Replace with your image path
+              <Image
+                src="/check-circle.svg"
                 alt="Logo"
                 height={20}
-                width={20}/> 
-              <span className="pl-4">Store your products.</span>
-            </li>
-            <li className="flex pt-4">
-            <Image 
-                className=""
-                src="/check-circle.svg" // Replace with your image path
-                alt="Logo"
-                height={20}
-                width={20}/> 
-              <span className="pl-4">Start selling your products with ZERO hassle.</span>
+                width={20}
+              />
+              <span className="pl-4 text-sm md:text-base">
+                Start selling your products with ZERO hassle.
+              </span>
             </li>
           </ul>
         </div>
-        <div className="w-[40%] h-full "> {/* global-element relative */}
-          <div className=" ml-10 z-10 global-element relative">
-          <Image 
-                className="w-[90%] h-[40%] rounded-2xl"
-                src="/salechart.png" // Replace with your image path
-                alt="Logo"
-                height={250}
-                width={290}/>
+        <div className="w-full md:w-[40%] h-[50%] md:mt-0 flex justify-center">
+          <div className="ml-0 md:ml-10 z-10 global-element relative">
+            <Image
+              className="w-[80%] md:w-[90%] h-auto rounded-2xl"
+              src="/salechart.png"
+              alt="Logo"
+              height={250}
+              width={290}
+            />
           </div>
         </div>
       </div>
       <div className="flex w-full justify-start">
-        <BuyNowButton message="Learn More"/>
+        <BuyNowButton message="Learn More" />
       </div>
     </div>,
   ];
@@ -274,6 +290,14 @@ const FirstSlider = () => {
   useEffect(() => {
     updateSlidePosition(-currentIndex * 100 + offset); // Position based on currentIndex and offset
   }, [currentIndex, offset]);
+
+  // Function to reset transition when sliding
+  const resetSliderTransition = () => {
+    const slidesElement = sliderRef.current;
+    if (slidesElement) {
+      slidesElement.style.transition = "transform 0.5s ease-in-out"; // Smooth sliding transition
+    }
+  };
 
   // Handle the start of dragging (mouse down)
   const handleDragStart = (e) => {
@@ -294,7 +318,10 @@ const FirstSlider = () => {
     const movement = e.pageX - startPos;
 
     // Update the offset
-    setOffset((prevOffset) => prevOffset + (movement / sliderRef.current.offsetWidth) * 100);
+    setOffset(
+      (prevOffset) =>
+        prevOffset + (movement / sliderRef.current.offsetWidth) * 100
+    );
     setStartPos(e.pageX); // Update start position for continuous dragging
   };
 
@@ -311,9 +338,13 @@ const FirstSlider = () => {
     // Snap to next or previous slide based on drag threshold
     if (Math.abs(movement) > threshold) {
       if (movement > 0) {
-        setCurrentIndex((prevIndex) => (prevIndex === 1 ? totalSlides : prevIndex - 1)); // Move to previous slide
+        setCurrentIndex((prevIndex) =>
+          prevIndex === 1 ? totalSlides : prevIndex - 1
+        ); // Move to previous slide
       } else {
-        setCurrentIndex((prevIndex) => (prevIndex === totalSlides ? 1 : prevIndex + 1)); // Move to next slide
+        setCurrentIndex((prevIndex) =>
+          prevIndex === totalSlides ? 1 : prevIndex + 1
+        ); // Move to next slide
       }
     }
 
@@ -343,17 +374,29 @@ const FirstSlider = () => {
       {/* Arrow Buttons */}
       <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2">
         <button
-          className="prevSlide mr-4 w-14 h-14 rounded-full bg-white flex items-center justify-center text-white hover:bg-transparent hover:border-transparent transition-all hover:bg-gradient-to-r from-blue-600 to-teal-500"
-          onClick={() => setCurrentIndex((prevIndex) => (prevIndex === 1 ? totalSlides : prevIndex - 1))} // Navigate to previous slide
+          className="prevSlide mr-4 md:w-14 md:h-14 w-10 h-10 rounded-full bg-white flex items-center justify-center text-white hover:bg-transparent hover:border-transparent transition-all hover:bg-gradient-to-r from-blue-600 to-teal-500"
+          onClick={() => {
+            if (isDragging) return; // Prevent action if dragging
+            setCurrentIndex((prevIndex) =>
+              prevIndex === 1 ? totalSlides : prevIndex - 1
+            ); // Navigate to previous slide
+            resetSliderTransition(); // Enable smooth transition
+          }}
         >
-          <ArrowLeftIcon className="w-7 h-7 text-black" />
+          <ArrowLeftIcon className="md:w-7 md:h-7 h-5 w-5 text-black" />
         </button>
 
         <button
-          className="nextSlide ml-4 w-14 h-14 rounded-full bg-white flex items-center justify-center text-white hover:bg-transparent hover:border-transparent transition-all hover:bg-gradient-to-r from-blue-600 to-teal-500"
-          onClick={() => setCurrentIndex((prevIndex) => (prevIndex === totalSlides ? 1 : prevIndex + 1))} // Navigate to next slide
+          className="nextSlide ml-4 md:w-14 md:h-14 w-10 h-10 rounded-full bg-white flex items-center justify-center text-white hover:bg-transparent hover:border-transparent transition-all hover:bg-gradient-to-r from-blue-600 to-teal-500"
+          onClick={() => {
+            if (isDragging) return; // Prevent action if dragging
+            setCurrentIndex((prevIndex) =>
+              prevIndex === totalSlides ? 1 : prevIndex + 1
+            ); // Navigate to next slide
+            resetSliderTransition(); // Enable smooth transition
+          }}
         >
-          <ArrowRightIcon className="w-7 h-7 text-black " />
+          <ArrowRightIcon className="md:w-7 md:h-7 h-5 w-5 text-black " />
         </button>
       </div>
     </div>

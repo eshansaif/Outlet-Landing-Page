@@ -164,7 +164,7 @@ export default function Home() {
             height={700}
             width={400}
           />
-          <div className="z-10 max-w-7xl mx-auto">
+          <div className="z-10 max-w-7xl mx-auto h-full">
             <div className="flex md:flex-row flex-col w-full flex-wrap">
               <div className="flex flex-col md:w-[70%] w-full flex-wrap">
                 <span className="md:text-4xl text-2xl font-bold md:text-left text-center px-10 md:px-0">
@@ -185,7 +185,7 @@ export default function Home() {
               </div>
             </div>
             {/* ----------------------SLIDER------------------------ */}
-            <div className="w-full h-screen mt-28 border-b border-gray-200">
+            <div className="w-full mt-28 md:h-screen h-[1000px] border-b border-gray-200 relative">
               <FirstSlider />
             </div>
           </div>

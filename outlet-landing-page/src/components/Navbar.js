@@ -60,7 +60,10 @@ export default function Navbar() {
                 >
                   Login
                 </Link>
-                <BuyNowButton message="Sign Up" link="https://pos.outletexpense.com/signup" />
+                <BuyNowButton
+                  message="Sign Up"
+                  link="https://pos.outletexpense.com/signup"
+                />
               </div>
             </div>
           </div>
@@ -118,35 +121,43 @@ export default function Navbar() {
             <Link
               href="/"
               className="font-inter text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition duration-200 ease-in-out"
+              onClick={toggleMenu} // Close menu after navigating
             >
               Home
             </Link>
             <Link
               href="/features"
               className="font-inter text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition duration-200 ease-in-out"
+              onClick={toggleMenu} // Close menu after navigating
             >
               Features
             </Link>
             <Link
               href="/pricing"
               className="font-inter text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition duration-200 ease-in-out"
+              onClick={toggleMenu} // Close menu after navigating
             >
               Pricing
             </Link>
             <Link
               href="/faqs"
               className="font-inter text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium transition duration-200 ease-in-out"
+              onClick={toggleMenu} // Close menu after navigating
             >
               FAQs
             </Link>
             <Link
               href="https://pos.outletexpense.com/login"
               className="font-inter text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium transition duration-200 ease-in-out"
+              onClick={toggleMenu} // Close menu after navigating
             >
               Login
             </Link>
             <div className="flex items-center justify-start mt-4">
-              <BuyNowButton message="Sign Up" link="https://pos.outletexpense.com/signup" />
+              <BuyNowButton
+                message="Sign Up"
+                link="https://pos.outletexpense.com/signup"
+              />
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-// File: C:\wamp64\www\Outlet-Landing-Page\outlet-landing-page\src\app\privacy\page.js
+// File: D:\Coding\React.js\Outlet-Landing-Page\outlet-landing-page\src\app\privacy\page.js
 import * as entry from '../../../../src/app/privacy/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
