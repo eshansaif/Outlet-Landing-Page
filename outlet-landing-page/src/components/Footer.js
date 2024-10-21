@@ -52,7 +52,7 @@ const Footer = () => {
           <h2 className="text-xl font-semibold mb-4">Follow Us</h2>
           <div className="flex space-x-4">
             <a
-              href="https://www.facebook.com/profile.php?id=61551666554830"
+              href="https://www.facebook.com/profile.php?id=61555243875890"
               className="hover:text-blue-500"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@ const Footer = () => {
                 <path d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.402.597 24 1.325 24H12.82V14.692H9.69V11.14h3.13V8.412c0-3.1 1.894-4.788 4.662-4.788 1.325 0 2.465.099 2.798.143v3.24H17.42c-1.763 0-2.104.838-2.104 2.065v2.712h4.208l-.548 3.552h-3.66V24h7.16c.729 0 1.326-.597 1.326-1.326V1.326C24 .597 23.402 0 22.675 0z" />
               </svg>
             </a>
-            <a href="https://www.linkedin.com/company/squad-innovators/" className="hover:text-blue-400">
+            <a href="https://www.linkedin.com/company/outlet-expense/" className="hover:text-blue-400">
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 {/* LinkedIn Icon */}
                 <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.23c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.23h-3v-5.5c0-1.1-.9-2-2-2s-2 .9-2 2v5.5h-3v-10h3v1.5c.87-1.17 2.2-1.5 3.5-1.5 2.49 0 4.5 2.01 4.5 4.5v5.5z" />
