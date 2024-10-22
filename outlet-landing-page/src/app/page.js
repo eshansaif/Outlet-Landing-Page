@@ -5,10 +5,12 @@ import FirstSlider from "../components/FirstSlider";
 import StatsSection from "../components/StatsSection";
 import SolarSystem from "../components/SolarSystem";
 import TypedWithGradient from "../components/TypedWithGradient";
+import Popup from "../components/Popup";
 
 export default function Home() {
   return (
     <div className="flex items-center w-full justify-center font-[family-name:var(--font-geist-sans)] x-overflow-hidden">
+      <Popup/>
       <main className="flex flex-col mt-16 w-full h-full ">
         <section className="top-background w-full z-0 pb-28 relative">
           <Image
@@ -249,7 +251,7 @@ export default function Home() {
                 <div className="grid md:grid-cols-4 grid-cols-2 md:grid-rows-3 grid-rows-1 gap-4 h-full border-gray border rounded-3xl p-5 z-10">
                   <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
                     <div className="flex md:flex-row flex-col md:justify-left justify-center items-center h-full w-full">
-                      <div className="h-12 w-12 flex items-center justify-center bg-gradient-to-b from-[#59ca38] to-[#18c2d9] rounded-full">
+                      <div className="h-12 w-12 flex items-center justify-center bg-gradient-to-b from-[#59ca38] to-[#18c2d9] rounded-full md:m-3">
                         <Image
                           className=""
                           src="/management_1.svg" // Replace with your image path
@@ -258,16 +260,18 @@ export default function Home() {
                           width={30}
                         />
                       </div>
-                      <p className="font-semibold md:ml-4 mt-4 md:mt-0 md:text-left text-center">
-                        Access
-                        <br /> Management
-                      </p>
+                      <div className="md:p-2 mt-4 md:mt-0 overflow-hidden">
+                        <p className="font-semibold md:text-left text-center text-[14px]">
+                          Access
+                          <br /> Management
+                        </p>
+                      </div>
                     </div>
                   </div>
 
                   <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
                     <div className="flex md:flex-row flex-col md:justify-left justify-center items-center h-full w-full">
-                      <div className="h-12 w-12 bg-gradient-to-b from-[#fc7b82] to-[#e73f3f] rounded-full flex items-center justify-center">
+                      <div className="h-12 w-12 bg-gradient-to-b from-[#fc7b82] to-[#e73f3f] rounded-full flex items-center justify-center md:m-3">
                         <Image
                           className=""
                           src="/management_2.svg" // Replace with your image path
@@ -276,14 +280,16 @@ export default function Home() {
                           width={30}
                         />
                       </div>
-                      <p className="font-semibold md:ml-4 mt-4 md:mt-0 md:text-left text-center">
+                      <div className="md:p-2 mt-4 md:mt-0 overflow-hidden">
+                      <p className="font-semibold md:text-left text-center text-[14px]">
                         Inventory <br /> Control System
                       </p>
+                      </div>
                     </div>
                   </div>
                   <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300 ">
                     <div className="flex md:flex-row flex-col md:justify-left justify-center items-center h-full w-full">
-                      <div className="h-12 w-12 bg-[#0bb0ee] rounded-full flex items-center justify-center">
+                      <div className="h-12 w-12 bg-[#0bb0ee] rounded-full flex items-center justify-center  md:my-3 md:ml-3 md:mr-7">
                         <Image
                           className=""
                           src="/management_3.svg" // Replace with your image path
@@ -292,15 +298,17 @@ export default function Home() {
                           width={30}
                         />
                       </div>
-                      <p className="font-semibold md:ml-4 mt-4 md:mt-0 md:text-left text-center">
-                        Payment Gateway <br />
+                      <div className="md:py-2 md:pr-5 mt-4 md:mt-0 overflow-hidden">
+                      <p className="font-semibold md:text-left text-center text-[14px]">
+                        Payment<br/>Gateway<br />
                         Integration
                       </p>
+                      </div>
                     </div>
                   </div>
                   <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
                     <div className="flex md:flex-row flex-col md:justify-left justify-center items-center h-full w-full">
-                      <div className="h-12 w-12 bg-gradient-to-b from-[#d787fc] to-[#845cf7] rounded-full flex items-center justify-center">
+                      <div className="h-12 w-12 bg-gradient-to-b from-[#d787fc] to-[#845cf7] rounded-full flex items-center justify-center md:m-3">
                         <Image
                           className=""
                           src="/management_12.svg" // Replace with your image path
@@ -309,15 +317,17 @@ export default function Home() {
                           width={30}
                         />
                       </div>
-                      <p className="font-semibold md:ml-4 mt-4 md:mt-0 md:text-left text-center">
-                        Product Return <br />
-                        Management
-                      </p>
+                      <div className="md:p-2 mt-4 md:mt-0 overflow-hidden">
+                        <p className="font-semibold md:p-2 mt-4 md:mt-0 md:text-left text-center text-[14px]">
+                          Product<br/> Return <br />
+                          Management
+                        </p>
+                      </div>
                     </div>
                   </div>
                   <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
                     <div className="flex md:flex-row flex-col md:justify-left justify-center items-center h-full w-full">
-                      <div className="h-12 w-12 bg-gradient-to-b from-[#f9c91e] to-[#fc4c4a] rounded-full flex items-center justify-center">
+                      <div className="h-12 w-12 bg-gradient-to-b from-[#f9c91e] to-[#fc4c4a] rounded-full flex items-center justify-center md:m-3">
                         <Image
                           className=""
                           src="/management_5.svg" // Replace with your image path
@@ -326,15 +336,17 @@ export default function Home() {
                           width={30}
                         />
                       </div>
-                      <p className="font-semibold md:ml-4 mt-4 md:mt-0 md:text-left text-center">
+                      <div className="md:p-2 mt-4 md:mt-0 overflow-hidden">
+                      <p className="font-semibold md:p-2 mt-4 md:mt-0 md:text-left text-center text-[14px]">
                         Vendor <br />
                         Management
                       </p>
+                      </div>
                     </div>
                   </div>
                   <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
                     <div className="flex md:flex-row flex-col md:justify-left justify-center items-center h-full w-full">
-                      <div className="h-12 w-12 bg-gradient-to-r from-[#6b70ff] to-[#0bb0ee] rounded-full flex items-center justify-center">
+                      <div className="h-12 w-12 bg-gradient-to-r from-[#6b70ff] to-[#0bb0ee] rounded-full flex items-center justify-center md:my-3 md:mr-2 md:ml-4">
                         <Image
                           className=""
                           src="/management_6.svg" // Replace with your image path
@@ -343,14 +355,16 @@ export default function Home() {
                           width={30}
                         />
                       </div>
-                      <p className="font-semibold md:ml-4 mt-4 md:mt-0 md:text-left text-center">
-                        Real-Time <br /> Analytics And Reporting
+                      <div className="md:p-2 mt-4 md:mt-0 overflow-hidden">
+                      <p className="font-semibold md:p-2 mt-4 md:mt-0 md:text-left text-center text-[14px]">
+                        Real-Time <br /> Analytics <br/>And Reporting
                       </p>
+                      </div>
                     </div>
                   </div>
                   <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
                     <div className="flex md:flex-row flex-col md:justify-left justify-center items-center h-full w-full">
-                      <div className="h-12 w-12 bg-gradient-to-r from-[#18b5f0] to-[#b02ee5] rounded-full flex items-center justify-center">
+                      <div className="h-12 w-12 bg-gradient-to-r from-[#18b5f0] to-[#b02ee5] rounded-full flex items-center justify-center md:m-3">
                         <Image
                           className=""
                           src="/management_7.svg" // Replace with your image path
@@ -359,15 +373,17 @@ export default function Home() {
                           width={30}
                         />
                       </div>
-                      <p className="font-semibold md:ml-4 mt-4 md:mt-0 md:text-left text-center">
+                      <div className="md:p-2 mt-4 md:mt-0 overflow-hidden">
+                      <p className="font-semibold md:p-2 mt-4 md:mt-0 md:text-left text-center text-[14px]">
                         Wherehouse <br />
                         Controller
                       </p>
+                      </div>
                     </div>
                   </div>
                   <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
                     <div className="flex md:flex-row flex-col md:justify-left justify-center items-center h-full w-full">
-                      <div className="h-12 w-12 bg-gradient-to-r from-[#6b70ff] to-[#0bb0ee] rounded-full flex items-center justify-center">
+                      <div className="h-12 w-12 bg-gradient-to-r from-[#6b70ff] to-[#0bb0ee] rounded-full flex items-center justify-center md:m-3">
                         <Image
                           className=""
                           src="/management_8.svg" // Replace with your image path
@@ -376,16 +392,18 @@ export default function Home() {
                           width={30}
                         />
                       </div>
-                      <p className="font-semibold md:ml-4 mt-4 md:mt-0 md:text-left text-center">
+                      <div className="md:p-2 mt-4 md:mt-0 overflow-hidden">
+                      <p className="font-semibold md:p-2 mt-4 md:mt-0 md:text-left text-center text-[14px]">
                         Barcoding & <br />
                         Labeling
                       </p>
+                      </div>
                     </div>
                   </div>
 
                   <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
                     <div className="flex md:flex-row flex-col md:justify-left justify-center items-center h-full w-full">
-                      <div className="h-12 w-12 bg-gradient-to-b from-[#59ca38] to-[#18c2d9] rounded-full flex items-center justify-center">
+                      <div className="h-12 w-12 bg-gradient-to-b from-[#59ca38] to-[#18c2d9] rounded-full flex items-center justify-center md:mt-3 md:mr-3 md:ml-1">
                         <Image
                           className=""
                           src="/management_9.svg" // Replace with your image path
@@ -394,15 +412,17 @@ export default function Home() {
                           width={30}
                         />
                       </div>
-                      <p className="font-semibold md:ml-4 mt-4 md:mt-0 md:text-left text-center">
+                      <div className="md:p-2 mt-4 md:mt-0 overflow-hidden">
+                      <p className="font-semibold md:p-2 mt-4 md:mt-0 md:text-left text-center text-[14px]">
                         Invoicing <br />
                         And Sales
                       </p>
+                      </div>
                     </div>
                   </div>
                   <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
                     <div className="flex md:flex-row flex-col md:justify-left justify-center items-center h-full w-full">
-                      <div className="h-12 w-12 bg-gradient-to-b from-[#fc7b82] to-[#e73f3f] rounded-full flex items-center justify-center">
+                      <div className="h-12 w-12 bg-gradient-to-b from-[#fc7b82] to-[#e73f3f] rounded-full flex items-center justify-center md:m-3">
                         <Image
                           className=""
                           src="/management_10.svg" // Replace with your image path
@@ -411,16 +431,18 @@ export default function Home() {
                           width={30}
                         />
                       </div>
-                      <p className="font-semibold md:ml-4 mt-4 md:mt-0 md:text-left text-center">
+                      <div className="md:p-2 mt-4 md:mt-0 overflow-hidden">
+                      <p className="font-semibold md:p-2 mt-4 md:mt-0 md:text-left text-center text-[14px]">
                         Product
                         <br />
                         Management
                       </p>
+                      </div>
                     </div>
                   </div>
                   <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
                     <div className="flex md:flex-row flex-col md:justify-left justify-center items-center h-full w-full">
-                      <div className="h-12 w-12 bg-[#0bb0ee] rounded-full flex items-center justify-center">
+                      <div className="h-12 w-12 bg-[#0bb0ee] rounded-full flex items-center justify-center md:m-3">
                         <Image
                           className=""
                           src="/management_11.svg" // Replace with your image path
@@ -429,16 +451,18 @@ export default function Home() {
                           width={30}
                         />
                       </div>
-                      <p className="font-semibold md:ml-4 mt-4 md:mt-0 md:text-left text-center">
+                      <div className="md:p-2 mt-4 md:mt-0 overflow-hidden">
+                      <p className="font-semibold md:p-2 mt-4 md:mt-0 md:text-left text-center text-[14px]">
                         Exporter
                         <br />
                         Management
                       </p>
+                      </div>
                     </div>
                   </div>
                   <div className="bg-white border rounded-2xl p-4 hover:scale-105 transition-transform duration-300">
                     <div className="flex md:flex-row flex-col md:justify-left justify-center items-center h-full w-full">
-                      <div className="h-12 w-12 bg-gradient-to-b from-[#d787fc] to-[#845cf7] rounded-full flex items-center justify-center">
+                      <div className="h-12 w-12 bg-gradient-to-b from-[#d787fc] to-[#845cf7] rounded-full flex items-center justify-center md:m-3">
                         <Image
                           className=""
                           src="/management_9-1.svg" // Replace with your image path
@@ -447,11 +471,13 @@ export default function Home() {
                           width={30}
                         />
                       </div>
-                      <p className="font-semibold md:ml-4 mt-4 md:mt-0 md:text-left text-center">
+                      <div className="md:p-2 mt-4 md:mt-0 overflow-hidden">
+                      <p className="font-semibold md:p-2 mt-4 md:mt-0 md:text-left text-center text-[14px]">
                         Dynamic
                         <br />
-                        HRM Management
+                        HRM <br/> Management
                       </p>
+                      </div>
                     </div>
                   </div>
                 </div>

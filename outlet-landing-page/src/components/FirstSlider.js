@@ -84,12 +84,11 @@ const FirstSlider = () => {
         <div className="w-full md:w-[60%] h-[50%] flex-col md:pb-10">
           <div className="flex flex-col w-full">
             <span className="font-semibold text-2xl md:text-3xl">
-              Inventory Management
+              Exporter Feature
             </span>
             <p className="pt-4 text-sm md:text-base">
-              Grow your business online effortlessly with our multi-channel
-              inventory management system. Outlet Expense makes it simpler than
-              you think!
+            Outlet Expense streamlines exporter operations with automated invoicing,
+            inventory tracking, multi-currency support, and seamless international shipment management.
             </p>
           </div>
           <ul className="mt-6 flex flex-col justify-around">
@@ -101,7 +100,7 @@ const FirstSlider = () => {
                 width={20}
               />
               <span className="pl-4 text-sm md:text-base">
-                Create new warehouses.
+                Set exporter details.
               </span>
             </li>
             <li className="flex pt-4">
@@ -112,7 +111,7 @@ const FirstSlider = () => {
                 width={20}
               />
               <span className="pl-4 text-sm md:text-base">
-                Store your products.
+                Set carrier details.
               </span>
             </li>
             <li className="flex pt-4">
@@ -123,16 +122,27 @@ const FirstSlider = () => {
                 width={20}
               />
               <span className="pl-4 text-sm md:text-base">
-                Start selling your products with ZERO hassle.
+                Complete payment operation.
+              </span>
+            </li>
+            <li className="flex pt-4">
+              <Image
+                src="/check-circle.svg"
+                alt="Logo"
+                height={20}
+                width={20}
+              />
+              <span className="pl-4 text-sm md:text-base">
+                Import your products with ease.
               </span>
             </li>
           </ul>
         </div>
         <div className="w-full md:w-[40%] h-[50%] md:mt-0 flex justify-center">
-          <div className="ml-0 md:ml-10 z-10 global-element relative">
+          <div className="ml-0 md:ml-10 z-10 global-element relative pr-6">
             <Image
-              className="w-[80%] md:w-[90%] h-auto rounded-2xl"
-              src="/salechart.png"
+              className="w-[100%] md:w-[100%] h-auto rounded-2xl mt-10"
+              src="/exporter_billing.png"
               alt="Logo"
               height={250}
               width={290}
@@ -149,12 +159,11 @@ const FirstSlider = () => {
         <div className="w-full md:w-[60%] h-[50%] flex-col md:pb-10">
           <div className="flex flex-col w-full">
             <span className="font-semibold text-2xl md:text-3xl">
-              Inventory Management
+              Human Resource Management
             </span>
             <p className="pt-4 text-sm md:text-base">
-              Grow your business online effortlessly with our multi-channel
-              inventory management system. Outlet Expense makes it simpler than
-              you think!
+            Outlet Expense's HRM efficiently manages roles, designations, departments, 
+            and employees. It streamlines organizational hierarchy, ensuring smooth coordination and workflow across teams.
             </p>
           </div>
           <ul className="mt-6 flex flex-col justify-around">
@@ -166,7 +175,7 @@ const FirstSlider = () => {
                 width={20}
               />
               <span className="pl-4 text-sm md:text-base">
-                Create new warehouses.
+              Easily assign and manage roles and designations for all employees.
               </span>
             </li>
             <li className="flex pt-4">
@@ -177,7 +186,7 @@ const FirstSlider = () => {
                 width={20}
               />
               <span className="pl-4 text-sm md:text-base">
-                Store your products.
+              Simplify payroll processing with integrated HR and financial systems.
               </span>
             </li>
             <li className="flex pt-4">
@@ -188,7 +197,7 @@ const FirstSlider = () => {
                 width={20}
               />
               <span className="pl-4 text-sm md:text-base">
-                Start selling your products with ZERO hassle.
+              Streamline workflow by organizing employees into specific departments.
               </span>
             </li>
           </ul>
@@ -196,8 +205,8 @@ const FirstSlider = () => {
         <div className="w-full md:w-[40%] h-[50%] md:mt-0 flex justify-center">
           <div className="ml-0 md:ml-10 z-10 global-element relative">
             <Image
-              className="w-[80%] md:w-[90%] h-auto rounded-2xl"
-              src="/salechart.png"
+              className="w-[80%] md:w-[90%] h-auto rounded-2xl bg-white"
+              src="/hrm_slide.png"
               alt="Logo"
               height={250}
               width={290}
@@ -214,12 +223,12 @@ const FirstSlider = () => {
         <div className="w-full md:w-[60%] h-[50%] flex-col md:pb-10">
           <div className="flex flex-col w-full">
             <span className="font-semibold text-2xl md:text-3xl">
-              Inventory Management
+              Finance Management
             </span>
             <p className="pt-4 text-sm md:text-base">
-              Grow your business online effortlessly with our multi-channel
-              inventory management system. Outlet Expense makes it simpler than
-              you think!
+              Outlet Expense's Finance module includes a chart of accounts for detailed financial tracking, 
+              seamless fund transfers, a comprehensive party list, 
+              and an organized journal list for efficient transaction management and reporting.
             </p>
           </div>
           <ul className="mt-6 flex flex-col justify-around">
@@ -231,7 +240,7 @@ const FirstSlider = () => {
                 width={20}
               />
               <span className="pl-4 text-sm md:text-base">
-                Create new warehouses.
+              Organize and track all financial transactions with a detailed chart of accounts.
               </span>
             </li>
             <li className="flex pt-4">
@@ -242,7 +251,7 @@ const FirstSlider = () => {
                 width={20}
               />
               <span className="pl-4 text-sm md:text-base">
-                Store your products.
+              Facilitate quick and secure internal or external fund transfers.
               </span>
             </li>
             <li className="flex pt-4">
@@ -253,16 +262,16 @@ const FirstSlider = () => {
                 width={20}
               />
               <span className="pl-4 text-sm md:text-base">
-                Start selling your products with ZERO hassle.
+              Maintain a comprehensive list of parties for streamlined transactions.
               </span>
             </li>
           </ul>
         </div>
         <div className="w-full md:w-[40%] h-[50%] md:mt-0 flex justify-center">
-          <div className="ml-0 md:ml-10 z-10 global-element relative">
+          <div className="ml-0 md:ml-10 z-10 global-element relative pr-20">
             <Image
               className="w-[80%] md:w-[90%] h-auto rounded-2xl"
-              src="/salechart.png"
+              src="/finance-slide.svg"
               alt="Logo"
               height={250}
               width={290}
