@@ -1,62 +1,158 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import BuyNowButton from "./BuyNowButton";
-import { useState } from "react";
+import { useTheme } from "../contexts/ThemeContext";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
-  // State to manage the mobile menu visibility
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+  const { theme, toggleTheme } = useTheme();
 
-  // Function to toggle the mobile menu
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMenuOpen]);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/features", label: "Features" },
+    { href: "/pricing", label: "Pricing" },
+    { href: "/faqs", label: "FAQs" },
+  ];
+
+  const isActive = (href) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(href);
+  };
+
   return (
-    <nav className="fixed w-full z-10 top-0 transition duration-300 ease-in-out bg-white shadow-sm z-20">
-      <div className="md:max-w-7xl md:mx-auto mx-20">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold text-gray-800">
-              <Image
-                src="/outletlogo.png" // Replace with your image path
-                alt="Logo"
-                width={200} // Adjust the width as per your needs
-                height={250} // Adjust the height as per your needs
-              />
-            </Link>
-          </div>
-          <div className="ml-10 flex items-baseline space-x-4">
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <Link
-                  href="/"
-                  className="font-inter text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium transition duration-200 ease-in-out"
+    <>
+      <nav
+        className={`fixed w-full top-0 z-50 transition-all duration-300 ease-in-out ${
+          isScrolled
+            ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg border-b border-gray-200/50 dark:border-gray-700/50"
+            : "bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-sm"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
+            {/* Logo */}
+            <div className="flex-shrink-0">
+              <Link
+                href="/"
+                className="flex items-center group transition-transform duration-300 hover:scale-105"
+              >
+                <Image
+                  src="/outletlogo.png"
+                  alt="Outlet Expense Logo"
+                  width={180}
+                  height={60}
+                  className="h-12 w-auto object-contain"
+                  priority
+                />
+              </Link>
+            </div>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex md:items-center md:space-x-1">
+              <div className="flex items-center space-x-1">
+                {navLinks.map((link) => {
+                  const active = isActive(link.href);
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                        active
+                          ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30"
+                          : "text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800"
+                      }`}
+                    >
+                      {link.label}
+                      {active && (
+                        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-600 dark:bg-blue-400 rounded-full"></span>
+                      )}
+                    </Link>
+                  );
+                })}
+              </div>
+
+              <div className="ml-6 flex items-center space-x-4 border-l border-gray-200 dark:border-gray-700 pl-6">
+                {/* Theme Toggle Button */}
+                <button
+                  onClick={toggleTheme}
+                  className="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+                  aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
                 >
-                  Home
-                </Link>
-                <Link
-                  href="/features"
-                  className="font-inter text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium transition duration-200 ease-in-out"
-                >
-                  Features
-                </Link>
-                <Link
-                  href="/pricing"
-                  className="font-inter text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium transition duration-200 ease-in-out"
-                >
-                  Pricing
-                </Link>
-                <Link
-                  href="/faqs"
-                  className="font-inter text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium transition duration-200 ease-in-out"
-                >
-                  FAQs
-                </Link>
+                  {theme === "light" ? (
+                    // Moon icon for dark mode
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                      />
+                    </svg>
+                  ) : (
+                    // Sun icon for light mode
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                      />
+                    </svg>
+                  )}
+                </button>
                 <Link
                   href="https://pos.outletexpense.com/login"
-                  className="font-inter text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium transition duration-200 ease-in-out mr-4"
+                  className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-200"
                 >
                   Login
                 </Link>
@@ -66,102 +162,132 @@ export default function Navbar() {
                 />
               </div>
             </div>
-          </div>
-          <div className="-mr-2 flex md:hidden">
+
             {/* Mobile menu button */}
-            <button
-              type="button"
-              className="bg-[#0066fe] inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-300 focus:ring-white"
-              aria-controls="mobile-menu"
-              aria-expanded={isMenuOpen ? "true" : "false"}
-              onClick={toggleMenu}
-            >
-              <span className="sr-only">Open main menu</span>
-              {isMenuOpen ? (
-                <svg
-                  className="block h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
+            <div className="md:hidden">
+              <div className="flex items-center space-x-2">
+                {/* Theme Toggle Button - Mobile */}
+                <button
+                  onClick={toggleTheme}
+                  className="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  className="block h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
+                  {theme === "light" ? (
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                      />
+                    </svg>
+                  ) : (
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                      />
+                    </svg>
+                  )}
+                </button>
+                {/* Mobile menu button */}
+                <button
+                  type="button"
+                  className="inline-flex items-center justify-center p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-all duration-200"
+                  aria-controls="mobile-menu"
+                  aria-expanded={isMenuOpen ? "true" : "false"}
+                  onClick={toggleMenu}
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              )}
-            </button>
-          </div>
-        </div>
-      </div>
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden flex-shrink-0" id="mobile-menu">
-          <div className="px-2 pt-2 pb-3 sm:px-3 flex flex-col">
-            <Link
-              href="/"
-              className="font-inter text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition duration-200 ease-in-out"
-              onClick={toggleMenu} // Close menu after navigating
-            >
-              Home
-            </Link>
-            <Link
-              href="/features"
-              className="font-inter text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition duration-200 ease-in-out"
-              onClick={toggleMenu} // Close menu after navigating
-            >
-              Features
-            </Link>
-            <Link
-              href="/pricing"
-              className="font-inter text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium transition duration-200 ease-in-out"
-              onClick={toggleMenu} // Close menu after navigating
-            >
-              Pricing
-            </Link>
-            <Link
-              href="/faqs"
-              className="font-inter text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium transition duration-200 ease-in-out"
-              onClick={toggleMenu} // Close menu after navigating
-            >
-              FAQs
-            </Link>
-            <Link
-              href="https://pos.outletexpense.com/login"
-              className="font-inter text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium transition duration-200 ease-in-out"
-              onClick={toggleMenu} // Close menu after navigating
-            >
-              Login
-            </Link>
-            <div className="flex items-center justify-start mt-4">
-              <BuyNowButton
-                message="Sign Up"
-                link="https://pos.outletexpense.com/signup"
-              />
+                <span className="sr-only">Open main menu</span>
+                <div className="relative w-6 h-6">
+                  <span
+                    className={`absolute top-0 left-0 w-6 h-0.5 bg-current transform transition-all duration-300 ${
+                      isMenuOpen
+                        ? "rotate-45 translate-y-2.5"
+                        : "translate-y-0"
+                    }`}
+                  ></span>
+                  <span
+                    className={`absolute top-2.5 left-0 w-6 h-0.5 bg-current transform transition-all duration-300 ${
+                      isMenuOpen ? "opacity-0" : "opacity-100"
+                    }`}
+                  ></span>
+                  <span
+                    className={`absolute top-5 left-0 w-6 h-0.5 bg-current transform transition-all duration-300 ${
+                      isMenuOpen
+                        ? "-rotate-45 -translate-y-2.5"
+                        : "translate-y-0"
+                    }`}
+                  ></span>
+                </div>
+              </button>
+              </div>
             </div>
           </div>
         </div>
-      )}
-    </nav>
+
+        {/* Mobile Menu */}
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            isMenuOpen
+              ? "max-h-screen opacity-100"
+              : "max-h-0 opacity-0"
+          }`}
+          id="mobile-menu"
+        >
+          <div className="px-4 pt-2 pb-6 space-y-1 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            {navLinks.map((link) => {
+              const active = isActive(link.href);
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${
+                    active
+                      ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30"
+                      : "text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800"
+                  }`}
+                  onClick={toggleMenu}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+            <div className="pt-4 space-y-3 border-t border-gray-200 dark:border-gray-700 mt-3">
+              <Link
+                href="https://pos.outletexpense.com/login"
+                className="block px-4 py-3 rounded-lg text-base font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
+                onClick={toggleMenu}
+              >
+                Login
+              </Link>
+              <div className="px-4">
+                <BuyNowButton
+                  message="Sign Up"
+                  link="https://pos.outletexpense.com/signup"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {/* Spacer to prevent content from going under fixed navbar */}
+      <div className="h-20"></div>
+    </>
   );
 }

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Features = async () => {
   return (
-    <div clasName="bg-gradient-to-r from-[#ffffff] via-[#f9f8f8] to-[#f9f6f6] w-full">
+    <div className="bg-gradient-to-r from-[#ffffff] via-[#f9f8f8] to-[#f9f6f6] w-full dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <section className="w-full h-[50%] z-0 relative page-top-background pt-36 pb-20">
         <Image
           className="absolute top-[50%] right-0"
@@ -35,7 +35,7 @@ const Features = async () => {
         </div>
       </section>
       <section className="w-full z-0 relative pt-24 pb-10">
-        <div clasName="max-w-7xl mx-auto h-full">
+        <div className="max-w-7xl mx-auto h-full">
           <div className="grid grid-cols-1 grid-rows-1 md:grid-cols-4 md:grid-rows-3 gap-6 w-full md:px-20 px-5 pb-28">
             {/* Cell 1 */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col justify-between min-h-48 group">
