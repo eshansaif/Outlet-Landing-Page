@@ -1,0 +1,19 @@
+*.env
+*.env.local
+*node_modules*
+*dist*
+*build*
+*out*
+
+# Next.js build artifacts
+.next/
+_next/
+out/
+
+# Project specific
+outlet-landing-page/node_modules
+outlet-landing-page/dist
+outlet-landing-page/out
+outlet-landing-page/_next
+outlet-landing-page/.next
+outlet-landing-page/PROJECT_ANALYSIS.md
