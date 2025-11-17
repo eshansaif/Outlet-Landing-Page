@@ -35,8 +35,8 @@ const socials = [
 
 const Footer = () => {
   return (
-    <footer className="relative w-full overflow-hidden bg-[#010617] text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle,_rgba(20,184,166,0.15),_rgba(1,6,23,0))]" />
+    <footer className="relative w-full overflow-hidden bg-slate-50 text-slate-900 transition-colors duration-300 dark:bg-[#010617] dark:text-white">
+      <div className="absolute inset-0 bg-[radial-gradient(circle,_rgba(148,163,255,0.1),_rgba(241,245,249,0))] transition dark:bg-[radial-gradient(circle,_rgba(20,184,166,0.15),_rgba(1,6,23,0))]" />
       <div className="relative mx-auto flex max-w-6xl flex-col gap-10 px-6 py-16 md:px-0">
         <div className="flex flex-col justify-between gap-10 md:flex-row">
           <div className="max-w-sm space-y-4">
@@ -45,17 +45,17 @@ const Footer = () => {
               alt="Outlet Expense"
               height={50}
               width={180}
-              className="rounded-xl bg-white p-2"
+              className="rounded-xl bg-white p-2 dark:bg-white"
             />
-            <p className="text-sm text-white/70">
+            <p className="text-sm text-slate-600 dark:text-white/70">
               The control tower for modern POS teams. Unify inventory, payments,
               and fulfillment across every touchpoint with proactive automation.
             </p>
-            <div className="flex flex-wrap gap-2 text-xs text-white/60">
+            <div className="flex flex-wrap gap-2 text-xs text-slate-500 dark:text-white/60">
               {compliance.map((badge) => (
                 <span
                   key={badge}
-                  className="rounded-full border border-white/10 px-3 py-1"
+                  className="rounded-full border border-slate-200 px-3 py-1 dark:border-white/10"
                 >
                   {badge}
                 </span>
@@ -65,19 +65,19 @@ const Footer = () => {
 
           <div className="flex flex-1 flex-wrap gap-10 text-sm">
             <div>
-              <p className="text-xs uppercase tracking-[0.35em] text-white/60">
+              <p className="text-xs uppercase tracking-[0.35em] text-slate-500 dark:text-white/60">
                 Platform
               </p>
-              <ul className="mt-4 space-y-3 text-white/80">
+              <ul className="mt-4 space-y-3 text-slate-600 dark:text-white/80">
                 {navigation.map((link) => (
                   <li key={link.href}>
-                    <a href={link.href} className="transition hover:text-white">
+                    <a href={link.href} className="transition hover:text-slate-900 dark:hover:text-white">
                       {link.label}
                     </a>
                   </li>
                 ))}
                 <li>
-                  <a href="/privacy" className="transition hover:text-white">
+                  <a href="/privacy" className="transition hover:text-slate-900 dark:hover:text-white">
                     Privacy policy
                   </a>
                 </li>
@@ -85,27 +85,27 @@ const Footer = () => {
             </div>
 
             <div>
-              <p className="text-xs uppercase tracking-[0.35em] text-white/60">
+              <p className="text-xs uppercase tracking-[0.35em] text-slate-500 dark:text-white/60">
                 Contact
               </p>
-              <ul className="mt-4 space-y-3 text-white/80">
+              <ul className="mt-4 space-y-3 text-slate-600 dark:text-white/80">
                 <li>
-                  <span className="text-white/60">Email</span>
-                  <p className="text-white">squadinnovators@gmail.com</p>
+                  <span className="text-slate-500 dark:text-white/60">Email</span>
+                  <p className="text-slate-900 dark:text-white">squadinnovators@gmail.com</p>
                 </li>
                 <li>
-                  <span className="text-white/60">Phone</span>
-                  <p className="text-white">+880 1677-182084</p>
+                  <span className="text-slate-500 dark:text-white/60">Phone</span>
+                  <p className="text-slate-900 dark:text-white">+880 1677-182084</p>
                 </li>
                 <li>
-                  <span className="text-white/60">Support</span>
-                  <p className="text-white">Mon–Fri, 9am–6pm BST</p>
+                  <span className="text-slate-500 dark:text-white/60">Support</span>
+                  <p className="text-slate-900 dark:text-white">Mon–Fri, 9am–6pm BST</p>
                 </li>
               </ul>
             </div>
 
             <div>
-              <p className="text-xs uppercase tracking-[0.35em] text-white/60">
+              <p className="text-xs uppercase tracking-[0.35em] text-slate-500 dark:text-white/60">
                 Social
               </p>
               <div className="mt-4 flex gap-3">
@@ -114,7 +114,7 @@ const Footer = () => {
                     key={social.label}
                     href={social.href}
                     aria-label={social.label}
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white/70 transition hover:border-white/40 hover:text-white"
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-600 transition hover:border-slate-400 hover:text-slate-900 dark:border-white/10 dark:text-white/70 dark:hover:border-white/40 dark:hover:text-white"
                   >
                     <svg
                       className="h-4 w-4"
@@ -130,7 +130,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-white/5 py-6 text-center text-xs text-white/60 md:flex-row md:text-left">
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-slate-200 py-6 text-center text-xs text-slate-500 dark:border-white/5 dark:text-white/60 md:flex-row md:text-left">
           <p>
             © {new Date().getFullYear()} Squad Innovators. All rights reserved.
           </p>
