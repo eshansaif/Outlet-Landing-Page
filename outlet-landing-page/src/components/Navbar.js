@@ -114,7 +114,9 @@ export default function Navbar() {
                 <button
                   onClick={toggleTheme}
                   className="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
-                  aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+                  aria-label={`Switch to ${
+                    theme === "light" ? "dark" : "light"
+                  } mode`}
                 >
                   {theme === "light" ? (
                     // Moon icon for dark mode
@@ -170,7 +172,9 @@ export default function Navbar() {
                 <button
                   onClick={toggleTheme}
                   className="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+                  aria-label={`Switch to ${
+                    theme === "light" ? "dark" : "light"
+                  } mode`}
                 >
                   {theme === "light" ? (
                     <svg
@@ -212,29 +216,29 @@ export default function Navbar() {
                   aria-expanded={isMenuOpen ? "true" : "false"}
                   onClick={toggleMenu}
                 >
-                <span className="sr-only">Open main menu</span>
-                <div className="relative w-6 h-6">
-                  <span
-                    className={`absolute top-0 left-0 w-6 h-0.5 bg-current transform transition-all duration-300 ${
-                      isMenuOpen
-                        ? "rotate-45 translate-y-2.5"
-                        : "translate-y-0"
-                    }`}
-                  ></span>
-                  <span
-                    className={`absolute top-2.5 left-0 w-6 h-0.5 bg-current transform transition-all duration-300 ${
-                      isMenuOpen ? "opacity-0" : "opacity-100"
-                    }`}
-                  ></span>
-                  <span
-                    className={`absolute top-5 left-0 w-6 h-0.5 bg-current transform transition-all duration-300 ${
-                      isMenuOpen
-                        ? "-rotate-45 -translate-y-2.5"
-                        : "translate-y-0"
-                    }`}
-                  ></span>
-                </div>
-              </button>
+                  <span className="sr-only">Open main menu</span>
+                  <div className="relative w-6 h-6">
+                    <span
+                      className={`absolute top-0 left-0 w-6 h-0.5 bg-current transform transition-all duration-300 ${
+                        isMenuOpen
+                          ? "rotate-45 translate-y-2.5"
+                          : "translate-y-0"
+                      }`}
+                    ></span>
+                    <span
+                      className={`absolute top-2.5 left-0 w-6 h-0.5 bg-current transform transition-all duration-300 ${
+                        isMenuOpen ? "opacity-0" : "opacity-100"
+                      }`}
+                    ></span>
+                    <span
+                      className={`absolute top-5 left-0 w-6 h-0.5 bg-current transform transition-all duration-300 ${
+                        isMenuOpen
+                          ? "-rotate-45 -translate-y-2.5"
+                          : "translate-y-0"
+                      }`}
+                    ></span>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -243,9 +247,7 @@ export default function Navbar() {
         {/* Mobile Menu */}
         <div
           className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            isMenuOpen
-              ? "max-h-screen opacity-100"
-              : "max-h-0 opacity-0"
+            isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
           }`}
           id="mobile-menu"
         >

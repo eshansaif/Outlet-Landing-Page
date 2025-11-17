@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const TypedWithGradient = ({ message }) => {
   const [displayedText, setDisplayedText] = useState("");
@@ -18,7 +18,7 @@ const TypedWithGradient = ({ message }) => {
       setDisplayedText(""); // Clear previous text before starting
       interval = setInterval(() => {
         if (index < message.length) {
-          console.log(message.charAt(index) + ' ' + index); // Console log to track progress
+          console.log(message.charAt(index) + " " + index); // Console log to track progress
           setDisplayedText((prev) => prev + message.charAt(index));
           index++;
         } else {
@@ -42,10 +42,9 @@ const TypedWithGradient = ({ message }) => {
 
     // Cleanup on unmount or re-run
     return () => clearInterval(interval);
-
   }, [isTyping, message]); // Depend on isTyping and message
 
-/*   useEffect(() => {
+  /*   useEffect(() => {
     let index = 0;
     const typingSpeed = 100;
     

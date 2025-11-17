@@ -329,7 +329,7 @@ const PricingPlans = () => {
                 </div>
               </div>
               <div className="w-full h-[80%] flex flex-col items-center">
-              <div className="mt-5 flex items-center justify-center">
+                <div className="mt-5 flex items-center justify-center">
                   <span className="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white text-xl font-bold px-3 py-1 rounded-full shadow-lg animate-pulse hover:scale-105 transition-transform duration-300 text-center">
                     1 Month Free
                   </span>
@@ -536,7 +536,7 @@ const PricingPlans = () => {
               </div>
 
               <div className="w-full h-[80%] flex flex-col items-center">
-              <div className="mt-5 flex items-center justify-center">
+                <div className="mt-5 flex items-center justify-center">
                   <span className="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white text-xl font-bold px-3 py-1 rounded-full shadow-lg animate-pulse hover:scale-105 transition-transform duration-300 text-center">
                     1 Month Free
                   </span>

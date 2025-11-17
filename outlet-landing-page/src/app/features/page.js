@@ -56,7 +56,7 @@ const Features = async () => {
               </div>
               <p className="text-md text-gray-500 py-2 px-4">
                 Outlet Expense offers comprehensive inventory management,
-                tracking stock levels, managing suppliers,
+                tracking inventory levels, managing suppliers,
                 <br />
                 and generating insightful reports for efficient decision-making.
               </p>
@@ -156,7 +156,7 @@ const Features = async () => {
                       </p>
               </div>
               <p className="text-md text-gray-500 py-2 px-4">
-                Supplier Management in Outlet Expense simplifies vendor tracking, order management, and communication to ensure efficient procurement and stock replenishment.
+                Supplier Management in Outlet Expense simplifies vendor tracking, order management, and communication to ensure efficient procurement and inventory replenishment.
               </p>
 
               <div className="bg-transparent h-[3px] rounded-b-lg group-hover:bg-blue-800 transition-all duration-500 ease-in-out"></div>
@@ -204,7 +204,7 @@ const Features = async () => {
                       </p>
               </div>
               <p className="text-md text-gray-500 py-2 px-4">
-                Warehouse Management in Outlet Expense optimizes storage, streamlines inventory tracking, and ensures efficient stock movement across multiple locations.
+                Warehouse Management in Outlet Expense optimizes storage, streamlines inventory tracking, and ensures efficient inventory movement across multiple locations.
               </p>
 
               <div className="bg-transparent h-[3px] rounded-b-lg group-hover:bg-blue-800 transition-all duration-500 ease-in-out"></div>
@@ -228,7 +228,7 @@ const Features = async () => {
                       </p>
               </div>
               <p className="text-md text-gray-500 py-2 px-4">
-              Labeling & Barcoding in Outlet Expense simplifies product identification, speeds up inventory processes, and ensures accurate stock management.
+              Labeling & Barcoding in Outlet Expense simplifies product identification, speeds up inventory processes, and ensures accurate inventory management.
               </p>
 
               <div className="bg-transparent h-[3px] rounded-b-lg group-hover:bg-blue-800 transition-all duration-500 ease-in-out"></div>
@@ -328,7 +328,7 @@ const Features = async () => {
                       </p>
               </div>
               <p className="text-md text-gray-500 py-2 px-4">
-              Purchasing Receiving in Outlet Expense efficiently manages incoming stock, verifies order accuracy, and updates inventory levels for seamless operations.
+              Purchasing Receiving in Outlet Expense efficiently manages incoming inventory, verifies order accuracy, and updates inventory levels for seamless operations.
               </p>
 
               <div className="bg-transparent h-[3px] rounded-b-lg group-hover:bg-blue-800 transition-all duration-500 ease-in-out"></div>
