@@ -1,13 +1,13 @@
-import Popup from "../components/Popup";
-import HeroSection from "../components/HeroSection";
-import BusinessGrowthSection from "../components/BusinessGrowthSection";
-import HowItWorksSection from "../components/HowItWorksSection";
-import TrustedBySection from "../components/TrustedBySection";
-import InventoryManagementSection from "../components/InventoryManagementSection";
-import KeyFeaturesSection from "../components/KeyFeaturesSection";
-import SolarSystem from "../components/SolarSystem";
-import CustomerFeedbackSection from "../components/CustomerFeedbackSection";
-import FeatureHighlightsSection from "../components/FeatureHighlightsSection";
+import Popup from "@/components/Popup";
+import HeroSection from "@/components/HeroSection";
+import BusinessGrowthSection from "@/components/BusinessGrowthSection";
+import HowItWorksSection from "@/components/HowItWorksSection";
+import TrustedBySection from "@/components/TrustedBySection";
+import InventoryManagementSection from "@/components/InventoryManagementSection";
+import KeyFeaturesSection from "@/components/KeyFeaturesSection";
+import SolarSystem from "@/components/SolarSystem";
+import CustomerFeedbackSection from "@/components/CustomerFeedbackSection";
+import FeatureHighlightsSection from "@/components/FeatureHighlightsSection";
 
 export default function Home() {
   return (

@@ -1,7 +1,7 @@
 import "./page.css";
 import Image from "next/image";
 import Link from "next/link";
-import PricingPlans from "../../components/PricingPlans";
+import PricingPlans from "@/components/PricingPlans";
 
 const Pricing = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}plan-option-list`);
