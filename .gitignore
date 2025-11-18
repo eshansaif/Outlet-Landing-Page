@@ -12,6 +12,8 @@ out/
 
 *.next/
 
+outlet-landing-page/.next/
+
 # Project specific
 outlet-landing-page/node_modules
 outlet-landing-page/dist
