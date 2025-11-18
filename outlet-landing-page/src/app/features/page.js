@@ -164,7 +164,7 @@ const Features = () => {
           <div className="absolute top-10 right-0 w-[500px] rounded-full bg-[radial-gradient(circle,_rgba(14,165,233,0.35),_transparent_70%)]" />
         </div>
 
-        <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-10 px-6 pb-24 pt-32 text-center">
+        <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-10 px-6 pb-24 pt-10 text-center">
           <span className="text-xs uppercase tracking-[0.5em] text-slate-500 dark:text-slate-300">
             Feature Suite
           </span>

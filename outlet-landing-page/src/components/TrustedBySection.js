@@ -25,7 +25,7 @@ export default function TrustedBySection() {
       <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 md:flex-row md:items-center md:px-0">
         <div className="flex-1 text-center md:text-left">
           <p className="text-sm uppercase tracking-[0.4em] text-slate-500 dark:text-white/60">
-            Powered Merchants and me
+            Powered Merchants
           </p>
           <h2 className="mt-4 text-3xl font-semibold leading-tight text-slate-900 dark:text-white">
             POS experiences trusted by{" "}

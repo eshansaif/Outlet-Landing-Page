@@ -62,7 +62,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-slate-50 to-white text-slate-900 dark:from-[#020617] dark:via-[#050b1d] dark:to-[#020617] dark:text-white">
       {/* Hero */}
-      <section className="relative overflow-hidden pb-20 pt-32">
+      <section className="relative overflow-hidden pb-20 pt-10">
         <div className="absolute inset-0 opacity-40 blur-3xl">
           <div className="absolute inset-y-0 left-1/3 w-[700px] rounded-full bg-[radial-gradient(circle,_rgba(59,130,246,0.35),_transparent_70%)] dark:bg-[radial-gradient(circle,_rgba(56,189,248,0.4),_transparent_70%)]" />
           <div className="absolute top-0 right-0 w-[400px] rounded-full bg-[radial-gradient(circle,_rgba(14,165,233,0.3),_transparent_70%)]" />
