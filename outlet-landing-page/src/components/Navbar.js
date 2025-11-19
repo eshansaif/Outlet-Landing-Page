@@ -47,6 +47,7 @@ export default function Navbar() {
     { href: "/", label: "Home" },
     { href: "/features", label: "Features" },
     { href: "/pricing", label: "Pricing" },
+    { href: "/clients", label: "Our Clients" },
     { href: "/faqs", label: "FAQs" },
   ];
 
@@ -67,7 +68,7 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex-shrink-0">
               <Link
@@ -78,8 +79,8 @@ export default function Navbar() {
                   src="/outletlogo.png"
                   alt="Outlet Expense Logo"
                   width={180}
-                  height={60}
-                  className="h-12 w-auto object-contain"
+                  height={50}
+                  className="h-10 w-auto object-contain"
                   priority
                 />
               </Link>
@@ -94,7 +95,7 @@ export default function Navbar() {
                     <Link
                       key={link.href}
                       href={link.href}
-                      className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                      className={`relative px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 ${
                         active
                           ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30"
                           : "text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800"
@@ -109,11 +110,11 @@ export default function Navbar() {
                 })}
               </div>
 
-              <div className="ml-6 flex items-center space-x-4 border-l border-gray-200 dark:border-gray-700 pl-6">
+              <div className="ml-4 flex items-center space-x-3 border-l border-gray-200 dark:border-gray-700 pl-4">
                 {/* Theme Toggle Button */}
                 <button
                   onClick={toggleTheme}
-                  className="p-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+                  className="p-1.5 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
                   aria-label={`Switch to ${
                     theme === "light" ? "dark" : "light"
                   } mode`}
@@ -289,7 +290,7 @@ export default function Navbar() {
       </nav>
 
       {/* Spacer to prevent content from going under fixed navbar */}
-      <div className="h-20"></div>
+      <div className="h-16"></div>
     </>
   );
 }
