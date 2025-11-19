@@ -4,21 +4,37 @@ import Image from "next/image";
 const accentBorder =
   "border border-slate-200/70 dark:border-white/10 shadow-[0_25px_70px_rgba(15,23,42,0.08)] dark:shadow-[0_25px_70px_rgba(2,6,23,0.8)]";
 
+const BLOGS_API_URL = process.env.NEXT_PUBLIC_BLOGS_API_URL;
+
 async function getBlogs() {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}blogs`, {
+    if (!BLOGS_API_URL) {
+      console.warn("NEXT_PUBLIC_BLOGS_API_URL is not set");
+      return [];
+    }
+
+    const res = await fetch(BLOGS_API_URL, {
       next: { revalidate: 3600 }, // Revalidate every hour
     });
 
     if (!res.ok) {
-      return null;
+      console.warn("Failed to fetch blogs:", res.status);
+      return [];
     }
 
     const data = await res.json();
-    return data;
+    if (Array.isArray(data)) {
+      return data;
+    }
+
+    if (data?.data && Array.isArray(data.data)) {
+      return data.data;
+    }
+
+    return [];
   } catch (error) {
     console.error("Error fetching blogs:", error);
-    return null;
+    return [];
   }
 }
 

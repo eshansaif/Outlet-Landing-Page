@@ -76,15 +76,9 @@ const clients = [
     website: "https://squadinnovators.com/",
   },
   {
-    id: 13,
-    name: "Outlet Expense",
-    logo: "https://outletexpense.com/favicon.ico",
-    website: "https://outletexpense.com/",
-  },
-  {
     id: 14,
     name: "Apple Daddy",
-    logo: "https://www.appledaddybd.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffavicon.a0e81e1a.png&w=384&q=75&dpl=dpl_imvdJGmx7Rx6G9viBLLycAbU1M3f",
+    logo: "/apple-daddy.jpg",
     website: "https://www.appledaddybd.com/",
   },
   {
@@ -123,6 +117,108 @@ const clients = [
     logo: "https://appledreambd.com/logo.png",
     website: "https://appledreambd.com/",
   },
+  {
+    id: 21,
+    name: "Bhai Bhai Sewing Corner",
+    logo: "https://www.outletexpense.xyz/uploads/129-Moinuddin-Khan/1731158069.jpg",
+    website: "",
+  },
+  {
+    id: 22,
+    name: "Bonzer",
+    logo: "https://www.outletexpense.xyz/uploads/131-Monjurul-Islam-Palash/1731585999.jpg",
+    website: "",
+  },
+  {
+    id: 23,
+    name: "Accessories World",
+    logo: "https://www.outletexpense.xyz/uploads/132-MD.-Haris-Naved/1731054817.jpg",
+    website: "",
+  },
+  {
+    id: 24,
+    name: "Pochondoshop",
+    logo: "https://www.outletexpense.xyz/uploads/137-Engr.-Ehsan-Ahmed/1734175886.jpg",
+    website: "",
+  },
+  {
+    id: 25,
+    name: "Haque Pharma & Departmental Store",
+    logo: "https://www.outletexpense.xyz/uploads/154-Haque-Pharma/1754285544.jpg",
+    website: "",
+  },
+  {
+    id: 26,
+    name: "CELL TECH BD",
+    logo: "https://www.outletexpense.xyz/uploads/159-MD-Rubel-Ahmed/1735368008.jpg",
+    website: "",
+  },
+  {
+    id: 27,
+    name: "Niloy Electronics",
+    logo: "https://www.outletexpense.xyz/uploads/164-MD-Halim/1737664516.jpg",
+    website: "",
+  },
+  {
+    id: 28,
+    name: "Faizan International",
+    logo: "https://www.outletexpense.xyz/uploads/184-Nazmul-Hasan-Rafi/1745673306.jpg",
+    website: "",
+  },
+  {
+    id: 29,
+    name: "Exphone BD",
+    logo: "https://www.outletexpense.xyz/uploads/186-Minhaz-Kazi/1741101597.jpg",
+    website: "",
+  },
+  {
+    id: 30,
+    name: "CAFE LASANA",
+    logo: "https://www.outletexpense.xyz/uploads/208-Aftabnogor-(Branch)/1747630312.jpg",
+    website: "",
+  },
+  {
+    id: 31,
+    name: "Pixel Heaven",
+    logo: "https://www.outletexpense.xyz/uploads/209-Rakib-Hassan-(Shouvo)/1747662715.jpg",
+    website: "",
+  },
+  {
+    id: 32,
+    name: "Easy Phone Exchange",
+    logo: "https://www.outletexpense.xyz/uploads/226-Minhazur-Rahman/1756375137.jpg",
+    website: "",
+  },
+  {
+    id: 33,
+    name: "Khan Gadget BD",
+    logo: "https://www.outletexpense.xyz/uploads/254-Sakib-Ali/1760274411.jpg",
+    website: "",
+  },
+  {
+    id: 34,
+    name: "MAC TECHNOLOGY",
+    logo: "https://www.outletexpense.xyz/uploads/255-MD.-Saiful-Islam-Rubel/1760275902.jpg",
+    website: "",
+  },
+  {
+    id: 35,
+    name: "Badaner Dokan",
+    logo: "https://www.outletexpense.xyz/uploads/257-Badan-Ray/1760619931.jpg",
+    website: "",
+  },
+  {
+    id: 36,
+    name: "Apple Nation BD",
+    logo: "https://www.outletexpense.xyz/uploads/260-Biplob-Hossen/1762065976.jpg",
+    website: "",
+  },
+  {
+    id: 37,
+    name: "Dizmo",
+    logo: "/dizmo.jpg",
+    website: "",
+  },
 ];
 
 const accentBorder =
@@ -154,7 +250,7 @@ const Clients = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <span className="rounded-full border border-slate-200/70 bg-white/80 px-4 py-2 text-sm text-slate-700 dark:border-white/10 dark:bg-white/5 dark:text-white/80">
-              20+ Active Clients
+              35+ Active Clients
             </span>
             <span className="rounded-full border border-slate-200/70 bg-white/80 px-4 py-2 text-sm text-slate-700 dark:border-white/10 dark:bg-white/5 dark:text-white/80">
               Multiple Industries
@@ -169,21 +265,18 @@ const Clients = () => {
       {/* Clients Grid */}
       <section className="relative w-full pb-20">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
             {clients.map((client) => (
-              <Link
+              <div
                 key={client.id}
-                href={client.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`group flex flex-col items-center justify-center gap-4 rounded-3xl bg-white/80 p-8 transition-all duration-300 hover:scale-105 dark:bg-white/5 ${accentBorder} hover:shadow-2xl`}
+                className={`flex flex-col items-center justify-center gap-4 rounded-3xl bg-white/80 p-8 dark:bg-white/5 ${accentBorder}`}
               >
                 <div className="relative h-20 w-20 overflow-hidden rounded-2xl bg-white p-2 dark:bg-white/10">
                   <Image
                     src={client.logo}
                     alt={`${client.name} logo`}
                     fill
-                    className="object-contain transition-transform duration-300 group-hover:scale-110"
+                    className="object-contain"
                     unoptimized
                   />
                 </div>
@@ -191,11 +284,8 @@ const Clients = () => {
                   <h3 className="text-base font-semibold text-slate-900 dark:text-white">
                     {client.name}
                   </h3>
-                  <p className="mt-1 text-xs text-slate-500 dark:text-white/60">
-                    View Website →
-                  </p>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
