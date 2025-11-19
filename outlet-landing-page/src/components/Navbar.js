@@ -5,10 +5,26 @@ import { usePathname } from "next/navigation";
 import BuyNowButton from "./BuyNowButton";
 import { useTheme } from "../contexts/ThemeContext";
 import { useState, useEffect } from "react";
+import {
+  ShoppingBagIcon,
+  BuildingStorefrontIcon,
+  ShoppingCartIcon,
+  ComputerDesktopIcon,
+  WrenchScrewdriverIcon,
+  DevicePhoneMobileIcon,
+  CubeIcon,
+  CreditCardIcon,
+  BuildingOfficeIcon,
+  CalculatorIcon,
+  ClipboardDocumentListIcon,
+  ScissorsIcon,
+  BeakerIcon,
+} from "@heroicons/react/24/outline";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const pathname = usePathname();
   const { theme, toggleTheme } = useTheme();
 
@@ -46,10 +62,44 @@ export default function Navbar() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/features", label: "Features" },
+  ];
+
+  const navLinksAfterServices = [
     { href: "/pricing", label: "Pricing" },
     { href: "/clients", label: "Our Clients" },
     { href: "/blogs", label: "Blogs" },
     { href: "/faqs", label: "FAQs" },
+  ];
+
+  const servicesMenu = [
+    {
+      category: "Industry Solutions",
+      items: [
+        { name: "Fashion Shop POS", href: "/services/fashion-shop", icon: ShoppingBagIcon },
+        { name: "Restaurant Software", href: "/services/restaurant-pos", icon: BuildingStorefrontIcon },
+        { name: "SuperShop POS", href: "/services/supershop", icon: ShoppingCartIcon },
+        { name: "Electronics Store", href: "/services/electronics-store", icon: ComputerDesktopIcon },
+        { name: "Hardware Store", href: "/services/hardware-store", icon: WrenchScrewdriverIcon },
+        { name: "Gadget Shop", href: "/services/gadget-shop", icon: DevicePhoneMobileIcon },
+      ],
+    },
+    {
+      category: "Core Products",
+      items: [
+        { name: "Inventory Management", href: "/services/inventory-management", icon: CubeIcon },
+        { name: "Point of Sale", href: "/services/point-of-sale", icon: CreditCardIcon },
+        { name: "ERP System", href: "/services/erp-system", icon: BuildingOfficeIcon },
+        { name: "Accounting", href: "/services/accounting", icon: CalculatorIcon },
+      ],
+    },
+    {
+      category: "Specialized",
+      items: [
+        { name: "Wholesale", href: "/services/wholesale-management", icon: ClipboardDocumentListIcon },
+        { name: "Tailor Software", href: "/services/tailor-software", icon: ScissorsIcon },
+        { name: "Pharmacy POS", href: "/services/pharmacy-pos", icon: BeakerIcon },
+      ],
+    },
   ];
 
   const isActive = (href) => {
@@ -91,6 +141,97 @@ export default function Navbar() {
             <div className="hidden md:flex md:items-center md:space-x-1">
               <div className="flex items-center space-x-1">
                 {navLinks.map((link) => {
+                  const active = isActive(link.href);
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className={`relative px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 ${
+                        active
+                          ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30"
+                          : "text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800"
+                      }`}
+                    >
+                      {link.label}
+                      {active && (
+                        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-600 dark:bg-blue-400 rounded-full"></span>
+                      )}
+                    </Link>
+                  );
+                })}
+                
+                {/* Services Dropdown */}
+                <div
+                  className="relative"
+                  onMouseEnter={() => setIsServicesOpen(true)}
+                  onMouseLeave={() => setIsServicesOpen(false)}
+                >
+                  <button
+                    className={`relative flex items-center gap-1 px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 ${
+                      pathname.startsWith("/services")
+                        ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30"
+                        : "text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800"
+                    }`}
+                  >
+                    Services
+                    <svg
+                      className={`w-4 h-4 transition-transform ${isServicesOpen ? "rotate-180" : ""}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                    {pathname.startsWith("/services") && (
+                      <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-600 dark:bg-blue-400 rounded-full"></span>
+                    )}
+                  </button>
+
+                  {/* Mega Menu Dropdown */}
+                  {isServicesOpen && (
+                    <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[600px] rounded-2xl border border-slate-200/70 bg-white/95 p-6 shadow-2xl backdrop-blur-md dark:border-white/10 dark:bg-gray-900/95">
+                      <div className="grid grid-cols-3 gap-6">
+                        {servicesMenu.map((column) => (
+                          <div key={column.category}>
+                            <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                              {column.category}
+                            </h3>
+                            <ul className="space-y-2">
+                              {column.items.map((item) => {
+                                const IconComponent = item.icon;
+                                return (
+                                  <li key={item.href}>
+                                    <Link
+                                      href="/services"
+                                      className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-slate-700 transition-colors hover:bg-blue-50 hover:text-blue-600 dark:text-gray-300 dark:hover:bg-blue-900/30 dark:hover:text-blue-400"
+                                    >
+                                      <IconComponent className="h-5 w-5 flex-shrink-0" />
+                                      <span>{item.name}</span>
+                                    </Link>
+                                  </li>
+                                );
+                              })}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="mt-6 border-t border-slate-200 pt-4 dark:border-white/10">
+                        <Link
+                          href="/services"
+                          className="flex items-center justify-center gap-2 text-sm font-medium text-blue-600 transition-colors hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+                        >
+                          View All Services
+                          <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                          </svg>
+                        </Link>
+                      </div>
+                    </div>
+                  )}
+                </div>
+                
+                {/* Links after Services */}
+                {navLinksAfterServices.map((link) => {
                   const active = isActive(link.href);
                   return (
                     <Link
@@ -255,6 +396,38 @@ export default function Navbar() {
         >
           <div className="px-4 pt-2 pb-6 space-y-1 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
             {navLinks.map((link) => {
+              const active = isActive(link.href);
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${
+                    active
+                      ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30"
+                      : "text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800"
+                  }`}
+                  onClick={toggleMenu}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+            
+            {/* Services Link for Mobile */}
+            <Link
+              href="/services"
+              className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${
+                pathname.startsWith("/services")
+                  ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30"
+                  : "text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800"
+              }`}
+              onClick={toggleMenu}
+            >
+              Services
+            </Link>
+            
+            {/* Links after Services for Mobile */}
+            {navLinksAfterServices.map((link) => {
               const active = isActive(link.href);
               return (
                 <Link
