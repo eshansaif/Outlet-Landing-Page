@@ -144,13 +144,13 @@ const Pricing = async () => {
           </div>
 
           <div className="overflow-x-auto rounded-[32px] border border-slate-200/60 bg-white/80 shadow-2xl backdrop-blur dark:border-white/10 dark:bg-white/5">
-            <table className="w-full table-fixed divide-y divide-slate-200 text-sm dark:divide-white/10">
-              <thead className="bg-gradient-to-r from-sky-500 via-blue-500 to-emerald-400 text-left text-xs uppercase tracking-[0.3em] text-white">
+            <table className="w-full min-w-[640px] table-fixed divide-y divide-slate-200 text-sm dark:divide-white/10">
+              <thead className="bg-gradient-to-r from-sky-500 via-blue-500 to-emerald-400 text-left text-[10px] uppercase tracking-[0.15em] text-white sm:text-xs sm:tracking-[0.3em]">
                 <tr>
-                  <th className="py-4 pl-6 text-left w-[40%]">Feature</th>
-                  <th className="py-4 text-center w-[20%]">Starter</th>
-                  <th className="py-4 text-center w-[20%]">Premium</th>
-                  <th className="py-4 text-center w-[20%] pr-6">Enterprise</th>
+                  <th className="w-[40%] whitespace-nowrap py-3 pl-4 text-left sm:py-4 sm:pl-6">Feature</th>
+                  <th className="w-[20%] whitespace-nowrap py-3 text-center sm:py-4">Starter</th>
+                  <th className="w-[20%] whitespace-nowrap py-3 text-center sm:py-4">Premium</th>
+                  <th className="w-[20%] whitespace-nowrap py-3 pr-4 text-center sm:py-4 sm:pr-6">Enterprise</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-200 dark:divide-white/5">

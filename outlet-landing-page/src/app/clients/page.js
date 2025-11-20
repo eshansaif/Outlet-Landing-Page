@@ -219,6 +219,24 @@ const clients = [
     logo: "/dizmo.jpg",
     website: "",
   },
+  {
+    id: 38,
+    name: "Zubo Society",
+    logo: "/Zubo-Society.jpg",
+    website: "",
+  },
+  {
+    id: 39,
+    name: "DLM Properties",
+    logo: "/DLM-Properties.jpg",
+    website: "",
+  },
+  {
+    id: 40,
+    name: "Afrin Pharma",
+    logo: "/Afrin-Pharma.jpg",
+    website: "",
+  },
 ];
 
 const accentBorder =
@@ -234,7 +252,7 @@ const Clients = () => {
           <div className="absolute top-10 right-0 w-[500px] rounded-full bg-[radial-gradient(circle,_rgba(14,165,233,0.35),_transparent_70%)]" />
         </div>
 
-        <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-10 px-6 pb-24 pt-10 text-center">
+        <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-10 px-6 pb-10 pt-10 text-center">
           <span className="text-xs uppercase tracking-[0.5em] text-slate-500 dark:text-slate-300">
             Our Portfolio
           </span>
@@ -250,7 +268,7 @@ const Clients = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <span className="rounded-full border border-slate-200/70 bg-white/80 px-4 py-2 text-sm text-slate-700 dark:border-white/10 dark:bg-white/5 dark:text-white/80">
-              35+ Active Clients
+              500+ Active Clients
             </span>
             <span className="rounded-full border border-slate-200/70 bg-white/80 px-4 py-2 text-sm text-slate-700 dark:border-white/10 dark:bg-white/5 dark:text-white/80">
               Multiple Industries
@@ -265,7 +283,12 @@ const Clients = () => {
       {/* Clients Grid */}
       <section className="relative w-full pb-20">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+          <div className="mb-10 text-center">
+            <p className="text-sm uppercase tracking-[0.4em] text-slate-500 dark:text-white/60">
+              our top clients
+            </p>
+          </div>
+          <div className="grid gap-6 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
             {clients.map((client) => (
               <div
                 key={client.id}

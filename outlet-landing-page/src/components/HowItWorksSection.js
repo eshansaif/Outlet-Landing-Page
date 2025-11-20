@@ -30,7 +30,7 @@ export default function HowItWorksSection() {
         height={500}
         width={260}
       />
-      <div className="relative mx-auto flex max-w-6xl flex-col lg:flex-row lg:items-center">
+      <div className="relative w-full px-6 sm:px-8 mx-auto flex max-w-6xl flex-col lg:flex-row lg:items-center">
         <div className="flex-1 space-y-6">
           <p className="text-sm uppercase tracking-[0.4em] text-slate-500 dark:text-sky-300/70">
             Fulfillment Engine
