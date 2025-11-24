@@ -5,10 +5,15 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  turbopack: {
-    root: path.resolve(__dirname),
+  // Force Webpack instead of Turbopack
+  experimental: {
+    turbo: {
+      enabled: false,
+    },
   },
+
   output: "export",
+
   images: {
     unoptimized: true, // Disable image optimization globally
   },

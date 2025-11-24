@@ -2,9 +2,13 @@
   "/_global-error/page": "app/_global-error/page.js",
   "/_not-found/page": "app/_not-found/page.js",
   "/about/page": "app/about/page.js",
+  "/blogs/page": "app/blogs/page.js",
+  "/clients/page": "app/clients/page.js",
   "/faqs/page": "app/faqs/page.js",
   "/features/page": "app/features/page.js",
   "/page": "app/page.js",
   "/pricing/page": "app/pricing/page.js",
-  "/privacy/page": "app/privacy/page.js"
+  "/privacy/page": "app/privacy/page.js",
+  "/services/[slug]/page": "app/services/[slug]/page.js",
+  "/services/page": "app/services/page.js"
 }
