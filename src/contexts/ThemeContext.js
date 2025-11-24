@@ -4,7 +4,7 @@ import { createContext, useContext, useState, useEffect } from "react";
 const ThemeContext = createContext(undefined);
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -16,12 +16,18 @@ export function ThemeProvider({ children }) {
       "(prefers-color-scheme: dark)"
     ).matches;
 
+    // if (savedTheme) {
+    //   setTheme(savedTheme);
+    // } else if (systemPrefersDark) {
+    //   setTheme("dark");
+    // } else {
+    //   setTheme("light");
+    // }
+
     if (savedTheme) {
       setTheme(savedTheme);
-    } else if (systemPrefersDark) {
-      setTheme("dark");
     } else {
-      setTheme("light");
+      setTheme("dark"); // always default to dark
     }
   }, []);
 
@@ -58,4 +64,3 @@ export function useTheme() {
   }
   return context;
 }
-
