@@ -7,8 +7,8 @@
 # Next.js build artifacts
 .next/
 _next/
-out/
-**/out/
+#out/
+#**/out/
 
 *.next/
 
@@ -16,7 +16,7 @@ outlet-landing-page/.next/
 
 # Project specific
 outlet-landing-page/node_modules
-outlet-landing-page/out
+#outlet-landing-page/out
 outlet-landing-page/_next
 outlet-landing-page/.next
 outlet-landing-page/PROJECT_ANALYSIS.md

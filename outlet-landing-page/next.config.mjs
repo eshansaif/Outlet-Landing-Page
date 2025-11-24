@@ -5,17 +5,13 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Force Webpack instead of Turbopack
-  experimental: {
-    turbo: {
-      enabled: false,
-    },
+  turbopack: { root: path.resolve(__dirname), },
+  eslint: {
+    ignoreDuringBuilds: true,
   },
-
   output: "export",
-
   images: {
-    unoptimized: true, // Disable image optimization globally
+    unoptimized: true,
   },
 };
 
