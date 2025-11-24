@@ -100,7 +100,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "D:\\Coding\\React.js\\Outlet-Landing-Page\\outlet-landing-page",
+    "outputFileTracingRoot": "D:\\Coding\\React.js\\Outlet-Landing-Page",
     "cacheComponents": false,
     "cacheLife": {
       "default": {
@@ -290,14 +290,14 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.mjs",
     "turbopack": {
-      "root": "D:\\Coding\\React.js\\Outlet-Landing-Page\\outlet-landing-page"
+      "root": "D:\\Coding\\React.js\\Outlet-Landing-Page"
     },
     "eslint": {
       "ignoreDuringBuilds": true
     },
     "distDirRoot": ".next"
   },
-  "appDir": "D:\\Coding\\React.js\\Outlet-Landing-Page\\outlet-landing-page",
+  "appDir": "D:\\Coding\\React.js\\Outlet-Landing-Page",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",
