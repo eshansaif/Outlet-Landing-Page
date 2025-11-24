@@ -87,8 +87,9 @@ const FirstSlider = () => {
               Exporter Feature
             </span>
             <p className="pt-4 text-sm md:text-base">
-            Outlet Expense streamlines exporter operations with automated invoicing,
-            inventory tracking, multi-currency support, and seamless international shipment management.
+              Outlet Expense streamlines exporter operations with automated
+              invoicing, inventory tracking, multi-currency support, and
+              seamless international shipment management.
             </p>
           </div>
           <ul className="mt-6 flex flex-col justify-around">
@@ -162,8 +163,9 @@ const FirstSlider = () => {
               Human Resource Management
             </span>
             <p className="pt-4 text-sm md:text-base">
-            Outlet Expense's HRM efficiently manages roles, designations, departments, 
-            and employees. It streamlines organizational hierarchy, ensuring smooth coordination and workflow across teams.
+              Outlet Expense's HRM efficiently manages roles, designations,
+              departments, and employees. It streamlines organizational
+              hierarchy, ensuring smooth coordination and workflow across teams.
             </p>
           </div>
           <ul className="mt-6 flex flex-col justify-around">
@@ -175,7 +177,8 @@ const FirstSlider = () => {
                 width={20}
               />
               <span className="pl-4 text-sm md:text-base">
-              Easily assign and manage roles and designations for all employees.
+                Easily assign and manage roles and designations for all
+                employees.
               </span>
             </li>
             <li className="flex pt-4">
@@ -186,7 +189,8 @@ const FirstSlider = () => {
                 width={20}
               />
               <span className="pl-4 text-sm md:text-base">
-              Simplify payroll processing with integrated HR and financial systems.
+                Simplify payroll processing with integrated HR and financial
+                systems.
               </span>
             </li>
             <li className="flex pt-4">
@@ -197,7 +201,8 @@ const FirstSlider = () => {
                 width={20}
               />
               <span className="pl-4 text-sm md:text-base">
-              Streamline workflow by organizing employees into specific departments.
+                Streamline workflow by organizing employees into specific
+                departments.
               </span>
             </li>
           </ul>
@@ -226,9 +231,10 @@ const FirstSlider = () => {
               Finance Management
             </span>
             <p className="pt-4 text-sm md:text-base">
-              Outlet Expense's Finance module includes a chart of accounts for detailed financial tracking, 
-              seamless fund transfers, a comprehensive party list, 
-              and an organized journal list for efficient transaction management and reporting.
+              Outlet Expense's Finance module includes a chart of accounts for
+              detailed financial tracking, seamless fund transfers, a
+              comprehensive party list, and an organized journal list for
+              efficient transaction management and reporting.
             </p>
           </div>
           <ul className="mt-6 flex flex-col justify-around">
@@ -240,7 +246,8 @@ const FirstSlider = () => {
                 width={20}
               />
               <span className="pl-4 text-sm md:text-base">
-              Organize and track all financial transactions with a detailed chart of accounts.
+                Organize and track all financial transactions with a detailed
+                chart of accounts.
               </span>
             </li>
             <li className="flex pt-4">
@@ -251,7 +258,7 @@ const FirstSlider = () => {
                 width={20}
               />
               <span className="pl-4 text-sm md:text-base">
-              Facilitate quick and secure internal or external fund transfers.
+                Facilitate quick and secure internal or external fund transfers.
               </span>
             </li>
             <li className="flex pt-4">
@@ -262,7 +269,8 @@ const FirstSlider = () => {
                 width={20}
               />
               <span className="pl-4 text-sm md:text-base">
-              Maintain a comprehensive list of parties for streamlined transactions.
+                Maintain a comprehensive list of parties for streamlined
+                transactions.
               </span>
             </li>
           </ul>

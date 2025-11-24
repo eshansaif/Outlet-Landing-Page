@@ -1,8 +1,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import Head from 'next/head';
-import Navbar from '../components/Navbar';
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 
 /* const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,25 +23,27 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <Head>
-        <link rel="icon" href="/favicon.ico"/>        
+      <head>
+        <link rel="icon" href="/favicon.ico" />
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
           rel="stylesheet"
-        /></Head>
+        />
+      </head>
 
       <body
-        className={`antialiased relative`}/* ${geistSans.variable} ${geistMono.variable}  */
+        className={`antialiased relative bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300`} /* ${geistSans.variable} ${geistMono.variable}  */
       >
-      <header className="flex gap-6 flex-wrap items-center justify-center">
-      <Navbar />
-      </header>
-        {children}
-        <footer className="flex gap-6 flex-wrap items-center justify-center">
-          <Footer/>
-        </footer>
+        <ThemeProvider>
+          <header className="flex gap-6 flex-wrap items-center justify-center">
+            <Navbar />
+          </header>
+          {children}
+          <footer className="flex gap-6 flex-wrap items-center justify-center">
+            <Footer />
+          </footer>
+        </ThemeProvider>
       </body>
-
     </html>
   );
 }
